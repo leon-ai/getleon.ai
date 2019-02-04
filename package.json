@@ -1,0 +1,35 @@
+{
+  "name": "getleon.ai",
+  "version": "1.0.0",
+  "description": "Website of the Leon personal assistant",
+  "author": {
+    "name": "Louis Grenard",
+    "email": "louis.grenard@gmail.com",
+    "url": "https://twitter.com/louistiti_fr"
+  },
+  "license": "MIT",
+  "homepage": "https://getleon.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leon-ai/getleon.ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leon-ai/getleon.ai/issues"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.3.4",
+    "terser": "^3.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9",
+    "autoprefixer": "^8.6.4",
+    "tailwindcss": "^0.7.0"
+  }
+}
