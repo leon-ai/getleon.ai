@@ -1,4 +1,4 @@
-# Leon Website
+# Leon Website [![Netlify Status](https://api.netlify.com/api/v1/badges/01c71291-d4f0-4b33-a692-24a0bfdb8591/deploy-status)](https://app.netlify.com/sites/leon/deploys)
 
 ## Overview
 
