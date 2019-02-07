@@ -25,7 +25,8 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/img/favicon.png' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,400i,600,700' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,400i,600,700' },
+      { rel: 'stylesheet', href: '/css/fallback.css' } // sass-loader does not handle d: path()
     ],
     htmlAttrs: {
       lang: 'en'
@@ -57,6 +58,9 @@ module.exports = {
     '@nuxtjs/style-resources'
   ],
   styleResources: {
+    css: [
+      'assets/css/fallback.css'
+    ],
     scss: [
       'assets/scss/main.scss'
     ]
