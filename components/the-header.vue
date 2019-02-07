@@ -1,0 +1,95 @@
+<template>
+  <div class="container">
+    <header>
+      <a href="/" id="logo">
+        <h2>Leon</h2>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="https://docs.getleon.ai" target="_blank">Getting Started</a></li>
+          <li><a href="https://github.com/leon-ai/leon" target="_blank">GitHub</a></li>
+          <li><a href="https://roadmap.getleon.ai" target="_blank">Roadmap</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+$logo-size: 66px;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $sm-space 0;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+#logo {
+  background: no-repeat url(/img/logo.svg);
+  width: $logo-size;
+  height: $logo-size;
+}
+
+h2 {
+  line-height: $logo-size;
+  margin-left: $logo-size + 10px;
+  font-size: 1.75em;
+  font-weight: $semi-bold;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  font-size: 1.25em;
+
+  a {
+    &::before, &::after {
+      position: relative;
+      display: block;
+      content: '';
+      height: 3px;
+      opacity: 0;
+      width: 0;
+      transition: width .4s ease, opacity .4s ease;
+      background-color: $blue;
+    }
+
+    &::before {
+      top: calc(1em + 7px);
+    }
+
+    &::after {
+      top: 11px;
+    }
+
+    &:hover {
+      &::before, &::after {
+        opacity: 1;
+      }
+
+      &::before {
+        width: 100%;
+      }
+
+      &::after {
+        transition-delay: .4s;
+        width: 18%;
+      }
+    }
+  }
+
+  li {
+    padding-right: 50px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+</style>

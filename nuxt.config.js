@@ -24,20 +24,24 @@ module.exports = {
       { name: 'twitter:image', content: 'https://getleon.ai/img/logo_t.png' }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/img/favicon.png' }
-    ]
+      { rel: 'icon', type: 'image/png', href: '/img/favicon.png' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,400i,600,700' }
+    ],
+    htmlAttrs: {
+      lang: 'en'
+    },
   },
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#FFF' },
 
   /*
   ** Global CSS
   */
   css: [
-    '~/assets/css/tailwind.css'
+    '@/assets/scss/main.scss'
   ],
 
   /*
@@ -50,7 +54,13 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/style-resources'
   ],
+  styleResources: {
+    scss: [
+      'assets/scss/main.scss'
+    ]
+  },
 
   /*
   ** Build configuration

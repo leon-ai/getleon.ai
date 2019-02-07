@@ -1,63 +1,126 @@
 <template>
-  <section class="container">
-    <div>
-      <h1 class="title">
-        ...
-      </h1>
-      <h2 class="subtitle">
-        Project incoming
-      </h2>
-      <div class="links">
-        <a
-          href="https://roadmap.getleon.ai"
-          target="_blank"
-          class="button--blue"
-        >Roadmap</a>
+  <div class="container">
+    <section>
+      <div>
+        <h1>Your Open-Source Personal Assistant</h1>
+        <h3>Get the latest from Leon</h3>
+        <p>Receive news, announcements, and more.</p>
+        <form action="" method="post">
+          <input type="email" required spellcheck="false" placeholder="john.doe@example.com">
+          <button type="submit">Stay updated</button>
+          <small>We don't spam.</small>
+        </form>
       </div>
-    </div>
-  </section>
+      <TheMonitor/>
+    </section>
+  </div>
 </template>
 
 <script>
+import TheMonitor from '@/components/the-monitor'
 export default {
   components: {
+    TheMonitor
   }
 }
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
+<style lang="scss" scoped>
+$cta-color-shadow: rgba(236, 41, 122, .75);
+
+section {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  padding: 52px 0;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+h1 {
+  font-size: 2.75em;
+  font-weight: $bold;
+  width: 364px;
+  line-height: 1.25em;
+
+  &::after {
+    position: relative;
+    display: block;
+    content: '';
+    top: 10px;
+    height: 3px;
+    width: 48px;
+    background-color: $blue;
+  }
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+h3 {
+  font-size: 2em;
+  font-weight: $semi-bold;
+  margin-top: 116px;
 }
 
-.links {
-  padding-top: 15px;
+p {
+  font-size: 1.25em;
+  font-weight: $light;
+  line-height: 1.5em;
+}
+
+form {
+  position: relative;
+  width: 432px;
+  margin-top: 14px;
+}
+
+input {
+  background-color: $white;
+  color: $black;
+  font-size: 1em;
+  font-weight: $light;
+  width: 100%;
+  padding: 18px 24px;
+  outline: none;
+  border: none;
+  border-radius: 2em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+
+  &::placeholder {
+    color: inherit;
+  }
+
+  &:focus {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .5);
+  }
+}
+
+button {
+  position: absolute;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: $semi-bold;
+  background-color: $pink;
+  color: $white;
+  border: none;
+  border-radius: 2em;
+  padding: 12px 14px;
+  top: 6px;
+  right: 6px;
+  outline: none;
+  box-shadow: 0 2px 4px $cta-color-shadow;
+  transition: box-shadow .3s ease, transform .3s ease;
+
+  &:hover {
+    box-shadow: 0 6px 12px $cta-color-shadow;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 2px 4px $cta-color-shadow;
+    transform: translateY(0);
+  }
+}
+
+small {
+  display: inline-block;
+  margin: 8px 22px;
+  font-style: italic;
+  font-size: .7em;
 }
 </style>

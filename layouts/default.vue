@@ -1,15 +1,26 @@
 <template>
   <div>
-    <nuxt />
+    <TheHeader/>
+    <main>
+      <Nuxt/>
+    </main>
+    <TheFooter/>
   </div>
 </template>
 
-<style>
+<script>
+import TheHeader from '@/components/the-header'
+import TheFooter from '@/components/the-footer'
+export default {
+  components: {
+    TheHeader,
+    TheFooter
+  }
+}
+</script>
+
+<style lang="scss">
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -17,24 +28,18 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  font-family: $font;
+  font-size: $font-size;
+  font-weight: $regular;
+  color: $white;
+  background-color: $black;
+}
+
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
-}
-
-.button--blue {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #1C75DB;
-  color: #1C75DB;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--blue:hover {
-  color: #fff;
-  background-color: #1C75DB;
 }
 </style>

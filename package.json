@@ -28,8 +28,10 @@
     "terser": "^3.14.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9",
+    "@nuxtjs/style-resources": "^0.1.1",
     "autoprefixer": "^8.6.4",
-    "tailwindcss": "^0.7.0"
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "sass-loader": "^7.1.0"
   }
 }
