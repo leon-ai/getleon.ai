@@ -16,13 +16,11 @@
 </template>
 
 <style lang="scss" scoped>
-$logo-size: 66px;
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $sm-space 0;
+  padding: $main-y-padding 0;
 }
 
 a {
@@ -32,7 +30,6 @@ a {
 
 #logo {
   background: no-repeat url(/img/logo.svg);
-  width: $logo-size;
   height: $logo-size;
 }
 

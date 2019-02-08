@@ -16,15 +16,38 @@
     </svg>
     <div class="container">
       <footer>
-        FOOTER
         <div id="copyright">
-          Released under the MIT License
-          Copyright © 2019 - present
-          <strong><a href="https://twitter.com/louistiti_fr" target="_blank">Louis Grenard</a></strong>
+          <img src="/img/logo_bw.svg" alt="Leon logo">
+          <p>
+            Released under the <a href="https://opensource.org/licenses/MIT">MIT License</a><br>
+            Copyright © 2019 - present<br>
+            <strong><a href="https://twitter.com/louistiti_fr" target="_blank">Louis Grenard</a></strong>
+          </p>
         </div>
+        <hr>
         <div id="more">
-          <h4>Resources</h4>
-          <h4>Stay Tuned</h4>
+          <div class="column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="https://github.com/leon-ai/leon" target="_blank">GitHub</a></li>
+              <li><a href="https://github.com/leon-ai/leon/issues" target="_blank">Issues</a></li>
+              <li><a href="https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md" target="_blank">Contribute</a></li>
+              <li><a href="https://github.com/leon-ai/leon/blob/develop/CHANGELOG.md" target="_blank">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h4>Stay Tuned</h4>
+            <ul>
+              <li><a href="https://blog.getleon.ai" target="_blank">Blog</a></li>
+              <li><a href="https://roadmap.getleon.ai" target="_blank">Roadmap</a></li>
+              <li><a href="https://twitter.com/hashtag/LeonAI" target="_blank">#LeonAI</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li><a href="https://donate.getleon.ai" target="_blank">Donate</a></li>
+            </ul>
+          </div>
         </div>
       </footer>
     </div>
@@ -37,6 +60,69 @@ section {
 }
 
 footer {
+  display: flex;
   color: $grey-dark;
+  justify-content: space-between;
+  font-size: 0.875em;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: color .2s ease;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+#copyright {
+  display: flex;
+  align-items: center;
+  line-height: 1.3em;
+  padding: $main-y-padding 0;
+
+  img {
+    height: $logo-size;
+  }
+
+  p {
+    margin-left: 10px;
+  }
+
+  a {
+    font-weight: $semi-bold;
+  }
+}
+
+hr {
+  position: absolute;
+  align-self: center;
+  content: '';
+  left: 50%;
+  height: $logo-size;
+  border: none;
+  border-right: 1px solid $grey-light;
+}
+
+#more {
+  display: flex;
+  justify-items: flex-end;
+  justify-content: space-between;
+  width: 50%;
+  padding-left: 146px;
+}
+
+.column {
+  justify-self: flex-end;
+
+  h4 {
+    text-transform: uppercase;
+    font-weight: $semi-bold;
+    margin-bottom: 10px;
+  }
+  ul {
+    line-height: 1.5em;
+  }
 }
 </style>
