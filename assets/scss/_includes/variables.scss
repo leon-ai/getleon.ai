@@ -44,3 +44,12 @@ $xs-space: 16px;
 $sm-space: $xs-space * 2;
 $md-space: $xs-space * 4;
 $lg-space: $xs-space * 8;
+
+/**
+ * Media queries sizes
+ */
+
+$xsxs-mq: 480px; // Even smaller than extra small devices (phones)
+$xs-mq: 768px; // Extra small devices (phones)
+$sm-mq: 991px; // Small devices (tablets)
+$md-mq: 1199px; // Medium devices (desktops)

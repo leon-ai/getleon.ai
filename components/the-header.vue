@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div id="header" class="container">
     <header>
       <a href="/" id="logo">
         <h2>Leon</h2>
@@ -16,76 +16,108 @@
 </template>
 
 <style lang="scss" scoped>
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: $main-y-padding 0;
-}
-
-a {
-  text-decoration: none;
-  color: $white;
-}
-
-#logo {
-  background: no-repeat url(/img/logo.svg);
-  height: $logo-size;
-}
-
-h2 {
-  line-height: $logo-size;
-  margin-left: $logo-size + 10px;
-  font-size: 1.75em;
-  font-weight: $semi-bold;
-}
-
-ul {
-  display: flex;
-  list-style: none;
-  font-size: 1.25em;
+#header {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $main-y-padding 0;
+  }
 
   a {
-    &::before, &::after {
-      position: relative;
-      display: block;
-      content: '';
-      height: 3px;
-      opacity: 0;
-      width: 0;
-      transition: width .4s ease, opacity .4s ease;
-      background-color: $blue;
-    }
+    text-decoration: none;
+    color: $white;
+  }
 
-    &::before {
-      top: calc(1em + 7px);
-    }
+  #logo {
+    background: no-repeat url(/img/logo.svg);
+    height: $logo-size;
+  }
 
-    &::after {
-      top: 11px;
-    }
+  h2 {
+    line-height: $logo-size;
+    margin-left: $logo-size + 10px;
+    font-size: 1.75em;
+    font-weight: $semi-bold;
+  }
 
-    &:hover {
+  ul {
+    display: flex;
+    list-style: none;
+    font-size: 1.25em;
+
+    a {
       &::before, &::after {
-        opacity: 1;
+        position: relative;
+        display: block;
+        content: '';
+        height: 3px;
+        opacity: 0;
+        width: 0;
+        transition: width .4s ease, opacity .4s ease;
+        background-color: $blue;
       }
 
       &::before {
-        width: 100%;
+        top: calc(1em + 7px);
       }
 
       &::after {
-        transition-delay: .4s;
-        width: 18%;
+        top: 11px;
+      }
+
+      &:hover {
+        &::before, &::after {
+          opacity: 1;
+        }
+
+        &::before {
+          width: 100%;
+        }
+
+        &::after {
+          transition-delay: .4s;
+          width: 18%;
+        }
+      }
+    }
+
+    li {
+      padding-right: 50px;
+
+      &:last-child {
+        padding-right: 0;
       }
     }
   }
+}
 
-  li {
-    padding-right: 50px;
+@media all and (max-width: $xs-mq) {
+  $logo-size: 48px;
 
-    &:last-child {
-      padding-right: 0;
+  header {
+    padding: ($main-y-padding / 2) 0 !important;
+  }
+
+  #logo {
+    height: $logo-size !important;
+  }
+
+  h2 {
+    line-height: $logo-size !important;
+    margin-left: $logo-size + 10px !important;
+    font-size: 1.5em !important;
+  }
+
+  ul {
+    font-size: 1em !important;
+
+    li {
+      padding-right: 25px !important;
+
+      &:last-child {
+        padding-right: 0 !important;
+      }
     }
   }
 }

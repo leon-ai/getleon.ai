@@ -85,48 +85,48 @@ $monitor-animation-delay: 1.5s;
 
 #monitor {
   width: 556px;
-}
 
-@keyframes movePlugBody {
-  50% {
-    transform: translateY(-28px);
+  @keyframes movePlugBody {
+    50% {
+      transform: translateY(-28px);
+    }
+    100% {
+      transform: translate(48px, -28px);
+    }
   }
-  100% {
-    transform: translate(48px, -28px);
+
+  #monitor-plug-body {
+    animation: movePlugBody $monitor-animation-duration $monitor-animation-delay ease-in forwards;
   }
-}
 
-#monitor-plug-body {
-  animation: movePlugBody $monitor-animation-duration $monitor-animation-delay ease-in forwards;
-}
-
-@keyframes movePlugRod1 {
-  50% {
-    transform: translateY(-16px);
+  @keyframes movePlugRod1 {
+    50% {
+      transform: translateY(-16px);
+    }
+    100% {
+      transform: translate(25px, -16px);
+    }
   }
-  100% {
-    transform: translate(25px, -16px);
+
+  #monitor-plug-rod-1 {
+    animation: movePlugRod1 $monitor-animation-duration $monitor-animation-delay ease-in forwards;
   }
-}
 
-#monitor-plug-rod-1 {
-  animation: movePlugRod1 $monitor-animation-duration $monitor-animation-delay ease-in forwards;
-}
-
-@keyframes movePlugRod2 {
-  50% {
-    transform: translateY(-16px);
+  @keyframes movePlugRod2 {
+    50% {
+      transform: translateY(-16px);
+    }
+    100% {
+      transform: translate(15px, -16px);
+    }
   }
-  100% {
-    transform: translate(15px, -16px);
+
+  #monitor-plug-rod-2 {
+    animation: movePlugRod2 $monitor-animation-duration $monitor-animation-delay ease-in forwards;
   }
-}
 
-#monitor-plug-rod-2 {
-  animation: movePlugRod2 $monitor-animation-duration $monitor-animation-delay ease-in forwards;
-}
-
-#monitor-wire-end {
-  animation: moveWire $monitor-animation-duration $monitor-animation-delay ease-in forwards;
+  #monitor-wire-end {
+    animation: moveWire $monitor-animation-duration $monitor-animation-delay ease-in forwards;
+  }
 }
 </style>
