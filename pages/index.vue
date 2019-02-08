@@ -38,7 +38,7 @@ section {
 h1 {
   font-size: 2.75em;
   font-weight: $bold;
-  width: 364px;
+  width: 400px;
   line-height: 1.25em;
 
   &::after {
@@ -81,9 +81,10 @@ input {
   border: none;
   border-radius: 2em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+  transition: box-shadow .3s ease;
 
   &::placeholder {
-    color: inherit;
+    color: $grey-dark;
   }
 
   &:focus {
