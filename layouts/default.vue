@@ -47,4 +47,10 @@ body {
 #wrapper {
   background-color: $black;
 }
+
+@media all and (max-width: $xs-mq) {
+  #wrapper {
+    position: absolute;
+  }
+}
 </style>

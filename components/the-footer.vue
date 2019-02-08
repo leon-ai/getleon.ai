@@ -161,6 +161,7 @@ section#footer {
   }
 
   #more {
+    margin-top: 20px;
     padding: 0 37px !important;
     width: 100% !important;
     justify-content: space-around !important;
