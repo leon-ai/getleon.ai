@@ -9,6 +9,9 @@
  */
 
 @media all and (max-width: $md-mq) {
+  .container {
+    max-width: 970px;
+  }
 }
 
 /**
@@ -16,6 +19,9 @@
  */
 
 @media all and (max-width: $sm-mq) {
+  .container {
+    max-width: 100%;
+  }
 }
 
 /**
