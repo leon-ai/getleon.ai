@@ -122,6 +122,7 @@ hr {
   justify-content: space-between;
   width: 50%;
   padding-left: 146px;
+  padding-bottom: $main-y-padding;
 }
 
 .column {

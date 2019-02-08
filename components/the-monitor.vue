@@ -81,6 +81,7 @@
 
 <style lang="scss" scoped>
 $monitor-animation-duration: 3s;
+$monitor-animation-delay: 1.5s;
 
 #monitor {
   width: 556px;
@@ -96,7 +97,7 @@ $monitor-animation-duration: 3s;
 }
 
 #monitor-plug-body {
-  animation: movePlugBody $monitor-animation-duration ease-in forwards;
+  animation: movePlugBody $monitor-animation-duration $monitor-animation-delay ease-in forwards;
 }
 
 @keyframes movePlugRod1 {
@@ -109,7 +110,7 @@ $monitor-animation-duration: 3s;
 }
 
 #monitor-plug-rod-1 {
-  animation: movePlugRod1 $monitor-animation-duration ease-in forwards;
+  animation: movePlugRod1 $monitor-animation-duration $monitor-animation-delay ease-in forwards;
 }
 
 @keyframes movePlugRod2 {
@@ -122,10 +123,10 @@ $monitor-animation-duration: 3s;
 }
 
 #monitor-plug-rod-2 {
-  animation: movePlugRod2 $monitor-animation-duration ease-in forwards;
+  animation: movePlugRod2 $monitor-animation-duration $monitor-animation-delay ease-in forwards;
 }
 
 #monitor-wire-end {
-  animation: moveWire $monitor-animation-duration ease-in forwards;
+  animation: moveWire $monitor-animation-duration $monitor-animation-delay ease-in forwards;
 }
 </style>
