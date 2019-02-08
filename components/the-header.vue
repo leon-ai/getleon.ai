@@ -97,10 +97,12 @@
 
   header {
     padding: ($main-y-padding / 2) 0 !important;
+    flex-direction: column;
   }
 
   #logo {
     height: $logo-size !important;
+    margin-bottom: 16px;
   }
 
   h2 {

@@ -84,7 +84,7 @@ $monitor-animation-duration: 3s;
 $monitor-animation-delay: 1.5s;
 
 #monitor {
-  width: 556px;
+  width: 596px;
 
   @keyframes movePlugBody {
     50% {
@@ -127,6 +127,12 @@ $monitor-animation-delay: 1.5s;
 
   #monitor-wire-end {
     animation: moveWire $monitor-animation-duration $monitor-animation-delay ease-in forwards;
+  }
+}
+
+@media all and (max-width: $xs-mq) {
+  #monitor {
+    width: 100%;
   }
 }
 </style>

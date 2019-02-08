@@ -141,4 +141,35 @@ section#hero {
     }
   }
 }
+
+@media all and (max-width: $xs-mq) {
+  h1 {
+    width: 96% !important;
+    font-size: 2em !important;
+  }
+
+  h3 {
+    font-size: 1.75em !important;
+  }
+
+  p {
+    font-size: 1em !important;
+  }
+
+  form {
+    width: 100% !important;
+  }
+
+  input, button {
+    font-size: 0.75em !important;
+  }
+
+  input {
+    padding: 14px 20px !important;
+  }
+
+  button {
+    padding: 8px 10px !important;
+  }
+}
 </style>
