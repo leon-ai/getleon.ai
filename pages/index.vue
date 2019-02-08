@@ -31,7 +31,8 @@ $cta-color-shadow: rgba(236, 41, 122, .75);
 section {
   display: flex;
   justify-content: space-between;
-  padding: 52px 0;
+  padding-top: 52px;
+  padding-bottom: 26px;
 }
 
 h1 {

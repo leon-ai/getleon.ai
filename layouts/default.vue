@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div id="wrapper">
     <TheHeader/>
     <main>
       <Nuxt/>
     </main>
-    <TheFooter/>
+  <TheFooter/>
   </div>
 </template>
 
@@ -15,17 +15,6 @@ export default {
   components: {
     TheHeader,
     TheFooter
-  },
-  mounted() {
-    const elem = document.createElement('style');
-    elem.type = 'text/css'
-    elem.textContent = '@keyframes moveWire {\n' +
-        '  50% {\n' +
-        '    d: path(\'M530,278.605932 C409.271909,202.01271 496.030494,222.01271 550.275753,236.605932 L539.147162,228.605932\');\n' +
-        '    transform: translateX(-40px);\n' +
-        '  }\n' +
-        '}';
-    document.head.appendChild(elem);
   }
 }
 </script>
@@ -36,6 +25,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   box-sizing: border-box;
 }
 
@@ -44,7 +34,7 @@ body {
   font-size: $font-size;
   font-weight: $regular;
   color: $white;
-  background-color: $black;
+  background-color: $white;
 }
 
 *,
@@ -52,5 +42,9 @@ body {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+#wrapper {
+  background-color: $black;
 }
 </style>
