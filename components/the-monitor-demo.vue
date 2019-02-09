@@ -1,6 +1,7 @@
 <template>
   <foreignObject :x="x" :y="y" :width="width" :height="height">
     <div id="monitor-demo" ref="monitorDemo">
+      <a href="https://www.youtube.com/watch?v=p7GRGiicO1c" id="xs-screen-fallback" target="_blank"></a>
       <div v-for="(message, index) in messages"
            :key="index" :ref="`bubble-${index}`"
            :class="['bubble', 'hidden', message.who === 'leon' ? 'leon' : 'me']">
@@ -34,7 +35,7 @@ export default {
   },
   data() {
     return {
-      delay: 100,
+      delay: 2000,
       messages: [
         { text: 'Hello.', who: 'me' },
         { text: 'Hi! What\'s up?!', who: 'leon' },
@@ -109,6 +110,14 @@ export default {
     overflow: scroll;
   }
 
+  #xs-screen-fallback {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: $blue;
+    mask: url(/img/icons/youtube.svg) no-repeat 50% 50%;
+  }
+
   .bubble {
     display: flex;
     margin-bottom: .5em;
@@ -149,6 +158,20 @@ export default {
       background-color: $grey-light;
       color: $black;
     }
+  }
+}
+
+@media all and (max-width: $xs-mq) {
+  #monitor-demo {
+    padding: 0 !important;
+  }
+
+  #xs-screen-fallback {
+    display: block !important;
+  }
+
+  .bubble {
+    display: none !important;
   }
 }
 </style>
