@@ -46,38 +46,41 @@
     list-style: none;
     font-size: 1.25em;
 
-    a {
-      &::before, &::after {
-        position: relative;
-        display: block;
-        content: '';
-        height: 3px;
-        opacity: 0;
-        width: 0;
-        transition: width .4s ease, opacity .4s ease;
-        background-color: $blue;
-      }
-
-      &::before {
-        top: calc(1em + 7px);
-      }
-
-      &::after {
-        top: 11px;
-      }
-
-      &:hover {
+    // https://css-tricks.com/annoying-mobile-double-tap-link-issue/
+    @media (hover) {
+      a {
         &::before, &::after {
-          opacity: 1;
+          position: relative;
+          display: block;
+          content: '';
+          height: 3px;
+          opacity: 0;
+          width: 0;
+          transition: width .4s ease, opacity .4s ease;
+          background-color: $blue;
         }
 
         &::before {
-          width: 100%;
+          top: calc(1em + 7px);
         }
 
         &::after {
-          transition-delay: .4s;
-          width: 18%;
+          top: 11px;
+        }
+
+        &:hover {
+          &::before, &::after {
+            opacity: 1;
+          }
+
+          &::before {
+            width: 100%;
+          }
+
+          &::after {
+            transition-delay: .4s;
+            width: 18%;
+          }
         }
       }
     }
