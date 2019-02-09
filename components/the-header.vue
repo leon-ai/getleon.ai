@@ -49,6 +49,7 @@
     a {
       &::before, &::after {
         position: relative;
+        pointer-events: none;
         display: block;
         content: '';
         height: 3px;
