@@ -5,9 +5,9 @@
         <h1>Your Open-Source Personal Assistant</h1>
         <h3>Get the latest from Leon</h3>
         <p>Receive news, announcements, and more.</p>
-        <form action="" method="post">
-          <input type="email" required spellcheck="false" placeholder="john.doe@example.com">
-          <button type="submit">Stay updated</button>
+        <form action="https://www.getrevue.co/profile/leon/add_subscriber" method="post" target="_blank">
+          <input type="email" required spellcheck="false" placeholder="john.doe@example.com" name="member[email]">
+          <button type="submit" name="member[subscribe]">Stay updated</button>
           <small>We don't spam.</small>
         </form>
       </div>
