@@ -8,6 +8,9 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
     title: 'Leon - Your Open-Source Personal Assistant',
     meta: [
       { charset: 'utf-8' },
@@ -24,11 +27,9 @@ module.exports = {
       { name: 'twitter:image', content: 'https://getleon.ai/img/logo_t.png' }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/img/favicon.png' }
-    ],
-    htmlAttrs: {
-      lang: 'en'
-    },
+      { rel: 'icon', type: 'image/png', href: '/img/favicon.png' },
+      { rel: 'stylesheet', href: '/css/fallback.css' } // sass-loader does not handle d: path()
+    ]
   },
 
   /*
