@@ -30,9 +30,9 @@
             </g>
           </svg>
           <p>
-            Released under the <a href="https://opensource.org/licenses/MIT">MIT License</a><br>
+            Released under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT License</a><br>
             Copyright © 2019 - present<br>
-            <strong><a href="https://twitter.com/louistiti_fr" target="_blank">Louis Grenard</a></strong>
+            <strong><a href="https://twitter.com/louistiti_fr" target="_blank" rel="noopener">Louis Grenard</a></strong>
           </p>
         </div>
         <hr>
@@ -40,23 +40,23 @@
           <div class="column">
             <h4>Resources</h4>
             <ul>
-              <li><a href="https://github.com/leon-ai/leon" target="_blank">GitHub</a></li>
-              <li><a href="https://github.com/leon-ai/leon/issues" target="_blank">Issues</a></li>
-              <li><a href="https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md" target="_blank">Contribute</a></li>
-              <li><a href="https://github.com/leon-ai/leon/blob/develop/CHANGELOG.md" target="_blank">Changelog</a></li>
+              <li><a href="https://github.com/leon-ai/leon" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://github.com/leon-ai/leon/issues" target="_blank" rel="noopener">Issues</a></li>
+              <li><a href="https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md" target="_blank" rel="noopener">Contribute</a></li>
+              <li><a href="https://github.com/leon-ai/leon/blob/develop/CHANGELOG.md" target="_blank" rel="noopener">Changelog</a></li>
             </ul>
           </div>
           <div class="column">
             <h4>Stay Tuned</h4>
             <ul>
-              <li><a href="https://blog.getleon.ai" target="_blank">Blog</a></li>
-              <li><a href="https://roadmap.getleon.ai" target="_blank">Roadmap</a></li>
-              <li><a href="https://twitter.com/hashtag/LeonAI" target="_blank">#LeonAI</a></li>
+              <li><a href="https://blog.getleon.ai" target="_blank" rel="noopener">Blog</a></li>
+              <li><a href="https://roadmap.getleon.ai" target="_blank" rel="noopener">Roadmap</a></li>
+              <li><a href="https://twitter.com/hashtag/LeonAI" target="_blank" rel="noopener">#LeonAI</a></li>
             </ul>
           </div>
           <div class="column">
             <ul>
-              <li><a href="https://donate.getleon.ai" target="_blank">Donate</a></li>
+              <li><a href="https://donate.getleon.ai" target="_blank" rel="noopener">Donate</a></li>
             </ul>
           </div>
         </div>

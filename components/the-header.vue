@@ -6,9 +6,9 @@
       </a>
       <nav>
         <ul>
-          <li><a href="https://docs.getleon.ai" target="_blank">Getting Started</a></li>
-          <li><a href="https://github.com/leon-ai/leon" target="_blank">GitHub</a></li>
-          <li><a href="https://roadmap.getleon.ai" target="_blank">Roadmap</a></li>
+          <li><a href="https://docs.getleon.ai" target="_blank" rel="noopener">Getting Started</a></li>
+          <li><a href="https://github.com/leon-ai/leon" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://roadmap.getleon.ai" target="_blank" rel="noopener">Roadmap</a></li>
         </ul>
       </nav>
     </header>
@@ -49,7 +49,6 @@
     a {
       &::before, &::after {
         position: relative;
-        pointer-events: none;
         display: block;
         content: '';
         height: 3px;

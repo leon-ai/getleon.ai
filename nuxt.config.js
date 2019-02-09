@@ -12,7 +12,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'theme-color', content: '#1c75bd' },
+      { name: 'theme-color', content: '#1C75DB' },
       { hid: 'description', name: 'description', content: 'Leon is an open-source personal assistant who can live on your server. He is built on the top of Node.js, Python and artificial intelligence concepts.' },
       { name: 'og:type', content: 'website' },
       { name: 'og:title', content: 'Leon - Your Open-Source Personal Assistant' },
@@ -24,9 +24,7 @@ module.exports = {
       { name: 'twitter:image', content: 'https://getleon.ai/img/logo_t.png' }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/img/favicon.png' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,400i,600,700' },
-      { rel: 'stylesheet', href: '/css/fallback.css' } // sass-loader does not handle d: path()
+      { rel: 'icon', type: 'image/png', href: '/img/favicon.png' }
     ],
     htmlAttrs: {
       lang: 'en'
@@ -42,7 +40,6 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@/assets/scss/main.scss'
   ],
 
   /*
@@ -58,9 +55,6 @@ module.exports = {
     '@nuxtjs/style-resources'
   ],
   styleResources: {
-    css: [
-      'assets/css/fallback.css'
-    ],
     scss: [
       'assets/scss/main.scss'
     ]
