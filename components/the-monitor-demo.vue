@@ -105,6 +105,10 @@ export default {
   width: 100%;
   overflow-y: auto;
 
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
   #xs-screen-fallback {
     width: 100%;
     height: 100%;
@@ -114,6 +118,8 @@ export default {
   }
 
   .bubble {
+    position: relative;
+    z-index: -10;
     display: flex;
     margin-bottom: .5em;
     transform: translateZ(0);
