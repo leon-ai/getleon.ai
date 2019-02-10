@@ -103,10 +103,7 @@ export default {
   padding: 12px;
   height: 100%;
   width: 100%;
-
-  &.done {
-    overflow: scroll;
-  }
+  overflow-y: auto;
 
   #xs-screen-fallback {
     width: 100%;
