@@ -99,8 +99,6 @@ export default {
 
 <style lang="scss" scoped>
 #monitor-demo {
-  display: flex;
-  flex-direction: column;
   font-size: 1em;
   padding: 12px;
   height: 100%;
