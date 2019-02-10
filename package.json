@@ -28,6 +28,7 @@
     "terser": "^3.14.1"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.0.3",
     "@nuxtjs/style-resources": "^0.1.1",
     "autoprefixer": "^8.6.4",
     "node-sass": "^4.11.0",

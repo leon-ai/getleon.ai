@@ -54,14 +54,26 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/google-analytics'
   ],
+
   /**
    * Global import inside the project
    */
   styleResources: {
     scss: [
       '@/assets/css/_includes/variables.scss'
+    ]
+  },
+
+  /**
+   * Google Analytics
+   */
+  'google-analytics': {
+    id: 'UA-131760989-2',
+    set: [
+      { field: 'anonymizeIp', value: true }
     ]
   },
 
