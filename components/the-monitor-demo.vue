@@ -1,7 +1,7 @@
 <template>
   <foreignObject :x="x" :y="y" :width="width" :height="height">
     <div id="monitor-demo" ref="monitorDemo">
-      <a href="https://www.youtube.com/watch?v=p7GRGiicO1c" id="xs-screen-fallback" target="_blank"></a>
+      <a href="https://www.youtube.com/watch?v=p7GRGiicO1c" id="xs-screen-fallback" target="_blank" rel="noopener" aria-hidden="true"></a>
       <div v-for="(message, index) in messages"
            :key="index" :ref="`bubble-${index}`"
            :class="['bubble', 'hidden', message.who === 'leon' ? 'leon' : 'me']">
