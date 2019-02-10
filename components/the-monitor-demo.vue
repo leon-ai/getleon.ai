@@ -98,16 +98,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#monitor-demo {
-  font-size: 1em;
-  padding: 12px;
-  height: 100%;
-  width: 100%;
+foreignObject, #monitor-demo {
   overflow-y: auto;
 
   &::-webkit-scrollbar {
     width: 0;
   }
+}
+
+#monitor-demo {
+  font-size: 1em;
+  padding: 12px;
+  height: 100%;
+  width: 100%;
 
   #xs-screen-fallback {
     width: 100%;
@@ -118,8 +121,6 @@ export default {
   }
 
   .bubble {
-    position: relative;
-    z-index: -10;
     display: flex;
     margin-bottom: .5em;
     transform: translateZ(0);
