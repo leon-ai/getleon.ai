@@ -54,11 +54,6 @@
               <li><a href="https://twitter.com/hashtag/LeonAI" target="_blank" rel="noopener">#LeonAI</a></li>
             </ul>
           </div>
-          <div class="column">
-            <ul>
-              <li><a href="https://donate.getleon.ai" target="_blank" rel="noopener">Donate</a></li>
-            </ul>
-          </div>
         </div>
       </footer>
     </div>
@@ -118,12 +113,14 @@ section#footer {
   #more {
     display: flex;
     justify-content: space-between;
-    width: 50%;
-    padding-left: 146px;
     padding-bottom: $main-y-padding;
   }
 
   .column {
+    &:first-child {
+      margin-right: 146px;
+    }
+
     h4 {
       text-transform: uppercase;
       font-weight: $semi-bold;

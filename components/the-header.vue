@@ -9,6 +9,7 @@
           <li><a href="https://docs.getleon.ai" target="_blank" rel="noopener">Getting Started</a></li>
           <li><a href="https://github.com/leon-ai/leon" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="https://roadmap.getleon.ai" target="_blank" rel="noopener">Roadmap</a></li>
+          <li><a href="https://donate.getleon.ai" target="_blank" rel="noopener">Donate</a></li>
         </ul>
       </nav>
     </header>
@@ -87,9 +88,26 @@
 
     li {
       padding-right: 50px;
+      align-self: center;
 
       &:last-child {
         padding-right: 0;
+        background-color: $blue;
+        border-radius: 4px;
+        line-height: 44px;
+        height: 44px;
+        width: 128px;
+        text-align: center;
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+
+          &::before, &::after {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -122,6 +140,9 @@
 
       &:last-child {
         padding-right: 0 !important;
+        line-height: 34px !important;
+        height: 34px !important;
+        width: 108px !important;
       }
     }
   }
