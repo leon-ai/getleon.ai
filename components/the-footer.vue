@@ -43,7 +43,7 @@
               <li><a href="https://github.com/leon-ai/leon" target="_blank" rel="noopener">GitHub</a></li>
               <li><a href="https://github.com/leon-ai/leon/issues" target="_blank" rel="noopener">Issues</a></li>
               <li><a href="https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md" target="_blank" rel="noopener">Contribute</a></li>
-              <li><a href="https://github.com/leon-ai/leon/blob/develop/CHANGELOG.md" target="_blank" rel="noopener">Changelog</a></li>
+              <li><a href="https://changelog.getleon.ai" target="_blank" rel="noopener">Changelog</a></li>
             </ul>
           </div>
           <div class="column">
