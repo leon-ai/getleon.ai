@@ -90,7 +90,7 @@
       padding-right: 50px;
       align-self: center;
 
-      &:last-child {
+      /* &:last-child {
         padding-right: 0;
         background-color: $blue;
         border-radius: 4px;
@@ -108,7 +108,7 @@
             display: none;
           }
         }
-      }
+      } */
     }
   }
 }
