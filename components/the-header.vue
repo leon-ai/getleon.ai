@@ -9,7 +9,7 @@
           <li><a href="https://docs.getleon.ai" target="_blank" rel="noopener">Getting Started</a></li>
           <li><a href="https://github.com/leon-ai/leon" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="https://roadmap.getleon.ai" target="_blank" rel="noopener">Roadmap</a></li>
-          <li><a href="https://donate.getleon.ai" target="_blank" rel="noopener">Donate</a></li>
+          <li><a href="https://sponsor.getleon.ai" target="_blank" rel="noopener">Sponsor</a></li>
         </ul>
       </nav>
     </header>
