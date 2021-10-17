@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the website of Leon. It is available on [getleon.ai](https://getleon.ai), built on the top of [Nuxt.js](https://nuxtjs.org) and hosted by [Netlify](https://www.netlify.com).
+This repository contains the website of Leon. It is available on [getleon.ai](https://getleon.ai), built on the top of [Next.js](https://nextjs.org) and hosted by [Netlify](https://www.netlify.com).
 
 ## Development
 

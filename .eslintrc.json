@@ -1,0 +1,13 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "quotes": ["error", "single"],
+    "no-trailing-spaces": "off",
+    "linebreak-style": "off",
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "space-before-function-paren": ["error", "always"],
+    "prefer-destructuring": ["error", { "array": true, "object": true }],
+    "comma-dangle": ["error", "never"],
+    "semi": ["error", "never"]
+  }
+}
