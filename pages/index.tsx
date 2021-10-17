@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import styles from '@/styles/HomePage.module.sass'
+import styles from '@/styles/pages/HomePage.module.sass'
 
 const headTitle = 'Leon - Your Open-Source Personal Assistant'
 
