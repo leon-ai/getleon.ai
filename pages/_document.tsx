@@ -27,6 +27,8 @@ class MyDocument extends Document {
           <meta name="twitter:creator" content="@louistiti_fr" />
           <link rel="icon" href="/img/favicon.png" type="image/png" />
           <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
+          <link rel="preconnect" href="https://unpkg.com" />
+          <link rel="dns-prefetch" href="https://unpkg.com" />
           <link rel="preconnect" href="https://www.google-analytics.com" />
           <link rel="dns-prefetch" href="https://www.google-analytics.com" />
           <link rel="preconnect" href="https://www.googletagmanager.com" />

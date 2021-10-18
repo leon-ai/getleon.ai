@@ -29,3 +29,23 @@ a
   width: var(--width-container)
   margin: 0 auto
   padding: 0 var(--padding-x-container)
+
+.icon
+  position: relative
+  vertical-align: middle
+  top: -1px
+
+button, .button
+  background-color: var(--color-white)
+  color: var(--color-black)
+  border-radius: var(--borderRadius-main)
+  font-weight: var(--fontWeight-semibold)
+  padding: 8px 20px
+  line-height: var(--fontSize-main)
+  text-align: center
+  border: 1px solid transparent
+  transition: background-color var(--transitionDuration-main) var(--transitionTiming-main), color var(--transitionDuration-main) var(--transitionTiming-main), border-color var(--transitionDuration-main) var(--transitionTiming-main)
+  &:hover
+    background-color: var(--color-black)
+    color: var(--color-white)
+    border-color: var(--color-white)

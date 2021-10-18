@@ -28,6 +28,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <Component {...pageProps} />
       </Layout>
       <Script
+        src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"
+        onLoad={() => {
+          window.feather.replace()
+        }}
+      />
+      <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
