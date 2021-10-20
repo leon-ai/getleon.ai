@@ -5,6 +5,10 @@
 *, :after, :before
   box-sizing: border-box
 
+::selection
+  background-color: var(--color-blue)
+  color: var(--color-white)
+
 html, body
   padding: 0
   margin: 0
@@ -31,16 +35,14 @@ a
   padding: 0 var(--padding-x-container)
 
 .icon
-  position: relative
   vertical-align: middle
-  top: -1px
 
 button, .button
   background-color: var(--color-white)
   color: var(--color-black)
   border-radius: var(--borderRadius-main)
   font-weight: var(--fontWeight-semibold)
-  padding: 8px 20px
+  padding: 4px 18px
   line-height: var(--fontSize-main)
   text-align: center
   border: 1px solid transparent
@@ -49,3 +51,7 @@ button, .button
     background-color: var(--color-black)
     color: var(--color-white)
     border-color: var(--color-white)
+
+h1, h2, h3
+  color: var(--color-white)
+  font-weight: var(--fontWeight-bold)

@@ -1,7 +1,8 @@
-import type { NextPage, GetServerSideProps } from 'next'
+import type { NextPage, GetStaticProps } from 'next'
 import Head from 'next/head'
 
 import styles from '@/styles/pages/HomePage.module.sass'
+import Introduction from '@/components/Introduction'
 
 const headTitle = 'Leon - Your Open-Source Personal Assistant'
 
@@ -14,28 +15,46 @@ const HomePage: NextPage = (props) => {
         <meta name="og:title" content={headTitle} />
         <meta name="twitter:title" content={headTitle} />
       </Head>
-      Main content...
+      <div className={`${styles.pageContainer} container`}>
+        <section>
+          <Introduction />
+        </section>
+        <section>
+          {/* Features */}
+        </section>
+        <section>
+          {/* TTS/STT */}
+        </section>
+        <section>
+          {/* Demo */}
+        </section>
+        <section>
+          {/* Roadmap */}
+        </section>
+        <section>
+          {/* Sponsor */}
+        </section>
+        <section>
+          {/* Get started */}
+        </section>
+      </div>
     </>
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   /**
    * TODO
    * 1. Check quota
-   * 2. If quote not enough, just return GitHub logo without stars number
+   * 2. If quota not enough, just return GitHub logo without stars number
    * 3. Otherwise req "https://api.github.com/repos/leon-ai/leon" and display with stars number via "stargazers_count" property
    */
 
-  const res = await fetch('https://api.github.com/rate_limit', {
-    headers: {
-      Authorization: `token ${process.env.GITHUB_OAUTH_TOKEN}`
-    }
-  })
-  const data = await res.json()
+  /*const res = await fetch('https://api.github.com/repos/leon-ai/leon')
+  const data = await res.json()*/
 
   return {
-    props: { data }
+    props: { }
   }
 }
 

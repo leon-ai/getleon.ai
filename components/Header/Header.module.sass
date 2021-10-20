@@ -1,5 +1,6 @@
 .header
-  padding: 28px 0
+  padding: var(--header-footer-y-padding) 0
+  margin-bottom: 72px
 
 .wrapper
   display: flex
@@ -8,4 +9,39 @@
 
 .menu
   display: flex
-  border: 1px solid red
+
+  nav
+    display: flex
+    margin-right: 72px
+    ul
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 228px
+    a
+      padding: 8px 0
+      transition: color var(--transitionDuration-main) var(--transitionTiming-main)
+      &:hover
+        color: var(--color-white)
+
+.social
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 228px
+
+  a:not(:last-child)
+    path
+      fill: var(--color-primary-grey)
+      transition: fill var(--transitionDuration-main) var(--transitionTiming-main)
+    &:hover path
+      fill: var(--color-white)
+
+.discord
+  width: 23px
+  height: 26px
+
+.github
+  width: 26px
+  height: 26px
+
