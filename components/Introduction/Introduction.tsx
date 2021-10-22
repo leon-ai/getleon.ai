@@ -1,6 +1,7 @@
 import React from 'react'
 
 import styles from '@/components/Introduction/Introduction.module.sass'
+import Loader from '@/components/Loader'
 
 interface IIntroductionProps { }
 
@@ -13,6 +14,7 @@ const Introduction: React.FC<IIntroductionProps> = () => {
         <br />
         He does stuff when you ask him to.
       </p>
+      <Loader />
     </div>
   )
 }
