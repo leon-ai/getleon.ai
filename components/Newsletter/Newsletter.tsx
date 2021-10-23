@@ -10,9 +10,18 @@ const Newsletter: React.FC<INewsletterProps> = () => {
       <span className={styles.title}>
         Get the latest from Leon
       </span>
-      <form action="https://www.getrevue.co/profile/leon/add_subscriber">
+      <form
+        action="https://www.getrevue.co/profile/leon/add_subscriber"
+        method="post"
+        target="_blank"
+      >
         <div className={styles.inputContainer}>
-          <input type="email" placeholder="Enter your email address..." required />
+          <input
+            type="email"
+            placeholder="Enter your email address..."
+            name="member[email]"
+            required
+          />
           <button type="submit">Stay updated</button>
         </div>
       </form>
