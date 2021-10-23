@@ -1,0 +1,47 @@
+.container
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-bottom: 32px
+  gap: 8px
+
+  i
+    font-style: italic
+    font-size: .8rem
+
+.inputContainer
+  display: flex
+  align-items: center
+  flex-direction: row-reverse
+  position: relative
+  width: 372px
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    border-radius: 4px
+    padding: 2px
+    background: linear-gradient(to right, var(--color-blue) 0%, var(--color-pink) 50%, var(--color-white) 100%)
+    mask: linear-gradient(to right, var(--color-black), var(--color-black)) content-box, linear-gradient(to right, var(--color-black), var(--color-black))
+    mask-composite: exclude
+
+  input
+    position: relative
+    padding: 18px
+    width: 100%
+    box-shadow: 0 0 10px 10px transparent
+    transition: box-shadow var(--transitionDuration-main) var(--transitionTiming-main)
+    &:focus
+      box-shadow: 0 0 10px 6px rgba(255, 255, 255, .2)
+
+  button
+    position: absolute
+    margin-right: 8px
+    height: 34px
+
+.title
+  color: var(--color-white)
+  font-weight: var(--fontWeight-semibold)

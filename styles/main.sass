@@ -9,6 +9,9 @@
   background-color: var(--color-blue)
   color: var(--color-white)
 
+::placeholder
+  color: var(--color-primary-grey)
+
 html, body
   padding: 0
   margin: 0
@@ -38,6 +41,7 @@ a
   vertical-align: middle
 
 button, .button
+  cursor: pointer
   background-color: var(--color-white)
   color: var(--color-black)
   border-radius: var(--borderRadius-main)
@@ -51,6 +55,14 @@ button, .button
     background-color: var(--color-black)
     color: var(--color-white)
     border-color: var(--color-white)
+
+input
+  background: none
+  border: none
+  border-radius: var(--borderRadius-main)
+  color: var(--color-white)
+  &:focus
+    outline: none
 
 h1, h2, h3
   color: var(--color-white)
