@@ -9,9 +9,18 @@
     animation: movePkg1 5s linear forwards
 
   :global(#screen-mail-icon)
-    stroke: red
-    perspective: 1000px
-    transform: translate(230px, 100px) translateZ(200px)
+    stroke: var(--color-white)
+    opacity: 0
+    transform: matrix(.38468, .13604, 0, .38468, 230, 100)
+    animation: moveEmailSkill 5s 4.5s linear forwards alternate
+
+@keyframes moveEmailSkill
+  50%, 65%
+    opacity: 1
+    transform: matrix(.38468, .13604, 0, .38468, 200, 100) scale(1.5)
+  100%
+    opacity: 0
+    transform: matrix(.38468, .13604, 0, .38468, 230, 100) scale(1)
 
 @keyframes movePkg1
   50%
