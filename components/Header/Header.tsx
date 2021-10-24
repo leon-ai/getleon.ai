@@ -11,6 +11,12 @@ const Header: React.FC<IHeaderProps> = () => {
   return (
     <header className={styles.header}>
       <div className="container">
+        <Icon name="mail" stroke="#FFF" width={18} />
+        <Icon name="music" stroke="#FFF" width={18} />
+        <Icon name="message-square" stroke="#FFF" width={18} />
+        <Icon name="youtube" stroke="#FFF" width={18} />
+        <Icon name="sun" stroke="#FFF" width={18} />
+        <Icon name="check-square" stroke="#FFF" width={18} />
         <div className={styles.wrapper}>
           <Link href="/">
             <a aria-label="Leon homepage">

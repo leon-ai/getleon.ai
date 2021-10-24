@@ -1,10 +1,28 @@
 .container
+
   :global(#screen-stroke-logo)
+    transform: matrix(.38468, .13604, 0, .38468, 255, 90)
+    animation: displayScreenStrokeLogo 5s linear forwards
+
+  :global(#pkg1)
+    transform: matrix(.75582, .36308, -.36308, .75582, 267.89, -94.872)
+    animation: movePkg1 5s linear forwards
+
+  :global(#screen-mail-icon)
+    stroke: red
+    perspective: 1000px
+    transform: translate(230px, 100px) translateZ(200px)
+
+@keyframes movePkg1
+  50%
+    opacity: 1
+    transform: matrix(.35582, .36308, -.36308, .35582, 287, -105)
+  100%
     opacity: 0
-    animation: displayScreenStrokeLogo 5s linear
+    transform: matrix(.35582, .36308, -.36308, .35582, 305, -105)
 
 @keyframes displayScreenStrokeLogo
   0%, 100%
     opacity: 0
   50%, 75%
-    opacity: 1
+    opacity: .2
