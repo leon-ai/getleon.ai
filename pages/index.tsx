@@ -4,6 +4,7 @@ import Head from 'next/head'
 import styles from '@/styles/pages/HomePage.module.sass'
 import Introduction from '@/components/Introduction'
 import Newsletter from '@/components/Newsletter'
+import Hero from '@/components/Hero'
 
 const headTitle = 'Leon - Your Open-Source Personal Assistant'
 
@@ -20,6 +21,7 @@ const HomePage: NextPage = (props) => {
         <section>
           <Introduction />
           <Newsletter />
+          <Hero />
         </section>
         <section>
           {/* Features */}
