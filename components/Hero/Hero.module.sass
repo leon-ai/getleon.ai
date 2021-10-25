@@ -1,34 +1,54 @@
 .container
 
   :global(#screen-stroke-logo)
-    transform: matrix(.38468, .13604, 0, .38468, 255, 90)
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 255, 90)
     animation: displayScreenStrokeLogo 5s linear forwards
 
   :global(#pkg1)
-    transform: matrix(.75582, .36308, -.36308, .75582, 267.89, -94.872)
-    animation: movePkg1 5s linear forwards
+    opacity: 0
+    transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 267, -20)
+    animation: movePkg1 12s linear forwards infinite
+  :global(#pkg2)
+    opacity: 0
+    transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 291, -32)
+    animation: movePkg2 15s 3s linear forwards infinite
 
   :global(#screen-mail-icon)
     stroke: var(--color-white)
     opacity: 0
-    transform: matrix(.38468, .13604, 0, .38468, 230, 100)
-    animation: moveEmailSkill 5s 4.5s linear forwards alternate
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 230, 100)
+    animation: moveEmailSkill 12s 8s ease-in infinite
 
 @keyframes moveEmailSkill
-  50%, 65%
+  10%, 25%
     opacity: 1
-    transform: matrix(.38468, .13604, 0, .38468, 200, 100) scale(1.5)
-  100%
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 210, 100) scale(1.5)
+  40%
     opacity: 0
-    transform: matrix(.38468, .13604, 0, .38468, 230, 100) scale(1)
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 230, 100) scale(1)
 
 @keyframes movePkg1
+  10%
+    opacity: 1
+  20%
+    transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 267, -94)
   50%
     opacity: 1
-    transform: matrix(.35582, .36308, -.36308, .35582, 287, -105)
-  100%
+    transform: translateZ(0) matrix(.35582, .36308, -.36308, .35582, 287, -105)
+  75%
     opacity: 0
-    transform: matrix(.35582, .36308, -.36308, .35582, 305, -105)
+    transform: translateZ(0) matrix(.35582, .36308, -.36308, .35582, 305, -105)
+@keyframes movePkg2
+  10%
+    opacity: 1
+  20%
+    transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 291, -72)
+  50%
+    opacity: 1
+    transform: translateZ(0) matrix(.56582, 0.36308, -0.36308,.56582, 299, -78)
+  75%
+    opacity: 0
+    transform: translateZ(0) matrix(.56582, 0.36308, -0.36308,.56582, 320, -89)
 
 @keyframes displayScreenStrokeLogo
   0%, 100%

@@ -568,7 +568,7 @@ const Hero: React.FC<INewsletterProps> = () => {
               <path d="m281.46 217.5 8.6603-5 8.6603 5-8.6603 5z" fill="#1c75db"/>
               <path d="m298.78 217.5v10l-8.6603 5v-10z" fill="#092c54"/>
             </g>
-            <g transform="rotate(-60 346.72 146.1)">
+            <g id="pkg2">
               <path d="m281.46 217.5v10l8.6603 5v-10z" fill="#8d134d"/>
               <path d="m281.46 217.5 8.6603-5 8.6603 5-8.6603 5z" fill="#ec297a"/>
               <path d="m298.78 217.5v10l-8.6603 5v-10z" fill="#6a1237"/>
