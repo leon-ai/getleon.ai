@@ -1,26 +1,54 @@
 @import './ScreenPackages.module'
 @import './Energy.module'
 
-// TODO: halo particles + floating tech logos + rotate logo
 // TODO: stop animations when out of viewport
+
+.container
+  position: relative
+  perspective: 500px
 
 .hero
   --energy-turned-off-color: rgba(0, 0, 0, .5)
+
+  perspective: 1000px
   opacity: 0
   // TODO: trigger on scroll position/intersection
   animation: displayHero 2s ease-in forwards
 
-.turnedOff
-  :global(#radialGradient1255) stop:nth-child(1)
-    stop-color: #252525
+.halo
+  animation: blinkHalo 6s 5s ease-in alternate infinite
 
-  .haloHidden
-    opacity: 0
-  .energyTurnedOff, .energyTurnedOff path
-    fill: var(--energy-turned-off-color)
-    stroke: var(--energy-turned-off-color)
-  .energyTurnedOffStrokeOnly, .energyTurnedOffStrokeOnly path
-    stroke: var(--energy-turned-off-color)
+@keyframes blinkHalo
+  10%
+    opacity: .45
+  50%
+    opacity: .58
+  100%
+    opacity: .3
+
+.logo
+  transform-origin: 150px 150px
+  transform: translateZ(0) perspective(3000px) matrix(.15468, -.03604, 0, .15468, 66, 30) rotateY(0deg)
+  animation: rotateLogo 60s 5s linear infinite
+
+@keyframes rotateLogo
+  100%
+    transform: translateZ(0) perspective(3000px) matrix(.15468, -.03604, 0, .15468, 66, 30) rotateY(360deg)
+
+.nodeJsLogo
+  transform: translate3d(105px, -5px, 0)
+  animation: floatNodeJsLogo 4s linear alternate infinite
+
+.pythonLogo
+  transform: translateZ(0) matrix(.22914, -.13229, 0, .26458, 302, 263)
+  animation: floatPythonLogo 5s 1s linear alternate infinite
+
+@keyframes floatNodeJsLogo
+  100%
+    transform: translate3d(105px, -12px, 0)
+@keyframes floatPythonLogo
+  100%
+    transform: translateZ(0) matrix(.22914, -.13229, 0, .26458, 302, 256)
 
 .voiceWaves path
   opacity: 0
@@ -40,6 +68,7 @@
   100%
     opacity: 1
     transform: translate3d(110px, 20px, 0)
+
 @keyframes displayHero
   100%
     opacity: 1
