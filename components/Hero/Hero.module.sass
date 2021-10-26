@@ -1,13 +1,45 @@
 @import './ScreenPackages.module'
 @import './Energy.module'
 
-// TODO: voice waves turns on the system (light effects)
+// TODO: halo particles + floating tech logos + rotate logo
+// TODO: stop animations when out of viewport
 
 .hero
+  --energy-turned-off-color: rgba(0, 0, 0, .5)
   opacity: 0
   // TODO: trigger on scroll position/intersection
   animation: displayHero 2s ease-in forwards
 
+.turnedOff
+  :global(#radialGradient1255) stop:nth-child(1)
+    stop-color: #252525
+
+  .haloHidden
+    opacity: 0
+  .energyTurnedOff, .energyTurnedOff path
+    fill: var(--energy-turned-off-color)
+    stroke: var(--energy-turned-off-color)
+  .energyTurnedOffStrokeOnly, .energyTurnedOffStrokeOnly path
+    stroke: var(--energy-turned-off-color)
+
+.voiceWaves path
+  opacity: 0
+  &:nth-child(1)
+    transform: translate3d(98px, 5px, 0)
+    animation: voiceWaveMove 2s 1s linear forwards
+  &:nth-child(2)
+    transform: translate3d(99px, 5px, 0)
+    animation: voiceWaveMove 2s 1.5s linear forwards
+  &:nth-child(3)
+    transform: translate3d(100px, 5px, 0)
+    animation: voiceWaveMove 2s 2s linear forwards
+
+@keyframes voiceWaveMove
+  70%
+    opacity: 0
+  100%
+    opacity: 1
+    transform: translate3d(110px, 20px, 0)
 @keyframes displayHero
   100%
     opacity: 1

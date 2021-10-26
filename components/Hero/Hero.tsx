@@ -1,13 +1,31 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import styles from '@/components/Hero/Hero.module.sass'
 
-interface INewsletterProps { }
+interface IHeroProps { }
 
-const Hero: React.FC<INewsletterProps> = () => {
+const animationStartDelay = 4000
+
+const Hero: React.FC<IHeroProps> = () => {
+  const svgRef = useRef<SVGElement>(null)
+  const turnOn = () => {
+    const interval = setInterval(() => {
+      svgRef?.current?.classList.toggle(styles.turnedOff)
+    }, 200)
+    setTimeout(() => {
+      clearInterval(interval)
+    }, 1000)
+  }
+
+  useEffect(() => {
+    setTimeout(() => {
+      turnOn()
+    }, animationStartDelay)
+  }, [])
+
   return (
     <div className={styles.container}>
-      <svg className={styles.hero} version="1.1" viewBox="0 0 610.63 413.49" xmlns="http://www.w3.org/2000/svg">
+      <svg ref={svgRef} className={`${styles.hero} ${styles.turnedOff}`} version="1.1" viewBox="0 0 610.63 413.49" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <g id="leon-stroke">
             <path fillRule="evenodd" clipRule="evenodd" d="M108.168 62.4606C108.17 56.0625 103.916 50.4368 97.7396 48.6708C91.5633 46.9049 84.9592 49.4258 81.5515 54.8502L78.772 53.1205C82.4603 47.2534 89.2535 44.0758 96.1436 44.9946C98.7806 42.3171 100.251 38.7126 100.236 34.9626C100.236 27.0435 93.7888 20.6238 85.8353 20.6238C85.3166 20.6228 84.7982 20.6494 84.2823 20.7034L83.8167 20.7587C82.3573 27.0203 76.8963 31.5534 70.4476 31.8562L70.3051 28.5733C75.2252 28.363 79.4201 24.9549 80.6142 20.1979C81.8084 15.4409 79.7172 10.4685 75.4751 7.97809C71.2329 5.48763 65.8508 6.0726 62.2482 9.41567V20.5269H58.9406V8.09076C62.8767 3.60863 69.1847 2.0139 74.7915 4.08346C80.3983 6.15303 84.1379 11.4565 84.1885 17.4101C84.7513 17.3582 85.3003 17.3306 85.8388 17.3306C92.6163 17.3378 98.7959 21.1938 101.758 27.2636C104.719 33.3335 103.944 40.5536 99.7604 45.8629C106.718 48.3589 111.387 54.8948 111.472 62.2576C111.557 69.6205 107.04 76.2616 100.143 78.9165L100.163 79.1172C100.216 79.6983 100.247 80.2449 100.247 80.7499C100.243 89.8863 93.2348 97.5083 84.0947 98.3163C84.7859 104.539 81.6706 110.569 76.1847 113.627C70.6988 116.686 63.9073 116.179 58.9406 112.34V101.167H62.2482V110.614C66.069 112.854 70.8018 112.884 74.6515 110.694C78.5013 108.504 80.8783 104.429 80.8809 100.015C80.8824 99.5246 80.8534 99.0347 80.7941 98.5481L80.7628 98.2955C76.2537 97.8408 72.091 95.6831 69.1308 92.266L71.6254 90.1177C75.5591 94.6469 81.9049 96.2661 87.5416 94.179C93.1783 92.0919 96.9196 86.7378 96.9254 80.7499C96.9254 80.404 96.9254 80.1031 96.901 79.8159C87.3316 81.5232 78.1677 75.2345 76.3643 65.7227L79.6093 65.1174C80.9886 72.3899 87.6991 77.4232 95.1003 76.7365C102.501 76.0498 108.162 69.8686 108.168 62.4675" fill="white"/>
@@ -306,7 +324,7 @@ const Hero: React.FC<INewsletterProps> = () => {
               <path d="m665.28 313.6a360.96 188.75 0 0 1-360.94 188.75 360.96 188.75 0 0 1-360.97-188.73 360.96 188.75 0 0 1 360.91-188.77 360.96 188.75 0 0 1 361 188.72" fill="#f9fafc" filter="url(#filter9031)" opacity=".78"/>
               <ellipse cx="304.33" cy="313.6" rx="413.53" ry="188.75" fill="url(#radialGradient1255)"/>
             </g>
-            <g fill="none" stroke="#b173ff">
+            <g className={styles.energyTurnedOffStrokeOnly} fill="none" stroke="#b173ff">
               <path d="m446 242.5 34.641-20" filter="url(#filter2622)" strokeWidth="1.265"/>
               <path d="m450.33 240 34.641-20" strokeWidth=".465"/>
               <path d="m246.82 202.5 43.301-25-17.321-10" filter="url(#filter2618)" strokeWidth="1.265"/>
@@ -315,8 +333,8 @@ const Hero: React.FC<INewsletterProps> = () => {
               <path d="m229.5 252.5 112.58 65 34.641-20" strokeWidth=".465"/>
             </g>
             <g transform="translate(103.44 -24.291)">
-              <path d="m246.98 316.06 34.96 20.733 80.012-47.096-45.37-27.988z" fill="none" filter="url(#filter4871)" stroke="#00000f" strokeWidth="10.665"/>
-              <path d="m246.98 316.06 34.96 20.733 80.012-47.096-45.37-27.988z" fill="#f9fafc" filter="url(#filter4875)"/>
+              <path className={styles.energyTurnedOff} d="m246.98 316.06 34.96 20.733 80.012-47.096-45.37-27.988z" fill="none" filter="url(#filter4871)" stroke="#00000f" strokeWidth="10.665"/>
+              <path className={styles.energyTurnedOff} d="m246.98 316.06 34.96 20.733 80.012-47.096-45.37-27.988z" fill="#f9fafc" filter="url(#filter4875)"/>
               <g fill="url(#linearGradient8246)">
                 <path d="m247.3 291.71v10l34.641 20v-10z"/>
                 <path d="m281.94 311.71v10l77.942-45v-10z"/>
@@ -324,22 +342,22 @@ const Hero: React.FC<INewsletterProps> = () => {
                 <path d="m281.94 321.71v10l77.942-45v-10z"/>
               </g>
               <path d="m247.3 291.71 34.641 20 77.942-45-34.641-20z" fill="url(#linearGradient6913)"/>
-              <path d="m247.3 301.79 34.641 20 77.942-45" fill="none" filter="url(#filter8382)" stroke="#f9fafc" strokeWidth="1.165"/>
-              <path d="m247.3 301.71 34.641 20 77.942-45" fill="none" stroke="#f9fafc" strokeWidth="1.165"/>
-              <g fill="#f9fafc">
+              <path className={styles.energyTurnedOffStrokeOnly} d="m247.3 301.79 34.641 20 77.942-45" fill="none" filter="url(#filter8382)" stroke="#f9fafc" strokeWidth="1.165"/>
+              <path className={styles.energyTurnedOffStrokeOnly} d="m247.3 301.71 34.641 20 77.942-45" fill="none" stroke="#f9fafc" strokeWidth="1.165"/>
+              <g className={styles.energyTurnedOff} fill="#f9fafc">
                 <path d="m273.28 286.71 17.32 10 43.301-25-17.32-10z" filter="url(#filter8162-5)"/>
                 <path d="m273.28 286.71 17.32 10 43.301-25-17.32-10z" filter="url(#filter8162)"/>
                 <path d="m273.28 286.71 17.32 10 43.301-25-17.32-10z"/>
               </g>
               <path d="m316.58 261.71 0.27424 19.842 17.046-9.8417-17.32-10" display="none" fill="#33333f"/>
               <path d="m320.91 253.73-60.622 35 25.981 15 60.622-35z" fill="none" filter="url(#filter8655)" stroke="#f9fafc" strokeWidth=".965"/>
-              <path d="m320.91 254.29-60.622 35 25.981 15 60.622-35z" fill="none" stroke="#f9fafc" strokeWidth=".965"/>
+              <path className={styles.energyTurnedOff} d="m320.91 254.29-60.622 35 25.981 15 60.622-35z" fill="none" stroke="#f9fafc" strokeWidth=".965"/>
             </g>
-            <path transform="matrix(1 -.51223 0 1 8.8593 204.35)" d="m367.86 246.5-14.611-73.198c16.635-13.801 59.183-29.061 72.235-10.697l2.4243 99.984c0.41656 15.852-59.189 1.3843-60.049-16.089z" fill="url(#linearGradient8084)" filter="url(#filter8045-9)" opacity=".58636"/>
+            <path className={styles.haloHidden} transform="matrix(1 -.51223 0 1 8.8593 204.35)" d="m367.86 246.5-14.611-73.198c16.635-13.801 59.183-29.061 72.235-10.697l2.4243 99.984c0.41656 15.852-59.189 1.3843-60.049-16.089z" fill="url(#linearGradient8084)" filter="url(#filter8045-9)" opacity=".58636"/>
             <g transform="matrix(-1 0 0 1 577.41 69.092)">
               <g>
                 <path d="m86.603 154.65 5.1962 3 10.392-6z" fill="#00000f" filter="url(#filter1999-5)"/>
-                <path d="m86.603 153.06 5.1962 3 10.392-6z" fill="#f9fafc" filter="url(#filter1626-5)"/>
+                <path className={styles.energyTurnedOff} d="m86.603 153.06 5.1962 3 10.392-6z" fill="#f9fafc" filter="url(#filter1626-5)"/>
                 <g stroke="#f9fafc" strokeWidth=".1">
                   <path d="m86.603 140v12l5.1962 3v-12z" fill="url(#linearGradient1422)"/>
                   <path d="m86.603 140 10.392-6 5.1962 3-10.392 6z" fill="url(#linearGradient1430)"/>
@@ -347,7 +365,7 @@ const Hero: React.FC<INewsletterProps> = () => {
                 </g>
               </g>
               <path d="m91.791 140.56-1e-6 -5 5.1962-3v5" fill="none" stroke="#f9fafc" strokeWidth=".865"/>
-              <g>
+              <g className={styles.energyTurnedOff}>
                 <path d="m97.517 144.99-0.72516 0.67397 0.06984 3.0897c0.28808-0.0166 0.51779-0.30779 0.73052-0.67885z" color="#000000" colorRendering="auto" dominantBaseline="auto" fill="#f9fafc" imageRendering="auto" shapeRendering="auto" stopColor="#000000"/>
                 <ellipse transform="matrix(-.58978 .80756 -.84562 -.53378 0 0)" cx="71.151" cy="-164.39" rx="1.1259" ry=".80261" fill="#f9fafc"/>
                 <path d="m97.538 145.85-0.01004-1.6283c0.30524 0.0883 0.4805 0.2703 0.46745 0.70996-0.03837 0.44867-0.18795 0.70273-0.45737 0.91838z" display="none" fill="#22222f"/>
@@ -412,7 +430,7 @@ const Hero: React.FC<INewsletterProps> = () => {
                     <ellipse transform="matrix(.64379 .7652 -.89326 .44954 0 0)" cx="-124.86" cy="604.05" rx="1.4534" ry="1.414" stroke="#cda5ff" strokeWidth=".30734"/>
                   </g>
                 </g>
-                <g transform="translate(6.486 14.734)">
+                <g className={styles.energyTurnedOffStrokeOnly} transform="translate(6.486 14.734)">
                   <path d="m-615.85 153.74-22.056 11.518" stroke="#b173ff" strokeWidth=".365"/>
                   <path d="m-637.81 165.12-2.0821 15.725" stroke="#b173ff" strokeWidth=".365"/>
                   <ellipse transform="matrix(.72771 -.68589 .82338 .56749 0 0)" cx="-524.89" cy="-313.35" rx="1.4418" ry="1.4276" stroke="#cda5ff" strokeWidth=".30758"/>
@@ -430,22 +448,22 @@ const Hero: React.FC<INewsletterProps> = () => {
                   </g>
                 </g>
               </g>
-              <ellipse transform="matrix(.97263 0 0 .95021 -16.453 5.7817)" cx="-583.78" cy="144.7" rx="43.949" ry="25.374" fill="none" filter="url(#filter5670)" opacity=".60148" stroke="#00000f" strokeWidth="4.05"/>
-              <ellipse cx="-583.78" cy="143.53" rx="39.166" ry="22.613" display="none" fill="none" stroke="#000" strokeWidth="3.14"/>
+              <ellipse className={styles.energyTurnedOff} transform="matrix(.97263 0 0 .95021 -16.453 5.7817)" cx="-583.78" cy="144.7" rx="43.949" ry="25.374" fill="none" filter="url(#filter5670)" opacity=".60148" stroke="#00000f" strokeWidth="4.05"/>
+              <ellipse className={styles.energyTurnedOff} cx="-583.78" cy="143.53" rx="39.166" ry="22.613" display="none" fill="none" stroke="#000" strokeWidth="3.14"/>
               <g>
-                <ellipse cx="-583.78" cy="141.94" rx="39.166" ry="22.613" fill="#f9fafc" filter="url(#filter6519)"/>
+                <ellipse className={styles.energyTurnedOff} cx="-583.78" cy="141.94" rx="39.166" ry="22.613" fill="#f9fafc" filter="url(#filter6519)"/>
                 <ellipse cx="-583.78" cy="134.4" rx="43.301" ry="24.128" fill="url(#linearGradient1812)"/>
                 <path d="m-627.08 119.39h86.603v16.598h-86.603z" fill="url(#linearGradient1812)"/>
                 <ellipse cx="-583.78" cy="120.11" rx="43.301" ry="25" fill="url(#linearGradient1667)"/>
               </g>
-              <ellipse cx="-583.78" cy="120.11" rx="38.766" ry="22.382" fill="none" filter="url(#filter1800)" stroke="#f9fafc" strokeWidth=".8"/>
-              <ellipse cx="-583.78" cy="120.11" rx="38.766" ry="22.382" fill="none" stroke="#f9fafc" strokeWidth=".8"/>
-              <g>
+              <ellipse className={styles.energyTurnedOff} cx="-583.78" cy="120.11" rx="38.766" ry="22.382" fill="none" filter="url(#filter1800)" stroke="#f9fafc" strokeWidth=".8"/>
+              <ellipse className={styles.energyTurnedOff} cx="-583.78" cy="120.11" rx="38.766" ry="22.382" fill="none" stroke="#f9fafc" strokeWidth=".8"/>
+              <g className={styles.energyTurnedOff}>
                 <ellipse cx="-583.25" cy="120.11" rx="21.651" ry="12.5" fill="#f9fcfb"/>
                 <path d="m-611.68 141.33 0.10676 10.165c5.3636 1.996 10.598 3.2766 15.928 4.4343l-0.0357-9.638c-5.6145-2.1074-11.07-3.3612-15.999-4.9609z" fill="#f9fafc" filter="url(#filter6899)"/>
                 <path d="m-561.13 144.54 0.0873 8.2372c4.4767-1.7758 8.9978-3.8061 13.018-6.9447l-0.0291-7.8539c-4.7443 1.6197-9.229 4.1526-13.076 6.5614z" fill="#f9fafc" filter="url(#filter6903)"/>
               </g>
-              <g transform="translate(.044003 .052855)" fill="none" filter="url(#filter1760)" stroke="#f9fafc">
+              <g className={styles.energyTurnedOff} transform="translate(.044003 .052855)" fill="none" filter="url(#filter1760)" stroke="#f9fafc">
                 <g strokeWidth="2.985">
                   <path d="m-555.96 112.51a30.311 17.5 0 0 1 0.14748 15.036"/>
                   <path d="m-580.52 137.54a30.311 17.5 0 0 1-13.887-1.156"/>
@@ -453,7 +471,7 @@ const Hero: React.FC<INewsletterProps> = () => {
                 </g>
                 <ellipse cx="-583.25" cy="120.11" rx="30.311" ry="17.5" strokeWidth="1.085"/>
               </g>
-              <g fill="none" stroke="#f9fafc">
+              <g className={styles.energyTurnedOff} fill="none" stroke="#f9fafc">
                 <g strokeWidth="2.985">
                   <path d="m-555.96 112.51a30.311 17.5 0 0 1 0.14748 15.036"/>
                   <path d="m-580.52 137.54a30.311 17.5 0 0 1-13.887-1.156"/>
@@ -462,18 +480,18 @@ const Hero: React.FC<INewsletterProps> = () => {
                 <ellipse cx="-583.25" cy="120.11" rx="30.311" ry="17.5" strokeWidth="1.085"/>
               </g>
               <path d="m-574.11 131.44c0.96944-6.5162 1.9508-13.021-0.11696-22.545 6.5416 1.3227 11.509 4.2902 12.623 10.355 0.49557 7.2576-7.8498 10.95-12.506 12.19z" display="none" fill="#dfe1e1"/>
-              <g fill="#f9fcfb">
+              <g className={styles.energyTurnedOff} fill="#f9fcfb">
                 <ellipse cx="-583.25" cy="120.11" rx="21.651" ry="12.5" filter="url(#filter1576-6-3)"/>
                 <ellipse cx="-583.25" cy="120.11" rx="21.651" ry="12.5" filter="url(#filter1576-6)"/>
                 <ellipse cx="-583.25" cy="120.11" rx="21.651" ry="12.5" display="none" filter="url(#filter1576)"/>
               </g>
             </g>
-            <g transform="translate(101.66 12.586)" fill="none" stroke="#1c75db">
+            <g className={styles.voiceWaves} fill="none" stroke="#1c75db">
               <path d="m62.369 147.13a7.8811 7.8811 0 0 1-6.055 7.6666" strokeWidth=".64709"/>
               <path d="m70.086 146.42a15.437 15.437 0 0 1-11.86 15.017" strokeWidth="1.2675"/>
               <path d="m78.409 145.13a27.163 27.163 0 0 1-20.87 26.424" strokeWidth="2.2303"/>
             </g>
-            <path d="m197.21 213.69-23.577-68.246c16.635-13.801 76.351-21.474 89.403-3.1093l-22.524 71.355c0.41656 15.852-42.441 17.474-43.301 0z" fill="url(#linearGradient7777)" filter="url(#filter8045)" opacity=".58636"/>
+            <path className={styles.haloHidden} d="m197.21 213.69-23.577-68.246c16.635-13.801 76.351-21.474 89.403-3.1093l-22.524 71.355c0.41656 15.852-42.441 17.474-43.301 0z" fill="url(#linearGradient7777)" filter="url(#filter8045)" opacity=".58636"/>
             <g id="Logo" transform="matrix(.15468 -.03604 0 .15468 194.62 160.86)" fillRule="evenodd">
               <path id="Path" d="m234.06 34.456c19.664 1.1611 37.516 11.869 47.799 28.671 10.283 16.801 11.695 37.571 3.7813 55.609-0.52 1.17-1.07 2.33-1.66 3.47 18.807 11.129 30.109 31.572 29.532 53.417-0.57728 21.845-12.943 41.663-32.312 51.783-0.24708 27.692-19.348 51.645-46.29 58.05-1.0731 20.173-13.26 38.081-31.632 46.481s-39.889 5.9035-55.848-6.481l-3.57-2.77v-309.3l2.29-2.61c12.742-14.556 32.657-20.593 51.336-15.562 18.679 5.0316 32.868 20.255 36.574 39.242" fill="#a31b57" strokeWidth="1.0021"/>
               <path d="m169.67 59.35v265.41c14.298 11.086 33.84 12.545 49.625 3.7062 15.786-8.8392 24.754-26.263 22.775-44.246 26.307-2.3356 46.48-24.369 46.49-50.78 0-1.46-0.09-3-0.24-4.72l-0.06-0.58c19.854-7.6746 32.853-26.873 32.608-48.157s-13.683-40.178-33.708-47.393c12.041-15.348 14.272-36.219 5.7482-53.766-8.5243-17.546-26.311-28.693-45.818-28.714-1.55 0-3.13 0.08-4.75 0.23-0.14553-17.211-10.909-32.542-27.047-38.524-16.138-5.9826-34.294-1.3726-45.623 11.584v36z" fill="#ec297a"/>
@@ -553,7 +571,7 @@ const Hero: React.FC<INewsletterProps> = () => {
             <g transform="translate(180.99 17.779)">
               <g>
                 <path d="m86.603 154.65 5.1962 3 10.392-6z" fill="#00000f" filter="url(#filter1999)"/>
-                <path d="m86.603 153.06 5.1962 3 10.392-6z" fill="#f9fafc" filter="url(#filter1626)"/>
+                <path className={styles.energyTurnedOff} d="m86.603 153.06 5.1962 3 10.392-6z" fill="#f9fafc" filter="url(#filter1626)"/>
                 <g stroke="#f9fafc" strokeWidth=".1">
                   <path d="m86.603 140v12l5.1962 3v-12z" fill="url(#linearGradient1422)"/>
                   <path d="m86.603 140 10.392-6 5.1962 3-10.392 6z" fill="url(#linearGradient1430)"/>
@@ -561,7 +579,7 @@ const Hero: React.FC<INewsletterProps> = () => {
                 </g>
               </g>
               <path d="m91.791 140.56-1e-6 -5 5.1962-3v5" fill="none" stroke="#f9fafc" strokeWidth=".865"/>
-              <g>
+              <g className={styles.energyTurnedOff}>
                 <path d="m97.517 144.99-0.72516 0.67397 0.06984 3.0897c0.28808-0.0166 0.51779-0.30779 0.73052-0.67885z" color="#000000" colorRendering="auto" dominantBaseline="auto" fill="#f9fafc" imageRendering="auto" shapeRendering="auto" stopColor="#000000"/>
                 <ellipse transform="matrix(-.58978 .80756 -.84562 -.53378 0 0)" cx="71.151" cy="-164.39" rx="1.1259" ry=".80261" fill="#f9fafc"/>
                 <path d="m97.538 145.85-0.01004-1.6283c0.30524 0.0883 0.4805 0.2703 0.46745 0.70996-0.03837 0.44867-0.18795 0.70273-0.45737 0.91838z" display="none" fill="#22222f"/>
