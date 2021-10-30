@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -8,8 +8,28 @@ import Icon from '@/components/Icon'
 interface IHeaderProps { }
 
 const Header: React.FC<IHeaderProps> = () => {
+  const headerRef = useRef<HTMLElement>(null)
+
+  useLayoutEffect(() => {
+    const handleScroll = () => {
+      const posY = window.scrollY
+
+      if (headerRef && headerRef.current) {
+        if (posY > 0) {
+          headerRef.current.classList.remove(styles.noBorder)
+        } else {
+          headerRef.current.classList.add(styles.noBorder)
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <header className={styles.header}>
+    <header ref={headerRef} className={`${styles.header} ${styles.noBorder}`}>
       <div className="container">
         <div className={styles.wrapper}>
           <Link href="/">

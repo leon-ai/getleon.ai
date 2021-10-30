@@ -8,7 +8,7 @@ const Newsletter: React.FC<INewsletterProps> = () => {
   return (
     <div className={styles.container}>
       <span className={styles.title}>
-        Get the latest from Leon
+        Get the latest news from Leon
       </span>
       <form
         action="https://www.getrevue.co/profile/leon/add_subscriber"

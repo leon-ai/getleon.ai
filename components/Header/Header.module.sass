@@ -1,6 +1,23 @@
 .header
-  padding: var(--header-footer-y-padding) 0
-  margin-bottom: 72px
+  position: sticky
+  z-index: 10
+  top: 0
+  padding-top: var(--header-footer-y-padding)
+  margin-bottom: 84px
+  backdrop-filter: saturate(140%) blur(5px)
+  background-color: rgba(0, 0, 0, .5)
+
+  &::after
+    content: ''
+    display: block
+    height: var(--header-footer-y-padding)
+    opacity: 1
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .1)
+    transition: opacity var(--transitionDuration-main) var(--transitionTiming-main)
+
+.noBorder
+  &::after
+    opacity: 0
 
 .wrapper
   display: flex
