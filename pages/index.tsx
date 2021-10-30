@@ -25,26 +25,24 @@ const HomePage: NextPage = (props) => {
           <Newsletter />
           <Hero />
         </section>
-        <Backbone>
-          <section>
-            <Features />
-          </section>
-          <section>
-            {/* TTS/STT */}
-          </section>
-          <section>
-            {/* Demo */}
-          </section>
-          <section>
-            {/* Roadmap */}
-          </section>
-          <section>
-            {/* Sponsor */}
-          </section>
-          <section>
-            {/* Get started */}
-          </section>
-        </Backbone>
+        <section>
+          <Features />
+        </section>
+        <section>
+          {/* TTS/STT */}
+        </section>
+        <section>
+          {/* Demo */}
+        </section>
+        <section>
+          {/* Roadmap */}
+        </section>
+        <section>
+          {/* Sponsor */}
+        </section>
+        <section>
+          {/* Get started */}
+        </section>
       </div>
     </>
   )
