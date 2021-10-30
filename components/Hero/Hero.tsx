@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 
 import styles from '@/components/Hero/Hero.module.sass'
 
@@ -8,7 +8,7 @@ const animationStartDelay = 4000
 let lightingIteration = 0
 
 const Hero: React.FC<IHeroProps> = () => {
-  const svgRef = useRef<SVGElement>(null)
+  const svgRef = useRef<SVGSVGElement>(null)
   const turnOn = () => {
     const svgCurrent = svgRef?.current
     const interval = setInterval(() => {
@@ -25,7 +25,7 @@ const Hero: React.FC<IHeroProps> = () => {
     }, 2000)
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (svgRef) {
       setTimeout(() => {
         turnOn()

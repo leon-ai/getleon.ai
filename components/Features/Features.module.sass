@@ -1,11 +1,40 @@
 .container
-  width: 800px
-  height: 1000px
+  --animation-container-size: 364px
+  --spacing-between-feature: 156px
+  font-size: var(--fontSize-bigger)
+  h2
+    margin-bottom: 16px
 
 .horizContainer
   display: flex
-  margin: 0 auto
-  border: 1px solid red
   justify-content: space-between
+  margin-bottom: var(--spacing-between-feature)
+  text-align: center
+  h2, p
+    text-align: center
+    width: var(--animation-container-size)
 
-.openSource
+  p
+    min-height: 89px
+    margin-bottom: 32px
+    line-height: 1.6rem
+
+.featureContainer
+  p
+    line-height: 1.5rem
+
+.automate, .imagination, .ai
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: var(--spacing-between-feature)
+  div:nth-child(1)
+    width: 500px
+.imagination
+  flex-direction: row-reverse
+
+.animationContainer
+  background: red
+  border-radius: 16px
+  width: var(--animation-container-size)
+  height: var(--animation-container-size)
