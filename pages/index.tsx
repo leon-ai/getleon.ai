@@ -5,6 +5,8 @@ import styles from '@/styles/pages/HomePage.module.sass'
 import Introduction from '@/components/Introduction'
 import Newsletter from '@/components/Newsletter'
 import Hero from '@/components/Hero'
+import Backbone from '@/components/Backbone'
+import Features from '@/components/Features'
 
 const headTitle = 'Leon - Your Open-Source Personal Assistant'
 
@@ -23,24 +25,26 @@ const HomePage: NextPage = (props) => {
           <Newsletter />
           <Hero />
         </section>
-        <section>
-          {/* Features */}
-        </section>
-        <section>
-          {/* TTS/STT */}
-        </section>
-        <section>
-          {/* Demo */}
-        </section>
-        <section>
-          {/* Roadmap */}
-        </section>
-        <section>
-          {/* Sponsor */}
-        </section>
-        <section>
-          {/* Get started */}
-        </section>
+        <Backbone>
+          <section>
+            <Features />
+          </section>
+          <section>
+            {/* TTS/STT */}
+          </section>
+          <section>
+            {/* Demo */}
+          </section>
+          <section>
+            {/* Roadmap */}
+          </section>
+          <section>
+            {/* Sponsor */}
+          </section>
+          <section>
+            {/* Get started */}
+          </section>
+        </Backbone>
       </div>
     </>
   )
