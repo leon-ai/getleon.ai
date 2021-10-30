@@ -35,7 +35,7 @@ const Features: React.FC<IFeaturesProps> = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tortor sed sem porttitor tristique.
           </p>
         </div>
-        <div className={`${styles.animationContainer} ${styles.openSourceAnimation}`}>
+        <div className={`${styles.animationContainer} ${styles.automateAnimation}`}>
 
         </div>
       </div>
@@ -47,7 +47,7 @@ const Features: React.FC<IFeaturesProps> = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tortor sed sem porttitor tristique.
           </p>
         </div>
-        <div className={`${styles.animationContainer} ${styles.openSourceAnimation}`}>
+        <div className={`${styles.animationContainer} ${styles.imaginationAnimation}`}>
 
         </div>
       </div>
@@ -59,7 +59,7 @@ const Features: React.FC<IFeaturesProps> = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tortor sed sem porttitor tristique.
           </p>
         </div>
-        <div className={`${styles.animationContainer} ${styles.openSourceAnimation}`}>
+        <div className={`${styles.animationContainer} ${styles.aiAnimation}`}>
 
         </div>
       </div>

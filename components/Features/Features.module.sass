@@ -34,7 +34,20 @@
   flex-direction: row-reverse
 
 .animationContainer
-  background: red
+  background-color: var(--color-black)
   border-radius: 16px
   width: var(--animation-container-size)
   height: var(--animation-container-size)
+  border: solid 2px transparent
+  background-origin: border-box
+  background-clip: content-box, border-box
+  &.openSourceAnimation
+    background-image: linear-gradient(var(--color-black), var(--color-black)), linear-gradient(to bottom right, #1CDBA2, var(--color-blue))
+  &.privacyAnimation
+    background-image: linear-gradient(var(--color-black), var(--color-black)), linear-gradient(to bottom right, #CB356B, #BD3F32)
+  &.automateAnimation
+    background-image: linear-gradient(var(--color-black), var(--color-black)), linear-gradient(to bottom right, #8E2DE2, #4A00E0)
+  &.imaginationAnimation
+    background-image: linear-gradient(var(--color-black), var(--color-black)), linear-gradient(to bottom right, #F27602, #EDF046)
+  &.aiAnimation
+    background-image: linear-gradient(var(--color-black), var(--color-black)), linear-gradient(to bottom right, #BDC3C7, #2C3E50)
