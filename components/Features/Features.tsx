@@ -14,7 +14,7 @@ const Features: React.FC<IFeaturesProps> = () => {
             Under MIT license which is the most permissive license in the <strong>open-source</strong> world, we want Leon be able to grow as much as possible with the least of restriction.
           </p>
           <div className={`${styles.animationContainer} ${styles.openSourceAnimation}`}>
-
+            test...
           </div>
         </div>
         <div className={`${styles.featureContainer} ${styles.privacy}`}>
@@ -27,12 +27,12 @@ const Features: React.FC<IFeaturesProps> = () => {
           </div>
         </div>
       </div>
+      <div className={styles.asteroid} />
       <div className={`${styles.featureContainer} ${styles.automate}`}>
         <div>
           <h2>Automate your virtual life</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tortor sed sem porttitor tristique.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tortor sed sem porttitor tristique.
+            Remove the hassle of your <strong>virtual</strong> life by <strong>automating</strong> stuff. You can think of Leon as your virtual brain.
           </p>
         </div>
         <div className={`${styles.animationContainer} ${styles.automateAnimation}`}>
@@ -41,22 +41,21 @@ const Features: React.FC<IFeaturesProps> = () => {
       </div>
       <div className={`${styles.featureContainer} ${styles.imagination}`}>
         <div>
-          <h2>Imagination in the only limit</h2>
+          <h2>Imagination is the only limit</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tortor sed sem porttitor tristique.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tortor sed sem porttitor tristique.
+            Leon is built on a <strong>modular</strong> architecture that gives you the flexibility to create or use <strong>packages/modules (skills)</strong> that fit your need. There is no barrier, only an infinity of possibilities. Be creative.
           </p>
         </div>
         <div className={`${styles.animationContainer} ${styles.imaginationAnimation}`}>
 
         </div>
       </div>
+      <div className={styles.earth} />
       <div className={`${styles.featureContainer} ${styles.ai}`}>
         <div>
           <h2>Powered by AI</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tortor sed sem porttitor tristique.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tortor sed sem porttitor tristique.
+            Some <strong>AI</strong> concepts are powering Leon to ease the interaction with humans.
           </p>
         </div>
         <div className={`${styles.animationContainer} ${styles.aiAnimation}`}>
