@@ -1,0 +1,63 @@
+.container
+  .intro
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    margin-bottom: 32px
+
+  h3
+    width: 512px
+  h2
+    text-align: center
+    font-size: 2.3rem
+
+  .ttsStt
+    display: flex
+    justify-content: space-around
+
+  .ttsSolutions, .sttSolutions
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    row-gap: 16px
+    column-gap: 16px
+
+  .solution
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 6px
+    &.soon
+      opacity: .5
+    &.googleCloud div
+      background-image: url(/img/tts-stt-solutions-logo/google-cloud.svg)
+      background-size: 72% 72%
+    &.aws div
+      background-image: url(/img/tts-stt-solutions-logo/aws.svg)
+      background-size: 72% 72%
+    &.ibmWatson div
+      background-image: url(/img/tts-stt-solutions-logo/ibm-watson.png)
+      background-size: 72% 68%
+    &.flite div
+      background-image: url(/img/tts-stt-solutions-logo/festvox.png)
+      background-size: 72% 38%
+    &.aliyun div
+      background-image: url(/img/tts-stt-solutions-logo/aliyun.svg)
+      background-size: 72% 72%
+    &.microsoftAzure div
+      background-image: url(/img/tts-stt-solutions-logo/microsoft-azure.svg)
+      background-size: 72% 72%
+    &.deepSpeech div
+      background-image: url(/img/tts-stt-solutions-logo/mozilla.svg)
+      background-size: 76% 76%
+    div
+      background-repeat: no-repeat
+      background-position: center
+      border-radius: 16px
+      width: 70px
+      height: 70px
+      background-color: var(--color-white)
+    span
+      color: var(--color-white)
+      font-size: .8rem
+      font-weight: var(--fontWeight-semibold)

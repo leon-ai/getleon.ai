@@ -7,6 +7,7 @@ import Newsletter from '@/components/Newsletter'
 import Hero from '@/components/Hero'
 import Backbone from '@/components/Backbone'
 import Features from '@/components/Features'
+import TtsStt from '@/components/TtsStt'
 
 const headTitle = 'Leon - Your Open-Source Personal Assistant'
 
@@ -29,6 +30,7 @@ const HomePage: NextPage = (props) => {
           <Features />
         </section>
         <section>
+          <TtsStt />
           {/* TTS/STT */}
         </section>
         <section>
