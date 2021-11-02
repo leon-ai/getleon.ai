@@ -7,15 +7,18 @@ interface IRoadmapProps { }
 
 const Roadmap: React.FC<IRoadmapProps> = () => {
   const cards = [
-    { types: ['Package/Module', 'Client', 'Server'], version: '1.0.0-beta.6', title: 'Widgets', url: 'https://trello.com/c/m83xpjPR/360-%E2%9C%A8-100-beta6-widgets' },
-    { types: ['Package/Module', 'Server'], version: '1.0.0-beta.5', title: 'Allow array of elements for trim conditions', url: 'https://trello.com/c/PFyAGitY/357-%E2%9C%A8-100-beta5-allow-array-of-elements-for-trim-conditions' },
-    { types: ['Package/Module'], version: '1.0.0', title: 'Game Package - Guess The Number module', url: 'https://trello.com/c/yKALSljC/274-%E2%9C%A8-100-game-package-guess-the-number-module' },
-    { types: ['Package/Module', 'Client', 'Server'], version: '1.0.0-beta.6', title: 'Widgets', url: 'https://trello.com/c/m83xpjPR/360-%E2%9C%A8-100-beta6-widgets' },
-    { types: ['Package/Module', 'Server'], version: '1.0.0-beta.5', title: 'Allow array of elements for trim conditions', url: 'https://trello.com/c/PFyAGitY/357-%E2%9C%A8-100-beta5-allow-array-of-elements-for-trim-conditions' },
-    { types: ['Package/Module'], version: '1.0.0', title: 'Game Package - Guess The Number module', url: 'https://trello.com/c/yKALSljC/274-%E2%9C%A8-100-game-package-guess-the-number-module' },
-    { types: ['Package/Module', 'Client', 'Server'], version: '1.0.0-beta.6', title: 'Widgets', url: 'https://trello.com/c/m83xpjPR/360-%E2%9C%A8-100-beta6-widgets' },
-    { types: ['Package/Module', 'Server'], version: '1.0.0-beta.5', title: 'Allow array of elements for trim conditions', url: 'https://trello.com/c/PFyAGitY/357-%E2%9C%A8-100-beta5-allow-array-of-elements-for-trim-conditions' },
-    { types: ['Package/Module'], version: '1.0.0', title: 'Game Package - Guess The Number module', url: 'https://trello.com/c/yKALSljC/274-%E2%9C%A8-100-game-package-guess-the-number-module' }
+    { top: 0, left: 0, types: ['Package/Module', 'Client', 'Server'], version: '1.0.0-beta.6', title: 'Widgets', url: 'https://trello.com/c/m83xpjPR/360-%E2%9C%A8-100-beta6-widgets' },
+    { top: 100, left: 100, types: ['Package/Module', 'Server'], version: '1.0.0-beta.5', title: 'Allow array of elements for trim conditions', url: 'https://trello.com/c/PFyAGitY/357-%E2%9C%A8-100-beta5-allow-array-of-elements-for-trim-conditions' },
+    { top: 200, left: 200, types: ['Package/Module'], version: '1.0.0', title: 'Game Package - Guess The Number module', url: 'https://trello.com/c/yKALSljC/274-%E2%9C%A8-100-game-package-guess-the-number-module' },
+    { top: 300, left: 300, types: ['Package/Module', 'Client', 'Server', 'Chore'], version: '1.0.0-beta.6', title: 'Widgets', url: 'https://trello.com/c/m83xpjPR/360-%E2%9C%A8-100-beta6-widgets' },
+    { top: 0, left: 268, types: ['Package/Module', 'Server'], version: '1.0.0-beta.5', title: 'Allow array of elements for trim conditions', url: 'https://trello.com/c/PFyAGitY/357-%E2%9C%A8-100-beta5-allow-array-of-elements-for-trim-conditions' },
+    { top: 100, left: 368, types: ['Package/Module'], version: '1.0.0', title: 'Game Package - Guess The Number module', url: 'https://trello.com/c/yKALSljC/274-%E2%9C%A8-100-game-package-guess-the-number-module' },
+    { top: 200, left: 468, types: ['Package/Module', 'Client', 'Server', 'Docs'], version: '1.0.0-beta.6', title: 'Widgets', url: 'https://trello.com/c/m83xpjPR/360-%E2%9C%A8-100-beta6-widgets' },
+    { top: 300, left: 568, types: ['Package/Module', 'Client', 'Server', 'Docs', 'Client (bis)'], version: '1.0.0-beta.6', title: 'Widgets', url: 'https://trello.com/c/m83xpjPR/360-%E2%9C%A8-100-beta6-widgets' },
+    { top: 0, left: 536, types: ['Package/Module', 'Server'], version: '1.0.0-beta.5', title: 'Allow array of elements for trim conditions', url: 'https://trello.com/c/PFyAGitY/357-%E2%9C%A8-100-beta5-allow-array-of-elements-for-trim-conditions' },
+    { top: 100, left: 636, types: ['Package/Module'], version: '1.0.0', title: 'Game Package - Guess The Number module', url: 'https://trello.com/c/yKALSljC/274-%E2%9C%A8-100-game-package-guess-the-number-module' },
+    { top: 200, left: 736, types: ['Package/Module', 'Client', 'Server'], version: '1.0.0-beta.6', title: 'Widgets', url: 'https://trello.com/c/m83xpjPR/360-%E2%9C%A8-100-beta6-widgets' },
+    { top: 300, left: 0, types: ['Package/Module', 'Server'], version: '1.0.0-beta.5', title: 'Allow array of elements for trim conditions', url: 'https://trello.com/c/PFyAGitY/357-%E2%9C%A8-100-beta5-allow-array-of-elements-for-trim-conditions' }
   ]
 
   return (
@@ -26,7 +29,7 @@ const Roadmap: React.FC<IRoadmapProps> = () => {
       <div className={styles.roadmap}>
         <div className={styles.cardsContainer}>
           {cards.map((card, cardIndex) => (
-            <a href={card.url} target="_blank" rel="noreferrer" className={styles.cardContainer} key={`card-${cardIndex}`}>
+            <a href={card.url} target="_blank" rel="noreferrer" className={styles.cardContainer} key={`card-${cardIndex}`} style={{ top: card.top, left: card.left }}>
               <div className={styles.cardInnerContainer}>
                 <div className={styles.typesContainer}>
                   {card.types.map((type, typeIndex) => (
@@ -35,10 +38,12 @@ const Roadmap: React.FC<IRoadmapProps> = () => {
                     </div>
                   ))}
                 </div>
-                <div className={styles.versionContainer}>
-                  <div className={styles.version}>{card.version}</div>
+                <div>
+                  <div className={styles.versionContainer}>
+                    <div className={styles.version}>{card.version}</div>
+                  </div>
+                  <span className={styles.title}>{card.title}</span>
                 </div>
-                <span className={styles.title}>{card.title}</span>
               </div>
             </a>
           ))}

@@ -1,4 +1,5 @@
 .container
+  --max-width: 243px
   margin-bottom: 156px
   .footer
     text-align: center
@@ -23,26 +24,51 @@
   width: 950px
   height: 450px
   .cardContainer
-    display: flex
+    position: absolute
+    display: inline-flex
     flex-direction: column
     max-width: 256px
+    height: 88px
     background-color: var(--color-black)
     border-radius: 10px
-    height: 128px
     border: solid 2px transparent
     background-origin: border-box
     background-clip: content-box, border-box
     background-image: linear-gradient(var(--color-black), var(--color-black)), linear-gradient(to right, var(--color-blue), var(--color-pink))
+    transition: transform var(--transitionDuration-main) var(--transitionTiming-main)
+    &:hover
+      transform: scale3d(1.05, 1.05, 1.05)
   .cardInnerContainer
-    padding: 4px
+    display: flex
+    flex: 1
+    flex-direction: column
+    justify-content: space-between
+    padding: 6px
+  .typesContainer
+    display: inline-block
+    gap: 4px
+    max-width: var(--max-width)
+    ~ div
+      display: flex
+      flex-direction: column
+      gap: 4px
   .type, .version
     display: inline-block
     padding: 1px 4px
-    border-radius: 16px
+    border-radius: 6px
     background-color: var(--color-white)
     color: var(--color-black)
     font-weight: var(--fontWeight-semibold)
     font-size: .8rem
+  .type
+    margin-right: 4px
+    margin-bottom: 4px
+    &:last-child
+      margin-right: 0
   .title
+    max-width: var(--max-width)
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
     color: var(--color-white)
     font-weight: var(--fontWeight-semibold)

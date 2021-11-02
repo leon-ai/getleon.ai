@@ -44,6 +44,7 @@ const HomePage: NextPage = (props) => {
           {/* Sponsor */}
         </section>
         <section>
+          {/* TODO: import JetBrains Mono fonts */}
           {/* Get started */}
         </section>
       </div>
