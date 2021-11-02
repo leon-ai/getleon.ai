@@ -1,0 +1,48 @@
+.container
+  margin-bottom: 156px
+  .footer
+    text-align: center
+  .browse
+    display: inline-block
+    font-weight: var(--fontWeight-semibold)
+    color: var(--color-white)
+    &:hover
+      :global(.feather-arrow-right)
+        transform: translateX(4px)
+    :global(.feather-arrow-right)
+      transition: transform var(--transitionTiming-main) var(--transitionDuration-main)
+      width: 14px
+
+.roadmap
+  margin: 0 auto
+
+.cardsContainer
+  position: absolute
+  margin-top: 80px
+  margin-left: 30px
+  width: 950px
+  height: 450px
+  .cardContainer
+    display: flex
+    flex-direction: column
+    max-width: 256px
+    background-color: var(--color-black)
+    border-radius: 10px
+    height: 128px
+    border: solid 2px transparent
+    background-origin: border-box
+    background-clip: content-box, border-box
+    background-image: linear-gradient(var(--color-black), var(--color-black)), linear-gradient(to right, var(--color-blue), var(--color-pink))
+  .cardInnerContainer
+    padding: 4px
+  .type, .version
+    display: inline-block
+    padding: 1px 4px
+    border-radius: 16px
+    background-color: var(--color-white)
+    color: var(--color-black)
+    font-weight: var(--fontWeight-semibold)
+    font-size: .8rem
+  .title
+    color: var(--color-white)
+    font-weight: var(--fontWeight-semibold)

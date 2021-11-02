@@ -9,6 +9,7 @@ import Backbone from '@/components/Backbone'
 import Features from '@/components/Features'
 import TtsStt from '@/components/TtsStt'
 import Demo from '@/components/Demo'
+import Roadmap from '@/components/Roadmap'
 
 const headTitle = 'Leon - Your Open-Source Personal Assistant'
 
@@ -37,7 +38,7 @@ const HomePage: NextPage = (props) => {
           <Demo />
         </section>
         <section>
-          {/* Roadmap */}
+          <Roadmap />
         </section>
         <section>
           {/* Sponsor */}
