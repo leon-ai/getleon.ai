@@ -26,6 +26,8 @@ const Roadmap: React.FC<IRoadmapProps> = () => {
       <h3>
         More to come...
       </h3>
+      <div className={styles.astronaut} />
+      <div className={styles.saturne} />
       <div className={styles.roadmap}>
         <div className={styles.cardsContainer}>
           {cards.map((card, cardIndex) => (

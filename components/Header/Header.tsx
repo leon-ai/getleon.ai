@@ -65,9 +65,9 @@ const Header: React.FC<IHeaderProps> = () => {
                 {/*<span>7.9k+</span>*/}
                 <span>8k</span>
               </a>
-              <a href="https://sponsor.getleon.ai" aria-label="Sponsor Leon" target="_blank" rel="noreferrer" className="button">
+              <a href="https://sponsor.getleon.ai" aria-label="GetStarted Leon" target="_blank" rel="noreferrer" className="button">
                 <Icon name="heart" stroke="none" fill="#FF0000" width={18} style={{ marginRight: '4px' }} />
-                Sponsor
+                GetStarted
               </a>
             </div>
           </div>

@@ -8,6 +8,7 @@ interface ISponsorProps { }
 const Sponsor: React.FC<ISponsorProps> = () => {
   return (
     <div className={styles.container}>
+      <div className={styles.astronaut} />
       <h3>Become a sponsor</h3>
       <div className={styles.sponsor}>
         <p>
@@ -20,10 +21,10 @@ const Sponsor: React.FC<ISponsorProps> = () => {
         </p>
         <div className={styles.right}>
           <div className={styles.photo} />
-          <a href="https://sponsor.getleon.ai" aria-label="Sponsor Leon" target="_blank" rel="noreferrer" className={styles.button}>
+          <a href="https://sponsor.getleon.ai" aria-label="GetStarted Leon" target="_blank" rel="noreferrer" className={styles.button}>
             <div className={styles.buttonInnerContainer}>
               <Icon name="heart" stroke="none" fill="#FF0000" width={18} style={{ marginRight: '4px' }} />
-              Sponsor @louistiti on GitHub
+              GetStarted @louistiti on GitHub
             </div>
           </a>
         </div>

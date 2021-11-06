@@ -11,6 +11,7 @@ import TtsStt from '@/components/TtsStt'
 import Demo from '@/components/Demo'
 import Roadmap from '@/components/Roadmap'
 import Sponsor from '@/components/Sponsor'
+import GetStarted from '@/components/GetStarted'
 
 const headTitle = 'Leon - Your Open-Source Personal Assistant'
 
@@ -45,6 +46,7 @@ const HomePage: NextPage = (props) => {
           <Sponsor />
         </section>
         <section>
+          <GetStarted />
           {/* TODO: import JetBrains Mono fonts */}
           {/* Get started */}
         </section>

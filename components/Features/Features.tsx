@@ -8,7 +8,7 @@ const Features: React.FC<IFeaturesProps> = () => {
   return (
     <div className={styles.container}>
       <div className={styles.horizContainer}>
-        <div className={`${styles.featureContainer} ${styles.openSource}`}>
+        <div className={styles.openSource}>
           <h2>Open source</h2>
           <p>
             Under MIT license which is the most permissive license in the <strong>open-source</strong> world, we want Leon be able to grow as much as possible with the least of restriction.
@@ -17,7 +17,7 @@ const Features: React.FC<IFeaturesProps> = () => {
             test...
           </div>
         </div>
-        <div className={`${styles.featureContainer} ${styles.privacy}`}>
+        <div className={styles.privacy}>
           <h2>Privacy matters</h2>
           <p>
             You are in control of your data. Leon lives on your server and you decide if you wish to make use of any third party.
@@ -28,7 +28,7 @@ const Features: React.FC<IFeaturesProps> = () => {
         </div>
       </div>
       <div className={styles.asteroid} />
-      <div className={`${styles.featureContainer} ${styles.automate}`}>
+      <div className={styles.automate}>
         <div>
           <h2>Automate your virtual life</h2>
           <p>
@@ -39,7 +39,7 @@ const Features: React.FC<IFeaturesProps> = () => {
 
         </div>
       </div>
-      <div className={`${styles.featureContainer} ${styles.imagination}`}>
+      <div className={styles.imagination}>
         <div>
           <h2>Imagination is the only limit</h2>
           <p>
@@ -51,7 +51,7 @@ const Features: React.FC<IFeaturesProps> = () => {
         </div>
       </div>
       <div className={styles.earth} />
-      <div className={`${styles.featureContainer} ${styles.ai}`}>
+      <div className={styles.ai}>
         <div>
           <h2>Powered by AI</h2>
           <p>
