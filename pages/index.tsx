@@ -10,6 +10,7 @@ import Features from '@/components/Features'
 import TtsStt from '@/components/TtsStt'
 import Demo from '@/components/Demo'
 import Roadmap from '@/components/Roadmap'
+import Sponsor from '@/components/Sponsor'
 
 const headTitle = 'Leon - Your Open-Source Personal Assistant'
 
@@ -41,7 +42,7 @@ const HomePage: NextPage = (props) => {
           <Roadmap />
         </section>
         <section>
-          {/* Sponsor */}
+          <Sponsor />
         </section>
         <section>
           {/* TODO: import JetBrains Mono fonts */}

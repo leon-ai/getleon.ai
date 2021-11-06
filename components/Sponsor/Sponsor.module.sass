@@ -1,0 +1,75 @@
+.container
+  margin: 0 auto
+  width: 764px
+  margin-bottom: 156px
+  &::before
+    position: absolute
+    z-index: -10
+    content: ''
+    width: 472px
+    height: 530px
+    border-radius: 50%
+    background-image: linear-gradient(to right, var(--color-blue), var(--color-pink))
+    filter: blur(100px)
+  &::before
+    left: 276px
+  h3
+    text-align: right
+  p
+    width: 356px
+    font-size: var(--fontSize-main)
+    color: var(--color-secondary-grey)
+  em
+    font-style: italic
+
+.sponsor
+  padding: 32px
+  position: relative
+  background-color: var(--color-white)
+  border-radius: 10px
+  display: flex
+  justify-content: space-between
+
+.right
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  gap: 16px
+
+.photo
+  background-repeat: no-repeat
+  background-size: 100% 100%
+  background-position: center
+  background-image: url(/img/louis.png)
+  width: 196px
+  height: 196px
+
+.button, .button::before, .button::after
+  color: var(--color-black)
+  font-weight: var(--fontWeight-semibold)
+  background-color: var(--color-white)
+  border-radius: 6px
+  border: solid 1px transparent
+  background-origin: border-box
+  background-clip: content-box, border-box
+  background-image: linear-gradient(var(--color-white), var(--color-white)), linear-gradient(to bottom right, var(--color-blue), var(--color-pink))
+  svg
+    margin-top: -2px
+.button
+  display: block
+.button, .buttonInnerContainer
+  position: relative
+  z-index: 10
+.button::before, .button::after
+  position: absolute
+  z-index: 0
+  width: 233px
+  height: 36px
+  content: ''
+.button::before
+  margin-top: -20px
+.button::after
+  margin-top: -18px
+.buttonInnerContainer
+  padding: 6px 12px
