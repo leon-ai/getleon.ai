@@ -62,12 +62,12 @@
   font-weight: var(--fontWeight-semibold)
   background-color: var(--color-white)
   border-radius: 5px
-  border: solid 1.5px transparent
+  border: solid 1.75px transparent
   background-origin: border-box
   background-clip: content-box, border-box
   background-image: linear-gradient(var(--color-white), var(--color-white)), linear-gradient(to right, var(--color-blue), var(--color-pink))
 .button svg
-    margin-top: -1px
+  margin-top: -1px
 .buttonInnerContainer::before, .buttonInnerContainer::after
   position: absolute
   z-index: -10
@@ -82,3 +82,18 @@
   margin-left: -213px
 .buttonInnerContainer
   padding: 6px 12px
+
+.rightArrow, .leftArrow
+  position: absolute
+  background-image: url(/img/arrow.svg)
+  background-repeat: no-repeat
+  background-size: 100% 100%
+  width: 53px
+  height: 22px
+.rightArrow
+  bottom: 36px
+  margin-left: -232px
+.leftArrow
+  transform: scaleX(-1)
+  bottom: 48px
+  right: 32px

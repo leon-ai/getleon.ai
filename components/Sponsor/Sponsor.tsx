@@ -21,12 +21,14 @@ const Sponsor: React.FC<ISponsorProps> = () => {
         </p>
         <div className={styles.right}>
           <div className={styles.photo} />
-          <a href="https://sponsor.getleon.ai" aria-label="GetStarted Leon" target="_blank" rel="noreferrer" className={styles.button}>
+          <a href="https://sponsor.getleon.ai" aria-label="Sponsor Leon" target="_blank" rel="noreferrer" className={`heartbeat-button ${styles.button}`}>
             <div className={styles.buttonInnerContainer}>
               <Icon name="heart" stroke="none" fill="#FF0000" width={18} style={{ marginRight: '4px' }} />
-              GetStarted @louistiti on GitHub
+              Sponsor @louistiti on GitHub
             </div>
           </a>
+          <div className={styles.rightArrow} />
+          <div className={styles.leftArrow} />
         </div>
       </div>
     </div>

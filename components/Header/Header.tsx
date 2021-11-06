@@ -45,8 +45,7 @@ const Header: React.FC<IHeaderProps> = () => {
           <div className={styles.menu}>
             <nav>
               <ul>
-                {/* TODO: scroll to gettig started section */}
-                <li><a href="https://docs.getleon.ai" target="_blank" rel="noreferrer">Get started</a></li>
+                <li><a href="#get-started">Get started</a></li>
                 <li><a href="https://roadmap.getleon.ai" target="_blank" rel="noreferrer">Roadmap</a></li>
                 <li><a href="https://blog.getleon.ai" target="_blank" rel="noreferrer">Blog</a></li>
               </ul>
@@ -65,9 +64,9 @@ const Header: React.FC<IHeaderProps> = () => {
                 {/*<span>7.9k+</span>*/}
                 <span>8k</span>
               </a>
-              <a href="https://sponsor.getleon.ai" aria-label="GetStarted Leon" target="_blank" rel="noreferrer" className="button">
+              <a href="https://sponsor.getleon.ai" aria-label="Sponsor Leon" target="_blank" rel="noreferrer" className="button heartbeat-button">
                 <Icon name="heart" stroke="none" fill="#FF0000" width={18} style={{ marginRight: '4px' }} />
-                GetStarted
+                Sponsor
               </a>
             </div>
           </div>

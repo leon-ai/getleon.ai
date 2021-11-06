@@ -48,7 +48,6 @@ const HomePage: NextPage = (props) => {
         <section>
           <GetStarted />
           {/* TODO: import JetBrains Mono fonts */}
-          {/* Get started */}
         </section>
       </div>
     </>
