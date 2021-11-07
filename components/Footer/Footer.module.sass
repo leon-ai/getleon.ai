@@ -1,3 +1,94 @@
 .footer
   padding: var(--header-footer-y-padding) 0
+  padding-bottom: calc(var(--header-footer-y-padding) * 4)
 
+.newsletterContainer
+  display: flex
+  justify-content: center
+  color: var(--color-white)
+  margin-bottom: 96px
+
+.newsletter
+  display: flex
+  flex-direction: column
+  gap: 6px
+  i
+    font-style: italic
+    color: var(--color-primary-grey)
+    font-size: .8rem
+
+.inputContainer
+  display: flex
+  align-items: center
+  flex-direction: row-reverse
+  position: relative
+  width: 300px
+  input
+    border: 1.5px solid var(--color-white)
+    position: relative
+    padding: 10px 4px
+    padding-right: calc(106px + 10px)
+    width: 100%
+    box-shadow: 0 0 10px 10px transparent
+    transition: box-shadow var(--transitionDuration-main) var(--transitionTiming-main)
+    &:focus
+      box-shadow: 0 0 10px 6px rgba(255, 255, 255, .2)
+  button
+    position: absolute
+    padding: 4px 10px
+    margin-right: 5px
+    height: 26px
+
+.wrapper
+  color: var(--color-white)
+  display: flex
+  justify-content: space-between
+  a
+    transition: color var(--transitionDuration-main) var(--transitionTiming-main)
+    &:hover
+      color: var(--color-white)
+
+.licenseContainer
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.license
+  display: flex
+  align-items: center
+  gap: 7px
+  p
+    color: var(--color-primary-grey)
+    font-size: var(--fontSize-main)
+    line-height: 1.3rem
+  a
+    font-weight: var(--fontWeight-semibold)
+
+.logo
+  background-image: url(/img/logo-stroke.svg)
+  background-size: 100% 100%
+  background-repeat: no-repeat
+  background-position: center
+  width: 58px
+  height: 60px
+
+.credits
+  line-height: 1rem
+  font-size: .7rem
+  color: var(--color-primary-grey)
+  a
+    font-weight: var(--fontWeight-semibold)
+
+.links
+  display: flex
+  gap: 64px
+  span
+    text-transform: uppercase
+    font-weight: var(--fontWeight-semibold)
+  ul
+    margin-top: 16px
+  li
+    color: var(--color-primary-grey)
+    margin-bottom: 16px
+    &:last-child
+      margin-bottom: 0
