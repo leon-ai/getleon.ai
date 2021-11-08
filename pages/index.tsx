@@ -20,6 +20,17 @@ const headTitle = 'Leon - Your Open-Source Personal Assistant'
 interface IHomePageProps {
   cards: IRoadmapCard
 }
+interface ITrelloCard {
+  id: string
+  name: string
+  idList: string
+  url: string
+  shortUrl: string
+  closed: boolean
+  labels: [{
+    name: string
+  }]
+}
 
 const HomePage: NextPage<IHomePageProps> = ({ cards }) => {
   return (
@@ -63,7 +74,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   let starsNb = '8k'
   let cards: IRoadmapCard[] = []
 
-  if (process.env.NODE_ENV !== 'development') {
+  // if (process.env.NODE_ENV !== 'development') {
+  if (process.env.NODE_ENV === 'development') {
     const [ghRes, trelloRes] = await Promise.all([
       fetch('https://api.github.com/repos/leon-ai/leon'),
       fetch('https://trello.com/b/7bdwhnLr/leon-your-open-source-personal-assistant-roadmap.json')
@@ -84,31 +96,33 @@ export const getStaticProps: GetStaticProps = async (context) => {
       { top: 0, left: 536 },
       { top: 100, left: 636 },
       { top: 200, left: 736 },
-      { top: 300, left: 0 }
+      { top: 300, left: 31 }
     ]
     const allowedListIds = ['5a5198721b384d74ec5af379', '5a5198a90e1368b6e4fbd5d5', '5a5198859807994804d5493b']
-    const legitCards = trelloData.cards.filter(card => card.name !== '.' && allowedListIds.includes(card.idList) && !card.labels.includes('Docs'))
+    const legitCards = trelloData.cards.filter((card: ITrelloCard) => card.name !== '.' && card.name.indexOf('🎉') === -1 && card.name.indexOf('📝') === -1 &&
+      allowedListIds.includes(card.idList) && !card.closed)
     const cardIds: string[] = []
-    const pickCard = () => {
+    const pickCard = (): ITrelloCard => {
       const pickUpNb = Math.floor(Math.random() * ((legitCards.length - 1) + 1))
-      const trelloCard = legitCards[pickUpNb]
+      const trelloCard: ITrelloCard = legitCards[pickUpNb]
 
       if (!cardIds.includes(trelloCard.id)) {
         cardIds.push(trelloCard.id)
 
         return trelloCard
-      } else {
-        pickCard()
       }
+
+      return pickCard()
     }
 
     cards = positions.map((pos) => {
       const trelloCard = pickCard()
+      const matches = trelloCard.name.match(/\[(.+?)\]/)
 
       return {
-        types: trelloCard.labels,
-        version: '',
-        title: trelloCard.name.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, ''),
+        types: trelloCard.labels.map(label => label.name),
+        version: matches ? matches[1] : '',
+        title: trelloCard.name.replace(/\[(.+?)\]/, ''),
         url: trelloCard.shortUrl,
         ...pos
       }
