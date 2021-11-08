@@ -2,10 +2,13 @@ import React from 'react'
 
 import styles from '@/components/Roadmap/Roadmap.module.sass'
 import Icon from '@/components/Icon'
+import { IRoadmapCard } from '@/shared/interfaces/roadmap-card.interface'
 
-interface IRoadmapProps { }
+interface IRoadmapProps {
+  cards: IRoadmapCard
+}
 
-const Roadmap: React.FC<IRoadmapProps> = () => {
+const Roadmap: React.FC<IRoadmapProps> = ({ cards }) => {
   const cards = [
     { top: 0, left: 0, types: ['Package/Module', 'Client', 'Server'], version: '1.0.0-beta.6', title: 'Widgets', url: 'https://trello.com/c/m83xpjPR/360-%E2%9C%A8-100-beta6-widgets' },
     { top: 100, left: 100, types: ['Package/Module', 'Server'], version: '1.0.0-beta.5', title: 'Allow array of elements for trim conditions', url: 'https://trello.com/c/PFyAGitY/357-%E2%9C%A8-100-beta5-allow-array-of-elements-for-trim-conditions' },
