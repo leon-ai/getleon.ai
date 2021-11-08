@@ -5,7 +5,7 @@ import Icon from '@/components/Icon'
 import { IRoadmapCard } from '@/shared/interfaces/roadmap-card.interface'
 
 interface IRoadmapProps {
-  cards: IRoadmapCard
+  cards: IRoadmapCard[]
 }
 
 const Roadmap: React.FC<IRoadmapProps> = ({ cards }) => {

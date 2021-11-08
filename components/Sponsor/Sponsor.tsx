@@ -16,7 +16,7 @@ const Sponsor: React.FC<ISponsorProps> = () => {
           thanks for stopping by!<br /><br />
           Such project needs time and energy to become possible.<br /><br />
           I dedicate most of my free time to Leon. The focus is not only limited to the activity you see on GitHub but also requires a lot of thinking about the direction of the project. Which is naturally related to the overall design, architecture, vision, learning process and so on...<br /><br />
-          If you already benefit from Leon, or you'd love to see the upcoming features happening faster, please consider to sponsor the project.<br /><br />
+          If you already benefit from Leon, or you&apos;d love to see the upcoming features happening faster, please consider to sponsor the project.<br /><br />
           <em>Louis</em>
         </p>
         <div className={styles.right}>
