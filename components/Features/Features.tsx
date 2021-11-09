@@ -625,7 +625,8 @@ const Features: React.FC<IFeaturesProps> = () => {
         <div>
           <h2>Powered by AI</h2>
           <p>
-            Some <strong>AI</strong> concepts are powering Leon to ease the interaction with humans.
+            Some <strong>AI</strong> concepts are powering Leon to ease the interaction with humans,
+            such as <abbr title="Natural Language Processing">NLP</abbr>, <abbr title="Text-to-Speech">TTS</abbr>, <abbr title="Speech-to-Text">STT</abbr>, and more in the future!
           </p>
         </div>
         <div className={`${styles.animationContainer} ${styles.aiAnimation}`}>
