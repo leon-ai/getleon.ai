@@ -144,9 +144,11 @@ const Features: React.FC<IFeaturesProps> = () => {
               <path d="M434.086 398.857L429.656 405.227L421.958 404.257L426.39 397.887L434.086 398.857Z" fill="#A8B2BF"/>
               <path d="M457.729 401.837L460.44 409.106L452.744 408.137L450.03 400.866L457.729 401.837Z" fill="#A8B2BF"/>
               <path d="M445.273 400.267L438.453 399.407L437.594 406.227L444.414 407.087L445.273 400.267Z" fill="#A8B2BF"/>
-              <line x1="400.641" y1="345.933" x2="387.641" y2="340.933" stroke="#EDF046" strokeWidth="2"/>
-              <line x1="417.181" y1="326.573" x2="410.181" y2="316.573" stroke="#EDF046" strokeWidth="2"/>
-              <line x1="407.293" y1="335.707" x2="394.293" y2="322.707" stroke="#EDF046" strokeWidth="2"/>
+              <g className={styles.privacyRays}>
+                <line x1="400.641" y1="345.933" x2="387.641" y2="340.933" stroke="#EDF046" strokeWidth="2"/>
+                <line x1="417.181" y1="326.573" x2="410.181" y2="316.573" stroke="#EDF046" strokeWidth="2"/>
+                <line x1="407.293" y1="335.707" x2="394.293" y2="322.707" stroke="#EDF046" strokeWidth="2"/>
+              </g>
               <path d="M727.3 654.148C727.3 781.811 623.811 885.3 496.152 885.3C368.489 885.3 265 781.811 265 654.148C265 526.489 368.489 423 496.152 423C623.811 423 727.3 526.489 727.3 654.148Z" fill="#F04729"/>
               <path d="M639.575 472.952C639.575 473.573 639.623 474.186 639.623 474.807C639.607 649.206 512.824 797.727 340.594 825.123C434.703 911.38 580.92 905.021 667.18 810.918C753.438 716.815 747.085 570.586 652.975 484.326C648.655 480.362 644.183 476.568 639.575 472.952Z" fill="#DD381A"/>
               <path d="M572.869 773.71C546.454 773.71 525.044 752.3 525.044 725.885C525.044 699.47 546.454 678.061 572.869 678.061C599.284 678.061 620.693 699.47 620.693 725.885C620.668 752.284 599.268 773.678 572.869 773.71ZM572.869 694.004C555.262 694.004 540.988 708.278 540.988 725.885C540.988 743.492 555.262 757.769 572.869 757.769C590.476 757.769 604.753 743.492 604.753 725.885C604.753 708.278 590.476 694.004 572.869 694.004Z" fill="#C43117"/>
@@ -156,7 +158,7 @@ const Features: React.FC<IFeaturesProps> = () => {
               <path d="M628.536 668.912C597.611 638.599 548.13 638.599 517.202 668.912C501.914 684.571 481.07 693.588 459.19 694.001H268.491C269.431 699.382 270.523 704.7 271.823 709.942H459.19C485.248 709.538 510.091 698.886 528.361 680.298C553.078 656.054 592.66 656.054 617.377 680.298C635.646 698.886 660.49 709.535 686.548 709.942H720.477C721.777 704.7 722.869 699.382 723.81 694.001H686.545C664.668 693.581 643.823 684.565 628.536 668.912Z" fill="#C43117"/>
               <path d="M617.377 771.47C592.659 795.717 553.078 795.717 528.361 771.47C510.091 752.881 485.248 742.233 459.19 741.826H282.257C284.488 747.248 286.921 752.563 289.54 757.767H459.19C481.07 758.183 501.914 767.197 517.202 782.859C548.126 813.172 597.608 813.172 628.536 782.859C643.823 767.206 664.668 758.19 686.548 757.767H702.76C705.382 752.563 707.812 747.248 710.044 741.826H686.548C660.489 742.233 635.646 752.881 617.377 771.47Z" fill="#C43117"/>
               <path d="M536.004 853.416C536.004 831.1 511.496 813.563 480.211 813.563C448.923 813.563 424.415 831.1 424.415 853.416C424.598 862.438 428.464 871 435.119 877.098C455.005 882.542 475.531 885.3 496.152 885.3C502.719 885.3 509.198 884.959 515.624 884.422C527.531 878.54 535.326 866.68 536.004 853.416ZM480.211 877.328C458.609 877.328 440.355 866.377 440.355 853.416C440.355 840.457 458.609 829.503 480.211 829.503C501.81 829.503 520.064 840.457 520.064 853.416C520.064 866.377 501.81 877.328 480.211 877.328Z" fill="#C43117"/>
-              <circle cx="240" cy="185" r="177" fill="white" fillOpacity="0.15" stroke="white" strokeWidth="4"/>
+              <circle className={styles.privacyShield} cx="240" cy="185" r="177" fill="white" fillOpacity="0.15" stroke="white" strokeWidth="4"/>
               <path d="M284.255 192.006L278.609 199.665L290.34 205.91L293.459 196.907L284.255 192.006Z" fill="#808B96"/>
               <path d="M332.355 112.851C324.682 115.193 318.252 120.487 314.482 127.568L280.817 190.803L296.459 199.131L330.124 135.896C333.894 128.814 334.696 120.524 332.355 112.851Z" fill="#F5AE45"/>
               <path d="M332.362 112.881C332.583 118.586 331.291 124.252 328.617 129.297L292.548 197.048L296.459 199.13L330.124 135.895C333.889 128.824 334.695 120.546 332.362 112.881Z" fill="#F09E26"/>
@@ -246,10 +248,22 @@ const Features: React.FC<IFeaturesProps> = () => {
               <path d="M24.9883 19.8771C24.9883 20.7908 24.248 21.531 23.3344 21.531C22.4211 21.531 21.6804 20.7908 21.6804 19.8771C21.6804 18.9639 22.4211 18.2231 23.3344 18.2231C24.248 18.2231 24.9883 18.9639 24.9883 19.8771Z" fill="#FABC5F"/>
               <path d="M42.2733 44.0758C42.2733 44.9895 41.533 45.7298 40.6194 45.7298C39.7061 45.7298 38.9654 44.9895 38.9654 44.0758C38.9654 43.1626 39.7061 42.4219 40.6194 42.4219C41.533 42.4219 42.2733 43.1626 42.2733 44.0758Z" fill="#FABC5F"/>
               <path d="M45.7301 40.619C45.7301 41.5327 44.9899 42.273 44.0762 42.273C43.1625 42.273 42.4222 41.5327 42.4222 40.619C42.4222 39.7058 43.1625 38.9651 44.0762 38.9651C44.9899 38.9651 45.7301 39.7058 45.7301 40.619Z" fill="#FABC5F"/>
-              <line y1="-1" x2="9.37468" y2="-1" transform="matrix(0.387503 0.921869 0.921869 -0.387503 43.3517 53.0369)" stroke="#EDF046" strokeWidth="2"/>
-              <line y1="-1" x2="8.21578" y2="-1" transform="matrix(0.836474 0.548006 0.548006 -0.836474 55.7822 41.207)" stroke="#EDF046" strokeWidth="2"/>
-              <line y1="-1" x2="12.3741" y2="-1" transform="matrix(0.728511 0.685034 0.685034 -0.728511 49.9344 48.1206)" stroke="#EDF046" strokeWidth="2"/>
-              <circle cx="408" cy="133" r="21" fill="white"/>
+              <g className={styles.privacyRays}>
+                <line y1="-1" x2="9.37468" y2="-1" transform="matrix(0.387503 0.921869 0.921869 -0.387503 43.3517 53.0369)" stroke="#EDF046" strokeWidth="2"/>
+                <line y1="-1" x2="8.21578" y2="-1" transform="matrix(0.836474 0.548006 0.548006 -0.836474 55.7822 41.207)" stroke="#EDF046" strokeWidth="2"/>
+                <line y1="-1" x2="12.3741" y2="-1" transform="matrix(0.728511 0.685034 0.685034 -0.728511 49.9344 48.1206)" stroke="#EDF046" strokeWidth="2"/>
+              </g>
+              <circle cx="408" cy="133" r="21" fill="white">
+                <animateTransform
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="rotate"
+                  from="00 240 185"
+                  to="360 240 185"
+                  dur="10s"
+                  repeatCount="indefinite"
+                />
+              </circle>
               <g opacity="0.5">
                 <line x1="42" y1="395" x2="42" y2="403" stroke="#EDF046" strokeWidth="2"/>
                 <line x1="38" y1="399" x2="46" y2="399" stroke="#EDF046" strokeWidth="2"/>
@@ -278,6 +292,22 @@ const Features: React.FC<IFeaturesProps> = () => {
           </div>
         </div>
       </div>
+      <svg className={styles.backbone} viewBox="0 0 749 288" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_43_23)">
+        <path d="M13 11.5V130C13 147.673 27.3269 162 45 162H360.5H736M736 162V11.5M736 162V277" stroke="#B173FF" strokeWidth="1.5"/>
+        </g>
+        <defs>
+        <filter id="filter0_d_43_23" x="0.5" y="0.5" width="748" height="287.5" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset/>
+        <feGaussianBlur stdDeviation="5.5"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0.694118 0 0 0 0 0.45098 0 0 0 0 1 0 0 0 1 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_43_23"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_43_23" result="shape"/>
+        </filter>
+        </defs>
+      </svg>
       <div className={styles.asteroid} />
       <div className={styles.automate}>
         <div>
@@ -391,6 +421,22 @@ const Features: React.FC<IFeaturesProps> = () => {
           </svg>
         </div>
       </div>
+      <svg className={styles.backbone} viewBox="0 0 749 298" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_43_24)">
+        <path d="M13 286.5V184.5C13 166.827 27.3269 152.5 45 152.5H351H704C721.673 152.5 736 138.173 736 120.5V11.5" stroke="#B173FF" strokeWidth="1.5"/>
+        </g>
+        <defs>
+        <filter id="filter0_d_43_24" x="0.5" y="0.5" width="748" height="297" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset/>
+        <feGaussianBlur stdDeviation="5.5"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0.694118 0 0 0 0 0.45098 0 0 0 0 1 0 0 0 1 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_43_24"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_43_24" result="shape"/>
+        </filter>
+        </defs>
+      </svg>
       <div className={styles.imagination}>
         <div>
           <h2>Imagination is<br />the only limit</h2>
@@ -620,12 +666,28 @@ const Features: React.FC<IFeaturesProps> = () => {
           </svg>
         </div>
       </div>
+      <svg className={styles.backbone} viewBox="0 0 749 298" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_43_25)">
+        <path d="M13 11.5V113.5C13 131.173 27.3269 145.5 45 145.5H351H704C721.673 145.5 736 159.827 736 177.5V286.5" stroke="#B173FF" strokeWidth="1.5"/>
+        </g>
+        <defs>
+        <filter id="filter0_d_43_25" x="0.5" y="0.5" width="748" height="297" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset/>
+        <feGaussianBlur stdDeviation="5.5"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0.694118 0 0 0 0 0.45098 0 0 0 0 1 0 0 0 1 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_43_25"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_43_25" result="shape"/>
+        </filter>
+        </defs>
+      </svg>
       <div className={styles.earth} />
       <div className={styles.ai}>
         <div>
           <h2>Powered by AI</h2>
           <p>
-            Some <strong>AI</strong> concepts are powering Leon to ease the interaction with humans,
+            Some <strong>AI</strong> concepts are empowering Leon to ease the interaction with humans,
             such as <abbr title="Natural Language Processing">NLP</abbr>, <abbr title="Text-to-Speech">TTS</abbr>, <abbr title="Speech-to-Text">STT</abbr>, and more in the future!
           </p>
         </div>
@@ -892,6 +954,22 @@ const Features: React.FC<IFeaturesProps> = () => {
           </svg>
         </div>
       </div>
+      <svg className={styles.backboneEnd} viewBox="0 0 385 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_43_85)">
+        <path d="M372 11V113C372 130.673 357.673 145 340 145H45C27.3269 145 13 159.327 13 177V293" stroke="#B173FF" strokeWidth="1.5"/>
+        </g>
+        <defs>
+        <filter id="filter0_d_43_85" x="0.5" y="0" width="384" height="304" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset/>
+        <feGaussianBlur stdDeviation="5.5"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0.694118 0 0 0 0 0.45098 0 0 0 0 1 0 0 0 1 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_43_85"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_43_85" result="shape"/>
+        </filter>
+        </defs>
+      </svg>
     </div>
   )
 }

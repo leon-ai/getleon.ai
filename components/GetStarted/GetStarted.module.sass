@@ -1,10 +1,12 @@
 .container
   margin-bottom: 156px
+  box-shadow: var(--backbone-shadow)
   h3
     margin: 0 auto
     margin-bottom: 59px
     text-align: center
     width: 626px
+    background-color: var(--color-black)
 
 .getStarted
   display: flex
@@ -131,3 +133,11 @@
   100%
     transform: translateZ(0) perspective(1000px) rotateY(360deg)
 
+
+.backbone
+  --width: 324px
+  position: absolute
+  z-index: -20
+  left: 501px
+  transform: translateY(210px)
+  width: var(--width)

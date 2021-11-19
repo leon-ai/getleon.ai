@@ -93,6 +93,22 @@ const Roadmap: React.FC<IRoadmapProps> = ({ cards }) => {
           Browse the roadmap <Icon name="arrow-right" />
         </a>
       </div>
+      <svg className={styles.backbone} viewBox="0 0 302 232" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_552_3)">
+        <path d="M13 11V100C13 117.673 27.3269 132 45 132L257 132C274.673 132 289 146.327 289 164L289 220.5" stroke="#B173FF" strokeWidth="1.5"/>
+        </g>
+        <defs>
+        <filter id="filter0_d_552_3" x="0.5" y="0" width="301" height="231.5" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset/>
+        <feGaussianBlur stdDeviation="5.5"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0.694118 0 0 0 0 0.45098 0 0 0 0 1 0 0 0 1 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_552_3"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_552_3" result="shape"/>
+        </filter>
+        </defs>
+      </svg>
     </div>
   )
 }

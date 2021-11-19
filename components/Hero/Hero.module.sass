@@ -6,6 +6,15 @@
 .container
   position: relative
   perspective: 500px
+  margin-bottom: 156px
+
+.backbone
+  --width: 672px
+  position: absolute
+  z-index: -10
+  bottom: -156px
+  left: calc(50% - (var(--width) / 2))
+  width: var(--width)
 
 .hero
   --energy-turned-off-color: rgba(0, 0, 0, .5)
@@ -14,6 +23,7 @@
   opacity: 0
   // TODO: trigger on scroll position/intersection
   animation: displayHero 2s ease-in forwards
+  box-shadow: 0 40px 20px 0 rgba(0, 0, 0, .9)
 
 .halo
   animation: blinkHalo 6s 5s ease-in alternate infinite

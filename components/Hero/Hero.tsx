@@ -903,6 +903,22 @@ const Hero: React.FC<IHeroProps> = () => {
           </g>
         </g>
       </svg>
+      <svg className={styles.backbone} viewBox="0 0 749 177" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_43_11)">
+        <path d="M375 11.5V101M375 101H45C27.3269 101 13 115.327 13 133V165.5M375 101H704C721.673 101 736 115.327 736 133V165.5" stroke="#B173FF" strokeWidth="1.5"/>
+        </g>
+        <defs>
+        <filter id="filter0_d_43_11" x="0.5" y="0.5" width="748" height="176" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset/>
+        <feGaussianBlur stdDeviation="5.5"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0.694118 0 0 0 0 0.45098 0 0 0 0 1 0 0 0 1 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_43_11"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_43_11" result="shape"/>
+        </filter>
+        </defs>
+      </svg>
     </div>
   )
 }

@@ -48,6 +48,22 @@ const GetStarted: React.FC<IGetStartedProps> = () => {
             <div className={styles.placeholder} />
           </div>
         </div>
+        <svg className={styles.backbone} viewBox="0 0 256 557" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_552_7)">
+          <path d="M243 11V105.5L243 512.5C243 530.173 228.673 544.5 211 544.5H11" stroke="#B173FF" strokeWidth="1.5"/>
+          </g>
+          <defs>
+          <filter id="filter0_d_552_7" x="0" y="0" width="255.5" height="557" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset/>
+          <feGaussianBlur stdDeviation="5.5"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0.694118 0 0 0 0 0.45098 0 0 0 0 1 0 0 0 1 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_552_7"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_552_7" result="shape"/>
+          </filter>
+          </defs>
+        </svg>
       </div>
       <div className={styles.generator}>
         <svg viewBox="0 0 428 593" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -2,6 +2,21 @@
   --animation-container-size: 364px
   --spacing-between-feature: 156px
 
+.backbone
+  --width: 672px
+  position: absolute
+  transform: translateY(-200px)
+  z-index: -10
+  left: calc(50% - (var(--width) / 2))
+  width: var(--width)
+.backboneEnd
+  --width: 332px
+  position: absolute
+  transform: translateY(-230px)
+  right: 200px
+  z-index: -10
+  width: var(--width)
+
 .asteroid
   position: absolute
   z-index: -10
@@ -16,7 +31,7 @@
 
 .earth
   position: absolute
-  z-index: -10
+  z-index: -20
   right: -50px
   margin-left: -25px
   margin-top: -200px
@@ -28,10 +43,12 @@
   box-shadow: inset 0 50px 80px var(--color-black), inset -65px 0 65px var(--color-black)
 
 .horizContainer
+  position: relative
   display: flex
   justify-content: space-between
   margin-bottom: var(--spacing-between-feature)
   text-align: center
+  box-shadow: var(--backbone-shadow)
   h2, p
     text-align: center
     width: var(--animation-container-size)
@@ -59,6 +76,7 @@
   background-origin: border-box
   background-clip: content-box, border-box
   overflow: hidden
+  box-shadow: var(--backbone-shadow)
   &.openSourceAnimation
     background-image: linear-gradient(var(--color-black), var(--color-black)), linear-gradient(to bottom right, #1CDBA2, var(--color-blue))
     svg
@@ -93,3 +111,25 @@
       top: -80px
       left: -100px
       width: 510px
+
+.privacyRays
+  opacity: .4
+  animation: blinkPrivacyRays 5s infinite
+@keyframes blinkPrivacyRays
+  25%
+    opacity: .6
+  50%
+    opacity: .4
+  75%
+    opacity: 1
+
+.privacyShield
+  opacity: .7
+  animation: blinkPrivacyShield 5s infinite
+@keyframes blinkPrivacyShield
+  25%
+    opacity: .5
+  50%
+    opacity: .7
+  75%
+    opacity: 1
