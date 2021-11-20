@@ -144,8 +144,8 @@
 .aiLogo
   transform-origin: 425px 425px
   transform: translateZ(0) perspective(1000px) rotateY(0deg)
-  animation: rotateLogo 20s linear infinite
-@keyframes rotateLogo
+  animation: rotateAiLogo 20s linear infinite
+@keyframes rotateAiLogo
   100%
     transform: translateZ(0) perspective(1000px) rotateY(360deg)
 
@@ -188,3 +188,29 @@
 @keyframes imaginationMoveAstronaut
   100%
     transform: translateY(-20px)
+
+.automateWires
+  opacity: .4
+  animation: blinkAutomateWires 5s infinite alternate
+@keyframes blinkAutomateWires
+  25%
+    opacity: .5
+  50%
+    opacity: .7
+  75%
+    opacity: 1
+
+.automateLogo
+  transform: translateY(0)
+  animation: automateMoveLogo 3s linear infinite alternate
+@keyframes automateMoveLogo
+  100%
+    transform: translateY(-20px)
+
+.automateRocket
+  transform: translateY(72px)
+  animation: automateMoveRocket 5s ease-in infinite
+@keyframes automateMoveRocket
+  100%
+    transform: translateY(-164px)
+
