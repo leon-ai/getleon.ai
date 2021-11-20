@@ -214,3 +214,97 @@
   100%
     transform: translateY(-164px)
 
+.automateLeft1stWave
+  opacity: 0
+  animation: automateMoveLeft1stWave 3s ease-in infinite
+@keyframes automateMoveLeft1stWave
+  50%
+    opacity: 1
+    transform: translate3d(7.5px, -15px, 0)
+  100%
+    transform: translate3d(7.5px, -15px, 0)
+.automateLeft2ndWave
+  transform: translate3d(5px, -5px, 0)
+  opacity: 0
+  animation: automateMoveLeft2ndWave 3s .5s ease-in infinite
+@keyframes automateMoveLeft2ndWave
+  50%
+    opacity: 1
+    transform: translate3d(5px, -10px, 0)
+  100%
+    transform: translate3d(5px, -10px, 0)
+.automateLeft3rdWave
+  opacity: 0
+  animation: automateMoveLeft3rdWave 3s 1s ease-in infinite
+@keyframes automateMoveLeft3rdWave
+  50%
+    opacity: 1
+    transform: translate3d(2.5px, -5px, 0)
+  100%
+    transform: translate3d(2.5px, -5px, 0)
+.automateRight1stWave
+  opacity: 0
+  animation: automateMoveRight1stWave 3s ease-in infinite
+@keyframes automateMoveRight1stWave
+  50%
+    opacity: 1
+    transform: translate3d(-7.5px, -15px, 0)
+  100%
+    transform: translate3d(-7.5px, -15px, 0)
+.automateRight2ndWave
+  transform: translate3d(-5px, -5px, 0)
+  opacity: 0
+  animation: automateMoveRight2ndWave 3s .5s ease-in infinite
+@keyframes automateMoveRight2ndWave
+  50%
+    opacity: 1
+    transform: translate3d(-5px, -10px, 0)
+  100%
+    transform: translate3d(-5px, -10px, 0)
+.automateRight3rdWave
+  opacity: 0
+  animation: automateMoveRight3rdWave 3s 1s ease-in infinite
+@keyframes automateMoveRight3rdWave
+  50%
+    opacity: 1
+    transform: translate3d(-2.5px, -5px, 0)
+  100%
+    transform: translate3d(-2.5px, -5px, 0)
+
+.osText
+  position: absolute
+  z-index: 10
+  color: var(--color-white)
+  font-weight: var(--fontWeight-semibold)
+  opacity: 0
+  // opacity: 1
+@for $i from 1 through 6
+  .osText1to2#{$i}
+    font-size: 1.5em
+    animation: osMoveText1to2 3s $i * .5s linear infinite
+@keyframes osMoveText1to2
+  25%
+    opacity: 1
+  100%
+    transform: translate3d(280px, 190px, 0) rotate(360deg) scale(.6)
+    opacity: 0
+@for $i from 1 through 6
+  .osText2to3#{$i}
+    font-size: 1em
+    animation: osMoveText2to3 3s $i * .5s linear infinite
+@keyframes osMoveText2to3
+  25%
+    opacity: 1
+  100%
+    transform: translate3d(80px, 150px, 0) rotate(360deg) scale(.6)
+    opacity: 0
+@for $i from 1 through 6
+  .osText3toTop#{$i}
+    font-size: .8em
+    animation: osMoveText3toTop 3s $i * .5s linear infinite
+@keyframes osMoveText3toTop
+  25%
+    opacity: 1
+  100%
+    transform: translate3d(164px, 0px, 0) rotate(360deg) scale(.6)
+    opacity: 0

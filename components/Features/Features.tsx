@@ -14,6 +14,54 @@ const Features: React.FC<IFeaturesProps> = () => {
             Under MIT license which is the most permissive license in the <strong>open-source</strong> world, we want Leon be able to grow as much as possible with the least of restriction.
           </p>
           <div className={`${styles.animationContainer} ${styles.openSourceAnimation}`}>
+            {/* 1st to 2nd */}
+            <span className={`${styles.osText} ${styles.osText1to21}`} style={{ transform: 'translate3d(60px, 220px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText1to21}`} style={{ transform: 'translate3d(80px, 240px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText1to22}`} style={{ transform: 'translate3d(60px, 220px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText1to22}`} style={{ transform: 'translate3d(80px, 240px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText1to23}`} style={{ transform: 'translate3d(60px, 220px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText1to23}`} style={{ transform: 'translate3d(80px, 240px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText1to24}`} style={{ transform: 'translate3d(60px, 220px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText1to24}`} style={{ transform: 'translate3d(80px, 240px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText1to25}`} style={{ transform: 'translate3d(60px, 220px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText1to25}`} style={{ transform: 'translate3d(80px, 240px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText1to26}`} style={{ transform: 'translate3d(60px, 220px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText1to26}`} style={{ transform: 'translate3d(80px, 240px, 0)' }}>1</span>
+            {/* 2nd to 3rd */}
+            <span className={`${styles.osText} ${styles.osText2to31}`} style={{ transform: 'translate3d(260px, 170px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText2to31}`} style={{ transform: 'translate3d(270px, 190px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText2to32}`} style={{ transform: 'translate3d(260px, 170px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText2to32}`} style={{ transform: 'translate3d(270px, 190px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText2to33}`} style={{ transform: 'translate3d(260px, 170px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText2to33}`} style={{ transform: 'translate3d(270px, 190px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText2to34}`} style={{ transform: 'translate3d(260px, 170px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText2to34}`} style={{ transform: 'translate3d(270px, 190px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText2to35}`} style={{ transform: 'translate3d(260px, 170px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText2to35}`} style={{ transform: 'translate3d(270px, 190px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText2to36}`} style={{ transform: 'translate3d(260px, 170px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText2to36}`} style={{ transform: 'translate3d(270px, 190px, 0)' }}>1</span>
+            {/* 3rd to spaceship */}
+            <span className={`${styles.osText} ${styles.osText3toTop1}`} style={{ transform: 'translate3d(80px, 150px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop1}`} style={{ transform: 'translate3d(90px, 150px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop2}`} style={{ transform: 'translate3d(80px, 150px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop2}`} style={{ transform: 'translate3d(90px, 150px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop3}`} style={{ transform: 'translate3d(80px, 150px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop3}`} style={{ transform: 'translate3d(90px, 150px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop4}`} style={{ transform: 'translate3d(80px, 150px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop4}`} style={{ transform: 'translate3d(90px, 150px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop5}`} style={{ transform: 'translate3d(80px, 150px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop5}`} style={{ transform: 'translate3d(90px, 150px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop6}`} style={{ transform: 'translate3d(80px, 150px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop6}`} style={{ transform: 'translate3d(90px, 150px, 0)' }}>1</span>
+            {/* To spaceship */}
+            <span className={`${styles.osText} ${styles.osText3toTop1}`} style={{ transform: 'translate3d(150px, 70px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop1}`} style={{ transform: 'translate3d(170px, 80px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop2}`} style={{ transform: 'translate3d(180px, 70px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop2}`} style={{ transform: 'translate3d(200px, 80px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop3}`} style={{ transform: 'translate3d(220px, 70px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop3}`} style={{ transform: 'translate3d(240px, 80px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop4}`} style={{ transform: 'translate3d(150px, 90px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop4}`} style={{ transform: 'translate3d(170px, 100px, 0)' }}>0</span>
             <svg viewBox="0 0 741 763" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g mask="url(#mask0_451:2)">
                 <path d="M174.604 492.151C173.414 496.799 171.027 507.007 172.02 513.433C172.951 517.884 174.955 522.04 177.857 525.542C180.498 528.952 178.09 533.7 173.356 534.432C171.452 534.767 169.495 534.293 167.955 533.123L151.134 525.766L147.884 494.284L174.604 492.151Z" fill="#35495E"/>
@@ -414,12 +462,12 @@ const Features: React.FC<IFeaturesProps> = () => {
               <path d="M393.039 338.066L389.774 338.826V424.279L393.039 423.518V338.066Z" fill="white"/>
               <path d="M399.463 333.742L396.198 334.503V422.782L399.463 422.021V333.742Z" fill="white"/>
             </g>
-            <path d="M206.503 511.3C272.214 505.613 307.47 515.06 364.915 553.747" stroke="#1C75DB" strokeWidth="4"/>
-            <path d="M230.669 529.293C273.538 525.595 296.541 531.759 334.023 556.987" stroke="#1C75DB" strokeWidth="4"/>
-            <path d="M243.467 547.216C273.25 544.153 289.158 548.416 314.945 566.368" stroke="#1C75DB" strokeWidth="4"/>
-            <path d="M417.368 553.747C471.431 515.966 506.688 506.519 575.779 511.3" stroke="#1C75DB" strokeWidth="4"/>
-            <path d="M447.293 557.245C482.57 532.609 505.572 526.445 550.647 529.552" stroke="#1C75DB" strokeWidth="4"/>
-            <path d="M467.337 566.368C491.599 548.824 507.507 544.562 538.816 547.216" stroke="#1C75DB" strokeWidth="4"/>
+            <path className={styles.automateLeft3rdWave} d="M206.503 511.3C272.214 505.613 307.47 515.06 364.915 553.747" stroke="#1C75DB" strokeWidth="4"/>
+            <path className={styles.automateLeft2ndWave} d="M230.669 529.293C273.538 525.595 296.541 531.759 334.023 556.987" stroke="#1C75DB" strokeWidth="4"/>
+            <path className={styles.automateLeft1stWave} d="M243.467 547.216C273.25 544.153 289.158 548.416 314.945 566.368" stroke="#1C75DB" strokeWidth="4"/>
+            <path className={styles.automateRight3rdWave} d="M417.368 553.747C471.431 515.966 506.688 506.519 575.779 511.3" stroke="#1C75DB" strokeWidth="4"/>
+            <path className={styles.automateRight2ndWave} d="M447.293 557.245C482.57 532.609 505.572 526.445 550.647 529.552" stroke="#1C75DB" strokeWidth="4"/>
+            <path className={styles.automateRight1stWave} d="M467.337 566.368C491.599 548.824 507.507 544.562 538.816 547.216" stroke="#1C75DB" strokeWidth="4"/>
             <g opacity="0.5">
               <line x1="335" y1="104" x2="335" y2="112" stroke="#EDF046" strokeWidth="2"/>
               <line x1="331" y1="108" x2="339" y2="108" stroke="#EDF046" strokeWidth="2"/>
