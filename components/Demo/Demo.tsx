@@ -1,24 +1,54 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import styles from '@/components/Demo/Demo.module.sass'
 
 interface IDemoProps { }
 
 const Demo: React.FC<IDemoProps> = () => {
+  const [isYtAccessible, setIsYtAccessible] = useState(false)
+
+  useEffect(() => {
+    const image = new Image()
+
+    image.onload = () => {
+      setIsYtAccessible(true)
+    }
+    image.onerror = () => {
+      setIsYtAccessible(false)
+    }
+    image.src = 'https://youtube.com/favicon.ico'
+
+    setTimeout(() => {
+      if (!image.complete) {
+        image.src = ''
+        setIsYtAccessible(false)
+      }
+    }, 3000)
+  }, [])
+
   return (
     <div className={styles.container}>
       <h3>
         Aaaand action!
       </h3>
       {/* TODO: onLoad loader */}
-      <iframe src="https://www.youtube.com/embed/p7GRGiicO1c"
-              width="472" height="400"
-              loading="lazy"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; clipboard-write;
+      {isYtAccessible ? (
+        <iframe src="https://www.youtube.com/embed/p7GRGiicO1c"
+                width="472" height="400"
+                loading="lazy"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; clipboard-write;
             encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen />
+                allowFullScreen />
+      ) : (
+        <a
+          href="https://www.youtube.com/watch?v=p7GRGiicO1c"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.ytPreview}
+        />
+      )}
       <svg className={styles.backbone} viewBox="0 0 429 544" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_552_2)">
         <path d="M416 11V211.5C416 229.173 401.673 243.5 384 243.5H45C27.3269 243.5 13 257.827 13 275.5V533" stroke="#B173FF" strokeWidth="1.5"/>

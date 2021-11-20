@@ -277,14 +277,13 @@
   color: var(--color-white)
   font-weight: var(--fontWeight-semibold)
   opacity: 0
-  // opacity: 1
 @for $i from 1 through 6
   .osText1to2#{$i}
     font-size: 1.5em
     animation: osMoveText1to2 3s $i * .5s linear infinite
 @keyframes osMoveText1to2
   25%
-    opacity: 1
+    opacity: .7
   100%
     transform: translate3d(280px, 190px, 0) rotate(360deg) scale(.6)
     opacity: 0
@@ -294,7 +293,7 @@
     animation: osMoveText2to3 3s $i * .5s linear infinite
 @keyframes osMoveText2to3
   25%
-    opacity: 1
+    opacity: .7
   100%
     transform: translate3d(80px, 150px, 0) rotate(360deg) scale(.6)
     opacity: 0
@@ -304,7 +303,7 @@
     animation: osMoveText3toTop 3s $i * .5s linear infinite
 @keyframes osMoveText3toTop
   25%
-    opacity: 1
+    opacity: .7
   100%
     transform: translate3d(164px, 0px, 0) rotate(360deg) scale(.6)
     opacity: 0
