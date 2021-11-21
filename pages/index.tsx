@@ -74,9 +74,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   let starsNb = '8k'
   let cards: IRoadmapCard[] = []
 
-  // TODO
-  if (process.env.NODE_ENV === 'development') {
-    // if (process.env.NODE_ENV !== 'development') {
+  if (process.env.NODE_ENV !== 'development') {
     const [ghRes, trelloRes] = await Promise.all([
       fetch('https://api.github.com/repos/leon-ai/leon'),
       fetch('https://trello.com/b/7bdwhnLr/leon-your-open-source-personal-assistant-roadmap.json')

@@ -1054,7 +1054,7 @@ const Features: React.FC<IFeaturesProps> = () => {
           </svg>
         </div>
       </div>
-      <svg className={`backbone ${styles.backbone}`} viewBox="0 0 385 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className={`backbone ${styles.backboneEnd}`} viewBox="0 0 385 304" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_43_85)">
         <path d="M372 11V113C372 130.673 357.673 145 340 145H45C27.3269 145 13 159.327 13 177V293" stroke="#B173FF" strokeWidth="1.5"/>
         </g>
