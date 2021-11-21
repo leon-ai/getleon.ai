@@ -1,3 +1,5 @@
+@import '@/styles/_includes/mixins'
+
 .container
   display: flex
   flex-direction: column
@@ -20,3 +22,13 @@
 
     strong
       font-weight: var(--fontWeight-bold)
+
+@include tablet
+  .container
+    h1
+      font-size: 5rem
+@include mobile
+  .container
+    h1
+      width: 296px
+      font-size: 3rem
