@@ -1,3 +1,5 @@
+@import '@/styles/_includes/mixins'
+
 .container
   margin-bottom: 156px
   h3
@@ -141,3 +143,11 @@
   left: 501px
   transform: translateY(210px)
   width: var(--width)
+
+@include tablet
+  .container
+    margin-bottom: 64px
+    h3
+      box-shadow: none
+  .getStarted
+    font-size: .85rem

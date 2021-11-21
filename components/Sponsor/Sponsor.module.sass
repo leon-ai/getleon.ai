@@ -1,3 +1,5 @@
+@import '@/styles/_includes/mixins'
+
 .container
   margin: 0 auto
   width: 764px
@@ -11,7 +13,6 @@
     border-radius: 50%
     background-image: linear-gradient(to right, var(--color-blue), var(--color-pink))
     filter: blur(100px)
-  &::before
     left: 276px
   h3
     text-align: right
@@ -104,3 +105,40 @@
   z-index: -10
   left: 342px
   width: var(--width)
+
+@include tablet
+  .container
+    width: 100%
+    margin-bottom: 64px
+    &::before
+      width: 472px
+      height: 530px
+      left: 156px
+    p
+      width: auto
+  .astronaut
+    left: 0
+  .sponsor
+    flex-direction: column
+  .rightArrow
+    bottom: 4px
+    margin-left: -280px
+  .leftArrow
+    bottom: 2px
+    right: 200px
+  .button
+    font-size: .85rem
+
+@include mobile
+  .container
+    &::before
+      width: 272px
+      height: 530px
+      left: 64px
+  .astronaut
+    left: -32px
+    margin-top: 0
+  .sponsor
+    padding: 16px
+  .rightArrow, .leftArrow
+    display: none
