@@ -1,3 +1,5 @@
+@import '@/styles/_includes/mixins'
+
 .container
   display: flex
   flex-direction: column
@@ -46,3 +48,10 @@
 .title
   color: var(--color-white)
   font-weight: var(--fontWeight-semibold)
+
+@include mobile
+  .container
+    i
+      font-size: .6rem
+  .inputContainer
+    width: auto

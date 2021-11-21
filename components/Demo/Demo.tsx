@@ -48,7 +48,7 @@ const Demo: React.FC<IDemoProps> = () => {
           className={styles.ytPreview}
         />
       )}
-      <svg className={styles.backbone} viewBox="0 0 429 544" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className={`backbone ${styles.backbone}`} viewBox="0 0 429 544" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_552_2)">
         <path d="M416 11V211.5C416 229.173 401.673 243.5 384 243.5H45C27.3269 243.5 13 257.827 13 275.5V533" stroke="#B173FF" strokeWidth="1.5"/>
         </g>

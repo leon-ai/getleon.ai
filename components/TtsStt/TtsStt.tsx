@@ -77,7 +77,7 @@ const TtsStt: React.FC<ITtsSttProps> = () => {
           </div>
         </div>
       </div>
-      <svg className={styles.backbone} viewBox="0 0 749 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className={`backbone ${styles.backbone}`} viewBox="0 0 749 176" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_543_189)">
         <path d="M375 165V75.5M375 75.5H45C27.3269 75.5 13 61.1731 13 43.5V11M375 75.5H704C721.673 75.5 736 61.1731 736 43.5V11" stroke="#B173FF" strokeWidth="1.5"/>
         </g>

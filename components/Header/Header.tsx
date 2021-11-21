@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -18,7 +18,7 @@ const Header: React.FC<IHeaderProps> = ({ starsNb }) => {
     menuRef.current?.classList.toggle(styles.mobileMenuBtnClicked)
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       const posY = window.scrollY
 
@@ -34,10 +34,6 @@ const Header: React.FC<IHeaderProps> = ({ starsNb }) => {
     window.addEventListener('scroll', handleScroll)
 
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  useLayoutEffect(() => {
-    // menuRef.current.innerHTML = ''
   }, [])
 
   return (

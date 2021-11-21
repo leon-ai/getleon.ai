@@ -93,7 +93,7 @@ const Roadmap: React.FC<IRoadmapProps> = ({ cards }) => {
           Browse the roadmap <Icon name="arrow-right" />
         </a>
       </div>
-      <svg className={styles.backbone} viewBox="0 0 302 232" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className={`backbone ${styles.backbone}`} viewBox="0 0 302 232" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_552_3)">
         <path d="M13 11V100C13 117.673 27.3269 132 45 132L257 132C274.673 132 289 146.327 289 164L289 220.5" stroke="#B173FF" strokeWidth="1.5"/>
         </g>

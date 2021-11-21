@@ -31,7 +31,7 @@ const Sponsor: React.FC<ISponsorProps> = () => {
           <div className={styles.leftArrow} />
         </div>
       </div>
-      <svg className={styles.backbone} viewBox="0 0 645 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className={`backbone ${styles.backbone}`} viewBox="0 0 645 260" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_552_4)">
         <path d="M632 11V125C632 142.673 617.673 157 600 157L45 157C27.3269 157 13 171.327 13 189V248.5" stroke="#B173FF" strokeWidth="1.5"/>
         </g>

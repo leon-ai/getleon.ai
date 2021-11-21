@@ -48,7 +48,7 @@ const GetStarted: React.FC<IGetStartedProps> = () => {
             <div className={styles.placeholder} />
           </div>
         </div>
-        <svg className={styles.backbone} viewBox="0 0 256 557" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className={`backbone ${styles.backbone}`} viewBox="0 0 256 557" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_552_7)">
           <path d="M243 11V105.5L243 512.5C243 530.173 228.673 544.5 211 544.5H11" stroke="#B173FF" strokeWidth="1.5"/>
           </g>

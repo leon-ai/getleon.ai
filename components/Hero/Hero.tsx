@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
 
 import styles from '@/components/Hero/Hero.module.sass'
 
@@ -25,7 +25,7 @@ const Hero: React.FC<IHeroProps> = () => {
     }, 2000)
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (svgRef) {
       setTimeout(() => {
         turnOn()
@@ -903,7 +903,7 @@ const Hero: React.FC<IHeroProps> = () => {
           </g>
         </g>
       </svg>
-      <svg className={styles.backbone} viewBox="0 0 749 177" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className={`backbone ${styles.backbone}`} viewBox="0 0 749 177" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_43_11)">
         <path d="M375 11.5V101M375 101H45C27.3269 101 13 115.327 13 133V165.5M375 101H704C721.673 101 736 115.327 736 133V165.5" stroke="#B173FF" strokeWidth="1.5"/>
         </g>

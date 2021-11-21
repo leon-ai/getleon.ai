@@ -364,7 +364,7 @@ const Features: React.FC<IFeaturesProps> = () => {
           </div>
         </div>
       </div>
-      <svg className={styles.backbone} viewBox="0 0 749 288" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className={`backbone ${styles.backbone}`} viewBox="0 0 749 288" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_43_23)">
         <path d="M13 11.5V130C13 147.673 27.3269 162 45 162H360.5H736M736 162V11.5M736 162V277" stroke="#B173FF" strokeWidth="1.5"/>
         </g>
@@ -509,7 +509,7 @@ const Features: React.FC<IFeaturesProps> = () => {
           </svg>
         </div>
       </div>
-      <svg className={styles.backbone} viewBox="0 0 749 298" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className={`backbone ${styles.backbone}`} viewBox="0 0 749 298" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_43_24)">
         <path d="M13 286.5V184.5C13 166.827 27.3269 152.5 45 152.5H351H704C721.673 152.5 736 138.173 736 120.5V11.5" stroke="#B173FF" strokeWidth="1.5"/>
         </g>
@@ -764,7 +764,7 @@ const Features: React.FC<IFeaturesProps> = () => {
           </svg>
         </div>
       </div>
-      <svg className={styles.backbone} viewBox="0 0 749 298" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className={`backbone ${styles.backbone}`} viewBox="0 0 749 298" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_43_25)">
         <path d="M13 11.5V113.5C13 131.173 27.3269 145.5 45 145.5H351H704C721.673 145.5 736 159.827 736 177.5V286.5" stroke="#B173FF" strokeWidth="1.5"/>
         </g>
@@ -1054,7 +1054,7 @@ const Features: React.FC<IFeaturesProps> = () => {
           </svg>
         </div>
       </div>
-      <svg className={styles.backboneEnd} viewBox="0 0 385 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className={`backbone ${styles.backbone}`} viewBox="0 0 385 304" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_43_85)">
         <path d="M372 11V113C372 130.673 357.673 145 340 145H45C27.3269 145 13 159.327 13 177V293" stroke="#B173FF" strokeWidth="1.5"/>
         </g>
