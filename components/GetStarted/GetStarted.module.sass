@@ -146,8 +146,30 @@
 
 @include tablet
   .container
-    margin-bottom: 64px
+    margin-bottom: 32px
     h3
       box-shadow: none
   .getStarted
-    font-size: .85rem
+    flex-direction: column-reverse
+    gap: 64px
+    :global(.button)
+      font-size: .85rem
+  .generator
+    transform: scale(.8)
+    margin-top: 32px
+
+@include mobile
+  .container
+    h3
+      width: 100%
+  .terminal, .terminal::before, .terminal::after
+    width: 100%
+  .terminal
+    &::before
+      margin-left: -20px
+      margin-top: -20px
+    &::after
+      margin-left: 20px
+      margin-top: -302px
+  .placeholder
+    width: 100%
