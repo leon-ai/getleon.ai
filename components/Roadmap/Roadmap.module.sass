@@ -1,3 +1,5 @@
+@import '@/styles/_includes/mixins'
+
 .container
   --max-width: 243px
   margin-bottom: 164px
@@ -108,3 +110,57 @@
   z-index: -10
   left: 508px
   width: var(--width)
+
+@include tablet
+  .container
+    h3
+      box-shadow: none
+  .cardsContainer
+    width: 100%
+    margin-top: 0
+    margin-left: 0
+    left: -72px
+    transform: scale(.7)
+  .astronaut
+    opacity: .7
+    right: 170px
+    margin-top: -110px
+    width: 285px
+    height: 164px
+    box-shadow: none
+  .saturne
+    opacity: .7
+    right: 25px
+    margin-top: -180px
+    width: 285px
+    height: 164px
+    box-shadow: none
+@include mobile
+  .container
+    --max-width: 200px
+    h3
+      text-align: center
+  .astronaut
+    right: 64px
+    margin-top: -120px
+  .saturne
+    right: -64px
+    margin-top: -200px
+  .cardsContainer
+    position: relative
+    margin-top: -72px
+    display: grid
+    width: 356px
+    height: 496px
+    grid-template-columns: repeat(2, 1fr)
+    row-gap: 8px
+    column-gap: 8px
+    align-items: center
+    justify-items: center
+    .cardContainer
+      top: auto !important
+      left: auto !important
+      position: relative
+      width: 248px
+  .roadmapBg
+    display: none

@@ -1,3 +1,5 @@
+@import '@/styles/_includes/mixins'
+
 .container
   display: flex
   flex-direction: column
@@ -39,3 +41,21 @@
   z-index: -10
   left: 182px
   width: var(--width)
+
+@include tablet
+  .container
+    margin-bottom: 172px
+    &::before, &::after
+      width: 300px
+      height: 300px
+@include mobile
+  .container
+    &::before, &::after
+      width: 232px
+      height: 232px
+    iframe
+      width: 356px
+      height: 302px
+  .ytPreview
+    width: 356px
+    height: 302px

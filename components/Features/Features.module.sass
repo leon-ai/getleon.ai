@@ -318,9 +318,11 @@
     flex-direction: column
     gap: 64px
     align-items: center
-    p
+    h2, p
+      width: 500px
       margin-bottom: 16px
   .animationContainer
+    margin: 0 auto
     box-shadow: none
   .automate, .imagination, .ai
     text-align: center
@@ -332,14 +334,16 @@
   .imagination
     flex-direction: column
 @include mobile
+  .container
+    --spacing-between-feature: 32px
   .horizContainer
     gap: 32px
+    h2, p
+      width: 356px
     p
       margin-bottom: 0
-  .automate, .imagination, .ai
-    h2, p
-      width: 300px
   .animationContainer
+    margin: 0
     transform: scale(.8)
   .earth
     margin-top: -300px
