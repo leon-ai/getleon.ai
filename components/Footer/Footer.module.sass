@@ -1,3 +1,5 @@
+@import '@/styles/_includes/mixins'
+
 .footer
   padding: var(--header-footer-y-padding) 0
   padding-bottom: calc(var(--header-footer-y-padding) * 4)
@@ -92,3 +94,27 @@
     margin-bottom: 16px
     &:last-child
       margin-bottom: 0
+
+@include tablet
+  .newsletter
+    i
+      font-size: .7rem
+  .wrapper
+    align-items: center
+    flex-direction: column-reverse
+    gap: 32px
+  .licenseContainer
+    flex-direction: column
+    gap: 16px
+    text-align: center
+  .license
+    flex-direction: column
+    p
+      line-height: 1rem
+  .credits
+    font-size: .5rem
+    line-height: .6rem
+
+@include mobile
+  .links
+    gap: 32px
