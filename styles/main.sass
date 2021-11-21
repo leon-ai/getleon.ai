@@ -1,6 +1,7 @@
 @import '_includes/reset'
 @import '_includes/typography'
 @import '_includes/variables'
+@import '_includes/mixins'
 
 *, :after, :before
   box-sizing: border-box
@@ -28,6 +29,7 @@ body
   font-weight: var(--fontWeight-regular)
   background-color: var(--color-black)
   color: var(--color-primary-grey)
+  text-rendering: optimizeLegibility
 
 a
   color: inherit
@@ -93,3 +95,14 @@ p
 #get-started
   // Header height
   scroll-margin-top: 78px
+
+@include tablet
+  html
+    font-size: 18px
+  .container
+    width: calc(var(--tablet-width) - var(--padding-x-container))
+    overflow-x: hidden
+
+@include mobile
+  .container
+    width: 100%

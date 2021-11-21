@@ -1,3 +1,5 @@
+@import '@/styles/_includes/mixins'
+
 .header
   position: sticky
   z-index: 20
@@ -23,6 +25,9 @@
   display: flex
   justify-content: space-between
   align-items: center
+
+.mobileMenuBtn
+  display: none
 
 .menu
   display: flex
@@ -74,3 +79,72 @@
     width: 26px
     height: 26px
 
+.menu.mobileMenuBtnClicked
+  position: fixed
+  padding: 0 var(--padding-x-container)
+  display: flex
+  flex-direction: column
+  left: 0
+  top: 78px
+  width: 100%
+  height: calc(100vh - 78px)
+  background-color: var(--color-black)
+  nav
+    margin-right: 0
+    ul
+      display: block
+      flex: 1
+      align-items: center
+      flex-direction: column
+      li
+        a
+          padding: 10px 0
+          display: block
+          width: 100%
+          border-radius: 0
+          border-bottom: 1px solid rgba(255, 255, 255, .1)
+  .social
+    padding: var(--header-footer-y-padding) 0
+    flex-direction: column
+    align-items: center
+    width: auto
+    gap: 10px
+    a:not(:last-child) path
+      fill: var(--color-white)
+    a:last-child
+      width: 100%
+
+@include tablet
+  .header
+    color: var(--color-white)
+    background-color: var(--color-black)
+    margin-bottom: 32px
+  .menu:not(.mobileMenuBtnClicked)
+    display: none
+  .mobileMenuBtn
+    display: flex
+    flex-direction: column
+    background-color: transparent
+    border: none
+    height: auto
+    width: auto
+    padding: 10px 0
+    transition: transform .3s var(--transitionTiming-main)
+    &.mobileMenuBtnClicked
+      transform: rotate(180deg)
+    &::before, &::after
+      content: ''
+      display: block
+      height: 1px
+      width: 22px
+      background-color: var(--color-white)
+      transition: transform var(--transitionDuration-main) var(--transitionTiming-main)
+    &::before
+      transform: translateY(4px) rotate(0)
+    &::after
+      transform: translateY(-4px) rotate(0)
+    &.mobileMenuBtnClicked
+      &::before
+        transform: rotate(45deg)
+      &::after
+        transform: rotate(-45deg)

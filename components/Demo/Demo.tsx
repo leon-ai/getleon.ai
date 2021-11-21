@@ -31,7 +31,6 @@ const Demo: React.FC<IDemoProps> = () => {
       <h3>
         Aaaand action!
       </h3>
-      {/* TODO: onLoad loader */}
       {isYtAccessible ? (
         <iframe src="https://www.youtube.com/embed/p7GRGiicO1c"
                 width="472" height="400"

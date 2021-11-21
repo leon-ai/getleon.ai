@@ -11,6 +11,12 @@ interface IHeaderProps {
 
 const Header: React.FC<IHeaderProps> = ({ starsNb }) => {
   const headerRef = useRef<HTMLElement>(null)
+  const mobileMenuBtn = useRef<HTMLButtonElement>(null)
+  const menuRef = useRef<HTMLDivElement>(null)
+  const handleMobileMenuBtnClick = () => {
+    mobileMenuBtn.current?.classList.toggle(styles.mobileMenuBtnClicked)
+    menuRef.current?.classList.toggle(styles.mobileMenuBtnClicked)
+  }
 
   useLayoutEffect(() => {
     const handleScroll = () => {
@@ -30,6 +36,10 @@ const Header: React.FC<IHeaderProps> = ({ starsNb }) => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useLayoutEffect(() => {
+    // menuRef.current.innerHTML = ''
+  }, [])
+
   return (
     <header ref={headerRef} className={`${styles.header} ${styles.noBorder}`}>
       <div className="container">
@@ -44,7 +54,13 @@ const Header: React.FC<IHeaderProps> = ({ starsNb }) => {
               />
             </a>
           </Link>
-          <div className={styles.menu}>
+          <button
+            ref={mobileMenuBtn}
+            aria-label="Menu button"
+            className={styles.mobileMenuBtn}
+            onClick={handleMobileMenuBtnClick}
+          />
+          <div ref={menuRef} className={styles.menu}>
             <nav>
               <ul>
                 <li><a href="#get-started">Get started</a></li>
