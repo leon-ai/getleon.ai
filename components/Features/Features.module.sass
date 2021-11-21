@@ -1,3 +1,5 @@
+@import '@/styles/_includes/mixins'
+
 .container
   --animation-container-size: 364px
   --spacing-between-feature: 156px
@@ -307,3 +309,37 @@
   100%
     transform: translate3d(164px, 0px, 0) rotate(360deg) scale(.6)
     opacity: 0
+
+@include tablet
+  .container
+    --spacing-between-feature: 64px
+  .horizContainer
+    display: flex
+    flex-direction: column
+    gap: 64px
+    align-items: center
+    p
+      margin-bottom: 16px
+  .animationContainer
+    box-shadow: none
+  .automate, .imagination, .ai
+    text-align: center
+    flex-direction: column
+    margin-bottom: var(--spacing-between-feature)
+    h2, p
+      margin: 0 auto
+      margin-bottom: 16px
+  .imagination
+    flex-direction: column
+@include mobile
+  .horizContainer
+    gap: 32px
+    p
+      margin-bottom: 0
+  .automate, .imagination, .ai
+    h2, p
+      width: 300px
+  .animationContainer
+    transform: scale(.8)
+  .earth
+    margin-top: -300px
