@@ -1,4 +1,6 @@
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs@beta"
