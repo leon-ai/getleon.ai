@@ -6,7 +6,6 @@ import styles from '@/styles/pages/HomePage.module.sass'
 import Introduction from '@/components/Introduction'
 import Newsletter from '@/components/Newsletter'
 import Hero from '@/components/Hero'
-import Backbone from '@/components/Backbone'
 import Features from '@/components/Features'
 import TtsStt from '@/components/TtsStt'
 import Demo from '@/components/Demo'
@@ -74,7 +73,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   let starsNb = '8k'
   let cards: IRoadmapCard[] = []
 
-  if (process.env.NODE_ENV !== 'development') {
+  if (process.env.NODE_ENV === 'development') {
+  // if (process.env.NODE_ENV !== 'development') {
     const [ghRes, trelloRes] = await Promise.all([
       fetch('https://api.github.com/repos/leon-ai/leon'),
       fetch('https://trello.com/b/7bdwhnLr/leon-your-open-source-personal-assistant-roadmap.json')

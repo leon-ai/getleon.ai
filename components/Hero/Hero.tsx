@@ -1,6 +1,8 @@
-import React, { useEffect, useLayoutEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import styles from '@/components/Hero/Hero.module.sass'
+import usePauseAnimation from '@/lib/use-pause-animation'
+import useScrollPosition from '@/lib/use-scroll-position'
 
 interface IHeroProps { }
 
@@ -24,6 +26,7 @@ const Hero: React.FC<IHeroProps> = () => {
       clearInterval(interval)
     }, 2000)
   }
+  const scrollPosition = useScrollPosition()
 
   useEffect(() => {
     if (svgRef) {
@@ -32,6 +35,11 @@ const Hero: React.FC<IHeroProps> = () => {
       }, animationStartDelay)
     }
   }, [])
+
+  usePauseAnimation(scrollPosition, [
+    styles.halo, styles.logo, styles.pythonLogo, styles.nodeJsLogo
+    // '#static-pkg1'
+  ])
 
   return (
     <div className={styles.container}>
