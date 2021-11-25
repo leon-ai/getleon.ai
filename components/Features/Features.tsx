@@ -13,55 +13,55 @@ const Features: React.FC<IFeaturesProps> = () => {
           <p>
             Under MIT license which is the most permissive license in the <strong>open-source</strong> world, we want Leon be able to grow as much as possible with the least of restriction.
           </p>
-          <div className={`${styles.animationContainer} ${styles.openSourceAnimation}`}>
+          <div className={`${styles.animationContainer} ${styles.openSourceAnimation}`} data-pausable-animation={true}>
             {/* 1st to 2nd */}
-            <span className={`${styles.osText} ${styles.osText1to21}`} style={{ transform: 'translate3d(60px, 220px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText1to21}`} style={{ transform: 'translate3d(80px, 240px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText1to22}`} style={{ transform: 'translate3d(60px, 220px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText1to22}`} style={{ transform: 'translate3d(80px, 240px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText1to23}`} style={{ transform: 'translate3d(60px, 220px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText1to23}`} style={{ transform: 'translate3d(80px, 240px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText1to24}`} style={{ transform: 'translate3d(60px, 220px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText1to24}`} style={{ transform: 'translate3d(80px, 240px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText1to25}`} style={{ transform: 'translate3d(60px, 220px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText1to25}`} style={{ transform: 'translate3d(80px, 240px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText1to26}`} style={{ transform: 'translate3d(60px, 220px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText1to26}`} style={{ transform: 'translate3d(80px, 240px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText1to21}`} style={{ transform: 'translate3d(60px, 220px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText1to21}`} style={{ transform: 'translate3d(80px, 240px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText1to22}`} style={{ transform: 'translate3d(60px, 220px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText1to22}`} style={{ transform: 'translate3d(80px, 240px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText1to23}`} style={{ transform: 'translate3d(60px, 220px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText1to23}`} style={{ transform: 'translate3d(80px, 240px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText1to24}`} style={{ transform: 'translate3d(60px, 220px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText1to24}`} style={{ transform: 'translate3d(80px, 240px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText1to25}`} style={{ transform: 'translate3d(60px, 220px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText1to25}`} style={{ transform: 'translate3d(80px, 240px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText1to26}`} style={{ transform: 'translate3d(60px, 220px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText1to26}`} style={{ transform: 'translate3d(80px, 240px, 0)' }} data-pausable-animation={true}>1</span>
             {/* 2nd to 3rd */}
-            <span className={`${styles.osText} ${styles.osText2to31}`} style={{ transform: 'translate3d(260px, 170px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText2to31}`} style={{ transform: 'translate3d(270px, 190px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText2to32}`} style={{ transform: 'translate3d(260px, 170px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText2to32}`} style={{ transform: 'translate3d(270px, 190px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText2to33}`} style={{ transform: 'translate3d(260px, 170px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText2to33}`} style={{ transform: 'translate3d(270px, 190px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText2to34}`} style={{ transform: 'translate3d(260px, 170px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText2to34}`} style={{ transform: 'translate3d(270px, 190px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText2to35}`} style={{ transform: 'translate3d(260px, 170px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText2to35}`} style={{ transform: 'translate3d(270px, 190px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText2to36}`} style={{ transform: 'translate3d(260px, 170px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText2to36}`} style={{ transform: 'translate3d(270px, 190px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText2to31}`} style={{ transform: 'translate3d(260px, 170px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText2to31}`} style={{ transform: 'translate3d(270px, 190px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText2to32}`} style={{ transform: 'translate3d(260px, 170px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText2to32}`} style={{ transform: 'translate3d(270px, 190px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText2to33}`} style={{ transform: 'translate3d(260px, 170px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText2to33}`} style={{ transform: 'translate3d(270px, 190px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText2to34}`} style={{ transform: 'translate3d(260px, 170px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText2to34}`} style={{ transform: 'translate3d(270px, 190px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText2to35}`} style={{ transform: 'translate3d(260px, 170px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText2to35}`} style={{ transform: 'translate3d(270px, 190px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText2to36}`} style={{ transform: 'translate3d(260px, 170px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText2to36}`} style={{ transform: 'translate3d(270px, 190px, 0)' }} data-pausable-animation={true}>1</span>
             {/* 3rd to spaceship */}
-            <span className={`${styles.osText} ${styles.osText3toTop1}`} style={{ transform: 'translate3d(80px, 150px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText3toTop1}`} style={{ transform: 'translate3d(90px, 150px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText3toTop2}`} style={{ transform: 'translate3d(80px, 150px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText3toTop2}`} style={{ transform: 'translate3d(90px, 150px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText3toTop3}`} style={{ transform: 'translate3d(80px, 150px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText3toTop3}`} style={{ transform: 'translate3d(90px, 150px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText3toTop4}`} style={{ transform: 'translate3d(80px, 150px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText3toTop4}`} style={{ transform: 'translate3d(90px, 150px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText3toTop5}`} style={{ transform: 'translate3d(80px, 150px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText3toTop5}`} style={{ transform: 'translate3d(90px, 150px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText3toTop6}`} style={{ transform: 'translate3d(80px, 150px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText3toTop6}`} style={{ transform: 'translate3d(90px, 150px, 0)' }}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop1}`} style={{ transform: 'translate3d(80px, 150px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop1}`} style={{ transform: 'translate3d(90px, 150px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop2}`} style={{ transform: 'translate3d(80px, 150px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop2}`} style={{ transform: 'translate3d(90px, 150px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop3}`} style={{ transform: 'translate3d(80px, 150px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop3}`} style={{ transform: 'translate3d(90px, 150px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop4}`} style={{ transform: 'translate3d(80px, 150px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop4}`} style={{ transform: 'translate3d(90px, 150px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop5}`} style={{ transform: 'translate3d(80px, 150px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop5}`} style={{ transform: 'translate3d(90px, 150px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop6}`} style={{ transform: 'translate3d(80px, 150px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop6}`} style={{ transform: 'translate3d(90px, 150px, 0)' }} data-pausable-animation={true}>1</span>
             {/* To spaceship */}
-            <span className={`${styles.osText} ${styles.osText3toTop1}`} style={{ transform: 'translate3d(150px, 70px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText3toTop1}`} style={{ transform: 'translate3d(170px, 80px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText3toTop2}`} style={{ transform: 'translate3d(180px, 70px, 0)' }}>1</span>
-            <span className={`${styles.osText} ${styles.osText3toTop2}`} style={{ transform: 'translate3d(200px, 80px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText3toTop3}`} style={{ transform: 'translate3d(220px, 70px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText3toTop3}`} style={{ transform: 'translate3d(240px, 80px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText3toTop4}`} style={{ transform: 'translate3d(150px, 90px, 0)' }}>0</span>
-            <span className={`${styles.osText} ${styles.osText3toTop4}`} style={{ transform: 'translate3d(170px, 100px, 0)' }}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop1}`} style={{ transform: 'translate3d(150px, 70px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop1}`} style={{ transform: 'translate3d(170px, 80px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop2}`} style={{ transform: 'translate3d(180px, 70px, 0)' }} data-pausable-animation={true}>1</span>
+            <span className={`${styles.osText} ${styles.osText3toTop2}`} style={{ transform: 'translate3d(200px, 80px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop3}`} style={{ transform: 'translate3d(220px, 70px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop3}`} style={{ transform: 'translate3d(240px, 80px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop4}`} style={{ transform: 'translate3d(150px, 90px, 0)' }} data-pausable-animation={true}>0</span>
+            <span className={`${styles.osText} ${styles.osText3toTop4}`} style={{ transform: 'translate3d(170px, 100px, 0)' }} data-pausable-animation={true}>0</span>
             <svg viewBox="0 0 741 763" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g mask="url(#mask0_451:2)">
                 <path d="M174.604 492.151C173.414 496.799 171.027 507.007 172.02 513.433C172.951 517.884 174.955 522.04 177.857 525.542C180.498 528.952 178.09 533.7 173.356 534.432C171.452 534.767 169.495 534.293 167.955 533.123L151.134 525.766L147.884 494.284L174.604 492.151Z" fill="#35495E"/>
@@ -179,7 +179,7 @@ const Features: React.FC<IFeaturesProps> = () => {
             You are in control of your data. Leon lives on your server and you decide if you wish to make use of any third party.
           </p>
           <div className={`${styles.animationContainer} ${styles.privacyAnimation}`}>
-            <svg viewBox="0 0 601 886" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 601 886" fill="none" xmlns="http://www.w3.org/2000/svg" data-pausable-animation={true}>
               <path d="M398.633 449.812L390.937 448.842L426.39 397.887L421.682 397.294L422.541 390.474L439.589 392.623L441.738 375.574L448.128 379.844L446.409 393.482L463.458 395.631L462.598 402.45L457.729 401.837L479.43 459.994L471.731 459.024L450.03 400.866L445.273 400.267L438.398 454.823L431.578 453.964L438.453 399.407L434.086 398.857L398.633 449.812Z" fill="#C3C9D1"/>
               <path d="M440.449 385.804L447.269 386.663L448.128 379.844L441.738 375.574L440.449 385.804Z" fill="#A8B2BF"/>
               <path d="M478.256 404.424L494.758 382.188L423.302 328.221L406.8 350.457L478.256 404.424Z" fill="#D0D7DF"/>
@@ -192,7 +192,7 @@ const Features: React.FC<IFeaturesProps> = () => {
               <path d="M434.086 398.857L429.656 405.227L421.958 404.257L426.39 397.887L434.086 398.857Z" fill="#A8B2BF"/>
               <path d="M457.729 401.837L460.44 409.106L452.744 408.137L450.03 400.866L457.729 401.837Z" fill="#A8B2BF"/>
               <path d="M445.273 400.267L438.453 399.407L437.594 406.227L444.414 407.087L445.273 400.267Z" fill="#A8B2BF"/>
-              <g className={styles.privacyRays}>
+              <g className={styles.privacyRays} data-pausable-animation={true}>
                 <line x1="400.641" y1="345.933" x2="387.641" y2="340.933" stroke="#EDF046" strokeWidth="2"/>
                 <line x1="417.181" y1="326.573" x2="410.181" y2="316.573" stroke="#EDF046" strokeWidth="2"/>
                 <line x1="407.293" y1="335.707" x2="394.293" y2="322.707" stroke="#EDF046" strokeWidth="2"/>
@@ -206,7 +206,7 @@ const Features: React.FC<IFeaturesProps> = () => {
               <path d="M628.536 668.912C597.611 638.599 548.13 638.599 517.202 668.912C501.914 684.571 481.07 693.588 459.19 694.001H268.491C269.431 699.382 270.523 704.7 271.823 709.942H459.19C485.248 709.538 510.091 698.886 528.361 680.298C553.078 656.054 592.66 656.054 617.377 680.298C635.646 698.886 660.49 709.535 686.548 709.942H720.477C721.777 704.7 722.869 699.382 723.81 694.001H686.545C664.668 693.581 643.823 684.565 628.536 668.912Z" fill="#C43117"/>
               <path d="M617.377 771.47C592.659 795.717 553.078 795.717 528.361 771.47C510.091 752.881 485.248 742.233 459.19 741.826H282.257C284.488 747.248 286.921 752.563 289.54 757.767H459.19C481.07 758.183 501.914 767.197 517.202 782.859C548.126 813.172 597.608 813.172 628.536 782.859C643.823 767.206 664.668 758.19 686.548 757.767H702.76C705.382 752.563 707.812 747.248 710.044 741.826H686.548C660.489 742.233 635.646 752.881 617.377 771.47Z" fill="#C43117"/>
               <path d="M536.004 853.416C536.004 831.1 511.496 813.563 480.211 813.563C448.923 813.563 424.415 831.1 424.415 853.416C424.598 862.438 428.464 871 435.119 877.098C455.005 882.542 475.531 885.3 496.152 885.3C502.719 885.3 509.198 884.959 515.624 884.422C527.531 878.54 535.326 866.68 536.004 853.416ZM480.211 877.328C458.609 877.328 440.355 866.377 440.355 853.416C440.355 840.457 458.609 829.503 480.211 829.503C501.81 829.503 520.064 840.457 520.064 853.416C520.064 866.377 501.81 877.328 480.211 877.328Z" fill="#C43117"/>
-              <circle className={styles.privacyShield} cx="240" cy="185" r="177" fill="white" fillOpacity="0.15" stroke="white" strokeWidth="4"/>
+              <circle className={styles.privacyShield} data-pausable-animation={true} cx="240" cy="185" r="177" fill="white" fillOpacity="0.15" stroke="white" strokeWidth="4"/>
               <path d="M284.255 192.006L278.609 199.665L290.34 205.91L293.459 196.907L284.255 192.006Z" fill="#808B96"/>
               <path d="M332.355 112.851C324.682 115.193 318.252 120.487 314.482 127.568L280.817 190.803L296.459 199.131L330.124 135.896C333.894 128.814 334.696 120.524 332.355 112.851Z" fill="#F5AE45"/>
               <path d="M332.362 112.881C332.583 118.586 331.291 124.252 328.617 129.297L292.548 197.048L296.459 199.13L330.124 135.895C333.889 128.824 334.695 120.546 332.362 112.881Z" fill="#F09E26"/>
@@ -271,7 +271,7 @@ const Features: React.FC<IFeaturesProps> = () => {
               <path d="M205.304 174.616C211.43 166.858 220.778 162.341 230.663 162.368V156.549C219 156.519 207.972 161.847 200.747 170.998C194.877 178.433 185.919 182.76 176.444 182.737H135.155C134.011 184.625 132.954 186.575 131.953 188.556H176.445C187.694 188.585 198.335 183.443 205.304 174.616Z" fill="#D44A0F"/>
               <path d="M251.919 191.976C251.843 192.083 251.777 192.196 251.718 192.316C246.658 202.524 236.236 208.966 224.844 208.926V214.745C238.365 214.791 250.752 207.185 256.829 195.104C259.703 191 264.399 188.557 269.411 188.557H282.796C281.8 186.575 280.759 184.626 279.595 182.737H269.411C262.412 182.734 255.862 186.191 251.919 191.976Z" fill="#D44A0F"/>
               <path d="M204.955 152.906C208.516 149.734 212.578 147.175 216.981 145.34L222.96 143.454C218.814 142.683 214.615 142.22 210.399 142.073C207.053 143.862 203.931 146.036 201.087 148.55C193.187 155.58 182.98 159.461 172.406 159.458H156.011C153.648 161.277 151.382 163.221 149.223 165.278H172.406C184.406 165.281 195.987 160.879 204.955 152.906Z" fill="#D44A0F"/>
-              <g className={styles.privacySatellite}>
+              <g className={styles.privacySatellite} data-pausable-animation={true}>
                 <path d="M0 50.1251L10.3705 39.7546L24.1978 53.5824L13.8273 63.9524L0 50.1251Z" fill="#F5AE45"/>
                 <path d="M14.3344 43.7185V63.4471L24.1987 53.5828L14.3344 43.7185Z" fill="#F09E26"/>
                 <path d="M17.2846 29.3845L29.3837 17.2854L46.6683 34.57L34.5692 46.6691L17.2846 29.3845Z" fill="#F5AE45"/>
@@ -297,7 +297,7 @@ const Features: React.FC<IFeaturesProps> = () => {
                 <path d="M24.9883 19.8771C24.9883 20.7908 24.248 21.531 23.3344 21.531C22.4211 21.531 21.6804 20.7908 21.6804 19.8771C21.6804 18.9639 22.4211 18.2231 23.3344 18.2231C24.248 18.2231 24.9883 18.9639 24.9883 19.8771Z" fill="#FABC5F"/>
                 <path d="M42.2733 44.0758C42.2733 44.9895 41.533 45.7298 40.6194 45.7298C39.7061 45.7298 38.9654 44.9895 38.9654 44.0758C38.9654 43.1626 39.7061 42.4219 40.6194 42.4219C41.533 42.4219 42.2733 43.1626 42.2733 44.0758Z" fill="#FABC5F"/>
                 <path d="M45.7301 40.619C45.7301 41.5327 44.9899 42.273 44.0762 42.273C43.1625 42.273 42.4222 41.5327 42.4222 40.619C42.4222 39.7058 43.1625 38.9651 44.0762 38.9651C44.9899 38.9651 45.7301 39.7058 45.7301 40.619Z" fill="#FABC5F"/>
-                <g className={styles.privacyRays}>
+                <g className={styles.privacyRays} data-pausable-animation={true}>
                   <line y1="-1" x2="9.37468" y2="-1" transform="matrix(0.387503 0.921869 0.921869 -0.387503 43.3517 53.0369)" stroke="#EDF046" strokeWidth="2"/>
                   <line y1="-1" x2="8.21578" y2="-1" transform="matrix(0.836474 0.548006 0.548006 -0.836474 55.7822 41.207)" stroke="#EDF046" strokeWidth="2"/>
                   <line y1="-1" x2="12.3741" y2="-1" transform="matrix(0.728511 0.685034 0.685034 -0.728511 49.9344 48.1206)" stroke="#EDF046" strokeWidth="2"/>
@@ -389,14 +389,14 @@ const Features: React.FC<IFeaturesProps> = () => {
           </p>
         </div>
         <div className={`${styles.animationContainer} ${styles.automateAnimation}`}>
-          <svg viewBox="0 0 693 579" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g className={styles.automateWires} filter="url(#filter0_d_304:24)">
+          <svg viewBox="0 0 693 579" fill="none" xmlns="http://www.w3.org/2000/svg" data-pausable-animation={true}>
+            <g className={styles.automateWires} data-pausable-animation={true} filter="url(#filter0_d_304:24)">
               <path d="M192.5 213H294.152C300.823 213 305.624 219.408 303.749 225.81L258.251 381.19C256.376 387.592 261.177 394 267.848 394H352.5" stroke="#B173FF" strokeWidth="2"/>
             </g>
-            <g className={styles.automateWires} filter="url(#filter1_d_304:24)">
+            <g className={styles.automateWires} data-pausable-animation={true} filter="url(#filter1_d_304:24)">
               <path d="M389.5 416.5L376.695 466.52C375.076 472.845 379.853 479 386.382 479H473.346C482.541 479 490.552 472.731 492.761 463.805L575.5 129.5" stroke="#B173FF" strokeWidth="2"/>
             </g>
-            <g className={styles.automateRocket}>
+            <g className={styles.automateRocket} data-pausable-animation={true}>
               <path d="M182.801 127.19V219.478H156.523V146.544C156.523 141.566 158.502 136.791 162.021 133.272L165.908 129.385L169.444 123.491C170.744 121.326 173.084 120.001 175.61 120.001C179.582 120 182.801 123.219 182.801 127.19Z" fill="#D0D7DF"/>
               <path d="M173.416 219.478L175.293 228.863H164.031L165.908 219.478H173.416Z" fill="#808B96"/>
               <path d="M156.523 191.324V217.601L134 226.986V217.601L156.523 191.324Z" fill="#808B96"/>
@@ -450,7 +450,7 @@ const Features: React.FC<IFeaturesProps> = () => {
                 path="M533.834 185.656C526.669 186.028 519.659 183.485 514.402 178.603C497.557 161.759 511.856 121.05 546.96 85.9573C582.063 50.8649 622.76 36.5586 639.605 53.3988C656.45 70.2405 642.151 110.952 607.046 146.045C581.909 171.187 553.897 185.656 533.834 185.656ZM620.153 53.9719C602.555 53.9719 575.671 68.1696"
               />
             </circle>
-            <g className={styles.automateLogo}>
+            <g className={styles.automateLogo} data-pausable-animation={true}>
               <path fillRule="evenodd" clipRule="evenodd" d="M418.257 326.481C424.994 325.309 431.111 327.553 434.633 332.488C438.156 337.424 438.64 344.426 435.929 351.238C435.751 351.681 435.562 352.122 435.36 352.56C441.804 354.871 445.676 360.973 445.478 368.503C445.28 376.033 441.043 383.81 434.408 388.823C434.323 398.33 427.779 408.062 418.549 412.407C418.181 419.404 414.006 426.512 407.712 430.856C401.417 435.201 394.046 436.063 388.578 433.094L387.355 432.43V326.462L388.139 325.385C392.505 319.381 399.327 315.723 405.727 315.956C412.127 316.189 416.988 320.272 418.257 326.481Z" fill="#A31B57"/>
               <path fillRule="evenodd" clipRule="evenodd" d="M396.198 340.15V431.08C401.096 433.737 407.791 432.677 413.2 428.388C418.608 424.1 421.68 417.415 421.002 411.412C430.015 408.511 436.926 399.352 436.93 390.303C436.93 389.803 436.899 389.282 436.848 388.705L436.827 388.511C443.629 384.297 448.083 376.682 447.999 369.41C447.915 362.137 443.311 356.737 436.45 355.863C440.576 349.644 441.34 342.315 438.42 336.984C435.499 331.653 429.405 329.254 422.722 330.804C422.191 330.928 421.65 331.081 421.095 331.262C421.045 325.377 417.357 320.984 411.828 320.222C406.299 319.461 400.079 322.49 396.198 327.833V340.167V340.15Z" fill="#EC297A"/>
               <path fillRule="evenodd" clipRule="evenodd" d="M444.741 370.37C444.743 364.033 440.548 359.438 434.457 359.108C428.367 358.779 421.855 362.793 418.494 368.948L415.754 367.873C419.391 361.215 426.089 356.507 432.884 355.834C435.484 352.577 436.934 348.669 436.92 344.958C436.92 337.115 430.562 332.239 422.719 334.066C422.207 334.184 421.696 334.33 421.187 334.502L420.728 334.664C419.289 341.2 413.904 346.944 407.545 348.726L407.404 345.507C412.256 344.169 416.393 339.83 417.57 334.844C418.748 329.858 416.686 325.414 412.502 323.922C408.319 322.431 403.012 324.247 399.459 328.385V339.39L396.198 340.15V327.833C400.079 322.49 406.299 319.461 411.828 320.222C417.357 320.984 421.045 325.377 421.095 331.262C421.65 331.081 422.191 330.928 422.722 330.804C429.405 329.254 435.499 331.653 438.42 336.984C441.34 342.315 440.576 349.644 436.45 355.863C443.311 356.737 447.915 362.137 447.999 369.41C448.083 376.682 443.629 384.297 436.827 388.511L436.848 388.705C436.899 389.269 436.93 389.803 436.93 390.303C436.926 399.352 430.015 408.511 421.002 411.412C421.684 417.415 418.612 424.103 413.202 428.393C407.793 432.682 401.095 433.74 396.198 431.08V420.014L399.459 419.254V428.61C403.227 429.951 407.894 428.894 411.69 425.84C415.487 422.787 417.83 418.205 417.833 413.832C417.835 413.346 417.806 412.868 417.747 412.399L417.717 412.157C413.27 412.742 409.165 411.562 406.246 408.857L408.706 406.157C412.585 409.739 418.843 409.884 424.401 406.522C429.96 403.16 433.649 396.998 433.655 391.066C433.655 390.724 433.655 390.426 433.631 390.147C424.194 394.036 415.158 389.914 413.379 380.908L416.579 379.562C417.939 386.448 424.557 389.891 431.855 387.511C439.153 385.13 444.735 377.708 444.741 370.376" fill="white"/>
@@ -462,12 +462,12 @@ const Features: React.FC<IFeaturesProps> = () => {
               <path d="M393.039 338.066L389.774 338.826V424.279L393.039 423.518V338.066Z" fill="white"/>
               <path d="M399.463 333.742L396.198 334.503V422.782L399.463 422.021V333.742Z" fill="white"/>
             </g>
-            <path className={styles.automateLeft3rdWave} d="M206.503 511.3C272.214 505.613 307.47 515.06 364.915 553.747" stroke="#1C75DB" strokeWidth="4"/>
-            <path className={styles.automateLeft2ndWave} d="M230.669 529.293C273.538 525.595 296.541 531.759 334.023 556.987" stroke="#1C75DB" strokeWidth="4"/>
-            <path className={styles.automateLeft1stWave} d="M243.467 547.216C273.25 544.153 289.158 548.416 314.945 566.368" stroke="#1C75DB" strokeWidth="4"/>
-            <path className={styles.automateRight3rdWave} d="M417.368 553.747C471.431 515.966 506.688 506.519 575.779 511.3" stroke="#1C75DB" strokeWidth="4"/>
-            <path className={styles.automateRight2ndWave} d="M447.293 557.245C482.57 532.609 505.572 526.445 550.647 529.552" stroke="#1C75DB" strokeWidth="4"/>
-            <path className={styles.automateRight1stWave} d="M467.337 566.368C491.599 548.824 507.507 544.562 538.816 547.216" stroke="#1C75DB" strokeWidth="4"/>
+            <path className={styles.automateLeft3rdWave} data-pausable-animation={true} d="M206.503 511.3C272.214 505.613 307.47 515.06 364.915 553.747" stroke="#1C75DB" strokeWidth="4"/>
+            <path className={styles.automateLeft2ndWave} data-pausable-animation={true} d="M230.669 529.293C273.538 525.595 296.541 531.759 334.023 556.987" stroke="#1C75DB" strokeWidth="4"/>
+            <path className={styles.automateLeft1stWave} data-pausable-animation={true} d="M243.467 547.216C273.25 544.153 289.158 548.416 314.945 566.368" stroke="#1C75DB" strokeWidth="4"/>
+            <path className={styles.automateRight3rdWave} data-pausable-animation={true} d="M417.368 553.747C471.431 515.966 506.688 506.519 575.779 511.3" stroke="#1C75DB" strokeWidth="4"/>
+            <path className={styles.automateRight2ndWave} data-pausable-animation={true} d="M447.293 557.245C482.57 532.609 505.572 526.445 550.647 529.552" stroke="#1C75DB" strokeWidth="4"/>
+            <path className={styles.automateRight1stWave} data-pausable-animation={true} d="M467.337 566.368C491.599 548.824 507.507 544.562 538.816 547.216" stroke="#1C75DB" strokeWidth="4"/>
             <g opacity="0.5">
               <line x1="335" y1="104" x2="335" y2="112" stroke="#EDF046" strokeWidth="2"/>
               <line x1="331" y1="108" x2="339" y2="108" stroke="#EDF046" strokeWidth="2"/>
@@ -533,8 +533,8 @@ const Features: React.FC<IFeaturesProps> = () => {
           </p>
         </div>
         <div className={`${styles.animationContainer} ${styles.imaginationAnimation}`}>
-          <svg viewBox="0 0 919 696" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g className={styles.imaginationRocket}>
+          <svg viewBox="0 0 919 696" fill="none" xmlns="http://www.w3.org/2000/svg" data-pausable-animation={true}>
+            <g className={styles.imaginationRocket} data-pausable-animation={true}>
               <path d="M153.035 45.0995V84.8799H141.709V53.4416C141.709 51.2962 142.561 49.2379 144.078 47.7209L145.754 46.0455L147.278 43.505C147.838 42.5715 148.847 42.0004 149.936 42.0004C151.648 42.0001 153.035 43.3877 153.035 45.0995Z" fill="#D0D7DF"/>
               <path d="M148.99 84.8799L149.799 88.925H144.945L145.754 84.8799H148.99Z" fill="#808B96"/>
               <path d="M141.709 72.744V84.0709L132 88.116V84.0709L141.709 72.744Z" fill="#808B96"/>
@@ -550,7 +550,7 @@ const Features: React.FC<IFeaturesProps> = () => {
               <path d="M145.43 86.4978H149.314L148.99 84.8798H145.754L145.43 86.4978Z" fill="#576573"/>
               <path d="M146.563 51.7087V44.6968L145.754 46.0456L144.945 46.8545V51.7087H146.563Z" fill="#2A90DE"/>
             </g>
-            <rect className={styles.imaginationIdea} x="143" y="75" width="31" height="31" fill="url(#pattern0)"/>
+            <rect className={styles.imaginationIdea} data-pausable-animation={true} x="143" y="75" width="31" height="31" fill="url(#pattern0)"/>
             <path d="M538.006 185.395L543.495 197.371L525.83 202.521L524.145 189.436L538.006 185.395Z" fill="#808B96"/>
             <path d="M495.175 64.5153C504.914 69.857 512.133 78.85 515.242 89.5132L543.005 184.735L519.452 191.603L491.688 96.3807C488.579 85.7175 489.833 74.254 495.175 64.5153Z" fill="#F5AE45"/>
             <path d="M495.157 64.5535C493.245 72.2244 493.395 80.2694 495.594 87.8627L525.341 189.886L519.452 191.603L491.688 96.3807C488.583 85.7315 489.829 74.2843 495.157 64.5535Z" fill="#F09E26"/>
@@ -672,7 +672,7 @@ const Features: React.FC<IFeaturesProps> = () => {
             <path d="M207.982 686.417C204.125 675.389 204.125 664.13 207.982 653.102L214.189 635.372C218.403 623.393 218.403 611.165 214.189 599.188L207.982 581.458C204.125 570.428 204.125 559.171 207.982 548.141L214.189 530.412C218.385 518.435 218.385 506.206 214.189 494.227L207.982 476.498C204.619 466.889 204.179 457.103 206.684 447.437L207.364 445.505C200.881 446.201 194.507 446.987 188.192 447.906C185.876 457.903 186.436 468.005 189.872 477.933L196.078 495.663C199.936 506.691 199.936 517.948 196.078 528.978L189.872 546.708C185.657 558.687 185.657 570.913 189.872 582.892L196.078 600.622C199.936 611.652 199.936 622.909 196.078 633.937L189.872 651.666C185.665 663.645 185.665 675.877 189.872 687.856L191.13 690.84C197.522 691.735 204.005 692.519 210.571 693.196L209.56 690.909L207.982 686.417Z" fill="#DB8300"/>
             <path d="M55.0996 491.962L55.0996 646.383C60.8372 649.935 66.9711 653.342 73.465 656.587L73.465 481.76C66.9711 485.005 60.8372 488.411 55.0996 491.962Z" fill="#DB8300"/>
             <path d="M390.524 563.454L381.929 558.148C371.643 550.431 366.556 541.399 367.33 532.263C367.33 515.846 381.333 503.575 393.859 503.575C396.862 503.575 401.709 505.424 405.796 509.552C417.533 521.465 414.678 536.085 407.559 540.914C406.955 541.359 406.166 541.74 405.236 542.033C399.542 537.612 398.745 532.149 403.105 527.396L386.667 523.486C379.965 530.475 380.435 538.552 387.954 545.352C390.561 548.279 396.164 550.356 402.756 550.841C410.773 551.087 418.416 549.196 422.601 545.934C429.451 540.402 432.756 534.04 432.117 527.628C432.182 520.118 428.884 512.693 422.427 505.84C415.533 498.842 405.116 494.827 393.877 494.827C368.247 494.827 348.961 510.922 348.961 532.263C348.107 543.331 354.554 554.252 367.381 563.489L375.988 568.798C382.554 572.585 386.005 577.383 385.692 582.293V682.473C391.968 680.968 398.091 679.355 404.061 677.632V582.293C404.356 575.45 399.563 568.777 390.524 563.454Z" fill="#DB8300"/>
-            <g className={styles.imaginationAstronaut}>
+            <g className={styles.imaginationAstronaut} data-pausable-animation={true}>
               <path d="M155.813 179.293C154.567 177.963 154.122 176.072 154.644 174.326L162.433 148.39C163.171 145.927 165.622 144.393 168.16 144.806L180.627 146.38L161.537 184.764C159.396 183.201 157.471 181.361 155.813 179.293Z" fill="#2C3E50"/>
               <path d="M183.676 213.86C182.968 215.375 182.086 216.802 181.049 218.113C167.045 214.259 153.81 208.021 141.924 199.674C143.409 192.873 148.001 187.163 154.324 184.252C172.953 175.634 192.532 195.07 183.676 213.86Z" fill="#F29C1F"/>
               <path d="M184.863 210.74C183.109 212.721 180.258 213.306 177.864 212.178C174.91 210.745 173.641 207.213 175.007 204.227L173.596 207.223C172.409 209.833 169.558 211.258 166.757 210.642C164.987 210.233 163.5 209.04 162.718 207.4C161.937 205.76 161.946 203.853 162.744 202.221L167.467 192.201C167.83 191.484 167.645 190.611 167.021 190.104C160.491 184.781 159.79 184.507 159.073 182.584C166.745 180.975 174.697 183.533 179.991 189.313C185.286 195.094 187.138 203.239 184.863 210.74Z" fill="#E57E25"/>
@@ -687,7 +687,7 @@ const Features: React.FC<IFeaturesProps> = () => {
               <path d="M201.514 159.997C200.661 159.595 200.295 158.578 200.697 157.725C202.88 153.093 196.951 150.299 196.704 150.183C195.852 149.781 195.486 148.764 195.888 147.911C196.29 147.058 197.307 146.693 198.16 147.095C201.371 148.608 206.696 153.005 203.785 159.181C203.383 160.034 202.366 160.399 201.514 159.997Z" fill="#F9EAB0"/>
               <path d="M204.057 164.97C203.086 166.072 201.989 167.056 200.789 167.902C195.002 168.395 189.269 166.466 184.959 162.573C178.22 156.492 178.042 148.181 184.093 144.39C186.304 152.433 191.617 161.579 204.057 164.97Z" fill="#F29C1F"/>
             </g>
-            <g className={styles.imaginationStars}>
+            <g className={styles.imaginationStars} data-pausable-animation={true}>
               <path d="M182.121 124.241C181.178 124.241 180.414 123.477 180.414 122.534V115.707C180.414 114.764 181.178 114 182.121 114C183.063 114 183.828 114.764 183.828 115.707V122.534C183.828 123.477 183.063 124.241 182.121 124.241Z" fill="#F0C419"/>
               <path d="M185.534 120.828H178.707C177.764 120.828 177 120.063 177 119.121C177 118.178 177.764 117.414 178.707 117.414H185.534C186.477 117.414 187.241 118.178 187.241 119.121C187.241 120.063 186.477 120.828 185.534 120.828Z" fill="#F0C419"/>
               <path d="M208.121 102.241C207.178 102.241 206.414 101.477 206.414 100.534V93.7069C206.414 92.7642 207.178 92 208.121 92C209.063 92 209.828 92.7642 209.828 93.7069V100.534C209.828 101.477 209.063 102.241 208.121 102.241Z" fill="#F0C419"/>
@@ -705,7 +705,7 @@ const Features: React.FC<IFeaturesProps> = () => {
               <path d="M180.121 110.241C179.178 110.241 178.414 109.477 178.414 108.534V101.707C178.414 100.764 179.178 100 180.121 100C181.063 100 181.828 100.764 181.828 101.707V108.534C181.828 109.477 181.063 110.241 180.121 110.241Z" fill="#F0C419"/>
               <path d="M183.534 106.828H176.707C175.764 106.828 175 106.063 175 105.121C175 104.178 175.764 103.414 176.707 103.414H183.534C184.477 103.414 185.241 104.178 185.241 105.121C185.241 106.063 184.477 106.828 183.534 106.828Z" fill="#F0C419"/>
             </g>
-            <g className={styles.imaginationPackages}>
+            <g className={styles.imaginationPackages} data-pausable-animation={true}>
               <path d="M176 64.8765V78.436L187.743 85.2158V71.6562L176 64.8765Z" fill="#8D134D"/>
               <path d="M176 64.8765L187.743 58.0967L199.486 64.8765L187.743 71.6562L176 64.8765Z" fill="#EC297A"/>
               <path d="M199.486 64.8765V78.436L187.743 85.2158V71.6562L199.486 64.8765Z" fill="#6A1237"/>
@@ -716,7 +716,7 @@ const Features: React.FC<IFeaturesProps> = () => {
               <path d="M194.094 61.862L202.515 57L210.936 61.862L202.515 66.724L194.094 61.862Z" fill="#EC297A"/>
               <path d="M210.936 61.8618V71.5858L202.515 76.4477V66.7238L210.936 61.8618Z" fill="#6A1237"/>
             </g>
-            <g className={styles.imaginationThinking}>
+            <g className={styles.imaginationThinking} data-pausable-animation={true}>
               <g clipPath="url(#clip0_451:615)">
                 <path d="M178.855 38.5663L178.624 37.6063C178.497 37.0759 177.964 36.7499 177.433 36.8773L177.142 36.9476C176.033 37.214 175.052 36.1808 175.375 35.0876L175.46 34.7998C175.615 34.2766 175.316 33.7276 174.793 33.5729L173.846 33.293C173.323 33.1383 172.774 33.4367 172.619 33.9599L172.534 34.2478C172.211 35.341 170.825 35.6747 170.04 34.8479L169.834 34.6303C169.458 34.235 168.833 34.2186 168.438 34.5945L167.722 35.2745C167.326 35.6503 167.31 36.2751 167.686 36.6704L167.892 36.888C168.678 37.7148 168.274 39.0812 167.165 39.3481L166.874 39.4184C166.343 39.5457 166.017 40.079 166.145 40.6094L166.376 41.5694C166.503 42.0997 167.036 42.4257 167.567 42.2984L167.858 42.2281C168.967 41.9612 169.948 42.9948 169.625 44.088L169.54 44.3758C169.385 44.899 169.684 45.448 170.207 45.6027L171.154 45.8827C171.677 46.0374 172.226 45.7389 172.381 45.2157L172.466 44.9279C172.789 43.8347 174.175 43.501 174.96 44.3278L175.166 44.5453C175.542 44.9406 176.167 44.957 176.562 44.5812L177.278 43.9011C177.674 43.5253 177.69 42.9005 177.314 42.5052L177.108 42.2876C176.322 41.4608 176.726 40.0945 177.835 39.8276L178.127 39.7573C178.657 39.6299 178.983 39.0968 178.855 38.5663Z" fill="#F0C419" stroke="black" strokeWidth="0.987423" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M171.94 41.4818C172.986 41.791 174.085 41.1938 174.394 40.1479C174.703 39.102 174.106 38.0034 173.06 37.6942C172.014 37.385 170.915 37.9822 170.606 39.0281C170.297 40.074 170.894 41.1726 171.94 41.4818Z" stroke="black" strokeWidth="0.987423" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -790,7 +790,7 @@ const Features: React.FC<IFeaturesProps> = () => {
           </p>
         </div>
         <div className={`${styles.animationContainer} ${styles.aiAnimation}`}>
-          <svg viewBox="0 0 788 1077" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 788 1077" fill="none" xmlns="http://www.w3.org/2000/svg" data-pausable-animation={true}>
             <path d="M493.59 167.975L489.258 164.174L461.012 154.234L460.079 156.887L487.811 166.646L491.326 169.73L495.861 178.689L495.42 179.275L480.643 176.474L480.119 179.237L496.616 182.365L499.161 178.98L493.59 167.975Z" fill="#F1F1F4"/>
             <path d="M493.59 167.975L489.258 164.174L479 160.564V163.545L487.811 166.646L491.326 169.73L495.861 178.689L495.42 179.275L480.643 176.474L480.119 179.237L496.616 182.365L499.161 178.98L493.59 167.975Z" fill="#E2DFF4"/>
             <path d="M495.875 151.812H494.469V150.406C494.469 149.63 493.839 149 493.062 149C492.286 149 491.656 149.63 491.656 150.406V151.812H490.25C489.473 151.812 488.844 152.442 488.844 153.219C488.844 153.995 489.473 154.625 490.25 154.625H491.656V156.031C491.656 156.808 492.286 157.438 493.062 157.438C493.839 157.438 494.469 156.808 494.469 156.031V154.625H495.875C496.652 154.625 497.281 153.995 497.281 153.219C497.281 152.442 496.652 151.812 495.875 151.812Z" fill="#FFDE91"/>
@@ -836,13 +836,13 @@ const Features: React.FC<IFeaturesProps> = () => {
             <path d="M623.5 433.828V446.484C626.989 446.484 629.828 443.646 629.828 440.156C629.828 436.667 626.989 433.828 623.5 433.828Z" fill="#4895FF"/>
             <path d="M646 473.344C642.511 473.344 639.672 476.183 639.672 479.672C639.672 483.161 642.511 486 646 486C649.489 486 652.328 483.161 652.328 479.672C652.328 476.183 649.489 473.344 646 473.344Z" fill="#8CBCFF"/>
             <path d="M646 473.344V486C649.489 486 652.328 483.161 652.328 479.672C652.328 476.183 649.489 473.344 646 473.344Z" fill="#4895FF"/>
-            <g className={styles.aiWires} filter="url(#filter0_d_451:1043)">
+            <g className={styles.aiWires} data-pausable-animation={true} filter="url(#filter0_d_451:1043)">
               <path d="M372 501H287.691C280.919 501 276.105 494.409 278.165 487.958L300.335 418.542C302.395 412.091 297.581 405.5 290.809 405.5H189.407C182.432 405.5 177.599 398.538 180.039 392.002L217 293" stroke="#B173FF" strokeWidth="2"/>
             </g>
-            <g className={styles.aiWires} filter="url(#filter1_d_451:1043)">
+            <g className={styles.aiWires} data-pausable-animation={true} filter="url(#filter1_d_451:1043)">
               <path d="M466 501.5H519.5H549.211C558.236 501.5 566.143 495.456 568.511 486.746L603.068 359.623C604.797 353.264 600.009 347 593.419 347H498.395C491.564 347 486.743 340.302 488.913 333.824L517.214 249.324C518.58 245.248 522.398 242.5 526.697 242.5H590" stroke="#B173FF" strokeWidth="2"/>
             </g>
-            <g className={styles.aiWires} filter="url(#filter2_d_451:1043)">
+            <g className={styles.aiWires} data-pausable-animation={true} filter="url(#filter2_d_451:1043)">
               <path d="M438.5 469L403.363 598.254C399.906 610.973 409.482 623.5 422.663 623.5H588" stroke="#B173FF" strokeWidth="2"/>
             </g>
             <path d="M886.333 831.663C886.333 966.786 776.793 1076.33 641.67 1076.33C506.546 1076.33 397.007 966.786 397.007 831.663C397.007 696.539 506.546 587 641.67 587C776.793 587 886.333 696.539 886.333 831.663Z" fill="#C3C9D1"/>
@@ -929,7 +929,7 @@ const Features: React.FC<IFeaturesProps> = () => {
             <g opacity="0.586364" filter="url(#filter11_f_451:1043)">
               <path d="M383.052 447.995L334 306.011C368.608 277.299 492.845 261.336 520 299.542L473.139 447.995C474.005 480.975 384.841 484.348 383.052 447.995Z" fill="url(#paint3_linear_451:1043)"/>
             </g>
-            <g className={styles.aiLogo}>
+            <g className={styles.aiLogo} data-pausable-animation={true}>
               <path fillRule="evenodd" clipRule="evenodd" d="M452.968 331.616C459.296 330.515 465.041 332.623 468.35 337.259C471.659 341.895 472.114 348.472 469.567 354.871C469.4 355.286 469.223 355.701 469.033 356.112C475.085 358.283 478.722 364.015 478.536 371.088C478.351 378.161 474.371 385.466 468.138 390.175C468.059 399.105 461.912 408.245 453.242 412.327C452.896 418.899 448.974 425.576 443.062 429.656C437.15 433.737 430.226 434.547 425.09 431.758L423.941 431.134V331.599L424.678 330.587C428.778 324.947 435.187 321.512 441.198 321.73C447.209 321.949 451.775 325.784 452.968 331.616Z" fill="#A31B57"/>
               <path fillRule="evenodd" clipRule="evenodd" d="M432.247 344.455V429.866C436.848 432.362 443.137 431.366 448.217 427.338C453.297 423.31 456.183 417.03 455.546 411.391C464.012 408.667 470.504 400.064 470.507 391.564C470.507 391.094 470.478 390.605 470.43 390.063L470.411 389.881C476.8 385.923 480.983 378.77 480.904 371.939C480.825 365.108 476.501 360.035 470.057 359.215C473.932 353.373 474.65 346.489 471.906 341.481C469.163 336.474 463.439 334.22 457.162 335.676C456.663 335.792 456.154 335.937 455.633 336.106C455.586 330.579 452.122 326.452 446.929 325.737C441.736 325.022 435.893 327.867 432.247 332.886V344.471V344.455Z" fill="#EC297A"/>
               <path fillRule="evenodd" clipRule="evenodd" d="M477.844 372.841C477.846 366.888 473.906 362.573 468.185 362.263C462.464 361.953 456.347 365.723 453.191 371.505L450.616 370.496C454.032 364.242 460.325 359.82 466.707 359.187C469.149 356.128 470.511 352.457 470.497 348.972C470.497 341.605 464.525 337.024 457.158 338.741C456.678 338.852 456.198 338.988 455.72 339.15L455.289 339.302C453.937 345.442 448.879 350.837 442.906 352.511L442.774 349.487C447.331 348.23 451.216 344.154 452.322 339.471C453.428 334.788 451.492 330.614 447.562 329.213C443.633 327.811 438.648 329.517 435.311 333.404V343.741L432.247 344.455V332.886C435.893 327.867 441.736 325.022 446.929 325.737C452.122 326.452 455.586 330.579 455.633 336.106C456.154 335.937 456.663 335.792 457.162 335.676C463.439 334.22 469.163 336.474 471.906 341.481C474.65 346.489 473.932 353.373 470.057 359.215C476.501 360.035 480.825 365.108 480.904 371.939C480.983 378.77 476.8 385.923 470.411 389.881L470.43 390.063C470.478 390.593 470.507 391.094 470.507 391.564C470.504 400.064 464.012 408.667 455.546 411.391C456.186 417.031 453.301 423.313 448.22 427.342C443.138 431.371 436.848 432.365 432.247 429.866V419.472L435.311 418.758V427.546C438.85 428.805 443.234 427.812 446.799 424.944C450.365 422.076 452.567 417.772 452.569 413.665C452.571 413.209 452.544 412.759 452.489 412.319L452.46 412.091C448.283 412.641 444.428 411.532 441.686 408.992L443.996 406.456C447.64 409.82 453.518 409.957 458.739 406.799C463.96 403.641 467.425 397.853 467.431 392.281C467.431 391.959 467.431 391.679 467.408 391.417C458.544 395.071 450.056 391.198 448.386 382.739L451.392 381.475C452.669 387.943 458.885 391.177 465.74 388.941C472.595 386.705 477.839 379.733 477.844 372.847" fill="white"/>
