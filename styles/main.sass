@@ -96,8 +96,11 @@ p
   // Header height
   scroll-margin-top: 78px
 
-.animation-paused
-  animation-play-state: paused
+[data-pausable-animation], .page-hidden .animation-running [data-pausable-animation]
+  animation-play-state: paused !important
+
+.animation-running [data-pausable-animation], .animation-running[data-pausable-animation]
+  animation-play-state: running !important
 
 @include tablet
   html

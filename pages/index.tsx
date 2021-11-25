@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import type { NextPage, GetStaticProps } from 'next'
 import Head from 'next/head'
 import { abbreviateNumber } from 'js-abbreviation-number'
@@ -32,6 +33,47 @@ interface ITrelloCard {
 }
 
 const HomePage: NextPage<IHomePageProps> = ({ cards }) => {
+  const animationRunningClassName = 'animation-running'
+  // If visible in viewport, then run the animations, otherwise stop them
+  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(animationRunningClassName)
+      } else {
+        entry.target.classList.remove(animationRunningClassName)
+      }
+    })
+  }
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      rootMargin: '0px',
+      threshold: [0, 1]
+    })
+    const body = document.querySelector('body')
+    const elements = document.querySelectorAll('[data-pausable-animation]')
+
+    // When tab is not visible, then stop the animations
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        body?.classList.add('page-hidden')
+      } else {
+        body?.classList.remove('page-hidden')
+      }
+    })
+
+    elements.forEach((element) => {
+      observer.observe(element)
+    })
+
+    return () => {
+      elements.forEach((element) => {
+        observer.unobserve(element)
+      })
+    }
+  }, [])
+
   return (
     <>
       <Head>
@@ -73,8 +115,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   let starsNb = '8k'
   let cards: IRoadmapCard[] = []
 
-  if (process.env.NODE_ENV === 'development') {
-  // if (process.env.NODE_ENV !== 'development') {
+  if (process.env.NODE_ENV !== 'development') {
     const [ghRes, trelloRes] = await Promise.all([
       fetch('https://api.github.com/repos/leon-ai/leon'),
       fetch('https://trello.com/b/7bdwhnLr/leon-your-open-source-personal-assistant-roadmap.json')

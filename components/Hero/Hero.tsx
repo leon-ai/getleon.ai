@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 
 import styles from '@/components/Hero/Hero.module.sass'
-import usePauseAnimation from '@/lib/use-pause-animation'
-import useScrollPosition from '@/lib/use-scroll-position'
 
 interface IHeroProps { }
 
@@ -26,7 +24,6 @@ const Hero: React.FC<IHeroProps> = () => {
       clearInterval(interval)
     }, 2000)
   }
-  const scrollPosition = useScrollPosition()
 
   useEffect(() => {
     if (svgRef) {
@@ -36,14 +33,9 @@ const Hero: React.FC<IHeroProps> = () => {
     }
   }, [])
 
-  usePauseAnimation(scrollPosition, [
-    styles.halo, styles.logo, styles.pythonLogo, styles.nodeJsLogo
-    // '#static-pkg1'
-  ])
-
   return (
     <div className={styles.container}>
-      <svg ref={svgRef} className={`${styles.hero} ${styles.turnedOff}`} version="1.1" viewBox="0 0 610.63 413.49" xmlns="http://www.w3.org/2000/svg">
+      <svg ref={svgRef} className={`${styles.hero} ${styles.turnedOff}`} data-pausable-animation={true} version="1.1" viewBox="0 0 610.63 413.49" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <g id="leon-stroke">
             <path fillRule="evenodd" clipRule="evenodd" d="M108.168 62.4606C108.17 56.0625 103.916 50.4368 97.7396 48.6708C91.5633 46.9049 84.9592 49.4258 81.5515 54.8502L78.772 53.1205C82.4603 47.2534 89.2535 44.0758 96.1436 44.9946C98.7806 42.3171 100.251 38.7126 100.236 34.9626C100.236 27.0435 93.7888 20.6238 85.8353 20.6238C85.3166 20.6228 84.7982 20.6494 84.2823 20.7034L83.8167 20.7587C82.3573 27.0203 76.8963 31.5534 70.4476 31.8562L70.3051 28.5733C75.2252 28.363 79.4201 24.9549 80.6142 20.1979C81.8084 15.4409 79.7172 10.4685 75.4751 7.97809C71.2329 5.48763 65.8508 6.0726 62.2482 9.41567V20.5269H58.9406V8.09076C62.8767 3.60863 69.1847 2.0139 74.7915 4.08346C80.3983 6.15303 84.1379 11.4565 84.1885 17.4101C84.7513 17.3582 85.3003 17.3306 85.8388 17.3306C92.6163 17.3378 98.7959 21.1938 101.758 27.2636C104.719 33.3335 103.944 40.5536 99.7604 45.8629C106.718 48.3589 111.387 54.8948 111.472 62.2576C111.557 69.6205 107.04 76.2616 100.143 78.9165L100.163 79.1172C100.216 79.6983 100.247 80.2449 100.247 80.7499C100.243 89.8863 93.2348 97.5083 84.0947 98.3163C84.7859 104.539 81.6706 110.569 76.1847 113.627C70.6988 116.686 63.9073 116.179 58.9406 112.34V101.167H62.2482V110.614C66.069 112.854 70.8018 112.884 74.6515 110.694C78.5013 108.504 80.8783 104.429 80.8809 100.015C80.8824 99.5246 80.8534 99.0347 80.7941 98.5481L80.7628 98.2955C76.2537 97.8408 72.091 95.6831 69.1308 92.266L71.6254 90.1177C75.5591 94.6469 81.9049 96.2661 87.5416 94.179C93.1783 92.0919 96.9196 86.7378 96.9254 80.7499C96.9254 80.404 96.9254 80.1031 96.901 79.8159C87.3316 81.5232 78.1677 75.2345 76.3643 65.7227L79.6093 65.1174C80.9886 72.3899 87.6991 77.4232 95.1003 76.7365C102.501 76.0498 108.162 69.8686 108.168 62.4675" fill="white"/>
@@ -371,7 +363,7 @@ const Hero: React.FC<IHeroProps> = () => {
               <path d="m320.91 253.73-60.622 35 25.981 15 60.622-35z" fill="none" filter="url(#filter8655)" stroke="#f9fafc" strokeWidth=".965"/>
               <path className={styles.energyTurnedOff} d="m320.91 254.29-60.622 35 25.981 15 60.622-35z" fill="none" stroke="#f9fafc" strokeWidth=".965"/>
             </g>
-            <path className={`${styles.haloHidden} ${styles.halo}`} transform="matrix(1 -.51223 0 1 8.8593 204.35)" d="m367.86 246.5-14.611-73.198c16.635-13.801 59.183-29.061 72.235-10.697l2.4243 99.984c0.41656 15.852-59.189 1.3843-60.049-16.089z" fill="url(#linearGradient8084)" filter="url(#filter8045-9)" opacity=".58636"/>
+            <path className={`${styles.haloHidden} ${styles.halo}`} data-pausable-animation={true} transform="matrix(1 -.51223 0 1 8.8593 204.35)" d="m367.86 246.5-14.611-73.198c16.635-13.801 59.183-29.061 72.235-10.697l2.4243 99.984c0.41656 15.852-59.189 1.3843-60.049-16.089z" fill="url(#linearGradient8084)" filter="url(#filter8045-9)" opacity=".58636"/>
             <g transform="matrix(-1 0 0 1 577.41 69.092)">
               <g>
                 <path d="m86.603 154.65 5.1962 3 10.392-6z" fill="#00000f" filter="url(#filter1999-5)"/>
@@ -379,7 +371,7 @@ const Hero: React.FC<IHeroProps> = () => {
                 <g stroke="#f9fafc" strokeWidth=".1">
                   <path d="m86.603 140v12l5.1962 3v-12z" fill="url(#linearGradient1422)"/>
                   <path d="m86.603 140 10.392-6 5.1962 3-10.392 6z" fill="url(#linearGradient1430)"/>
-                  <path d="m102.19 137v12l-10.392 6v-12z" fill="url(#linearGradient1398)"/>
+                  <path d="m102.19 137v12l-10.392 6v-12z" fill="url(#linearGradient1398)" />
                 </g>
               </g>
               <path d="m91.791 140.56-1e-6 -5 5.1962-3v5" fill="none" stroke="#f9fafc" strokeWidth=".865"/>
@@ -509,8 +501,8 @@ const Hero: React.FC<IHeroProps> = () => {
               <path d="m70.086 146.42a15.437 15.437 0 0 1-11.86 15.017" strokeWidth="1.2675"/>
               <path d="m78.409 145.13a27.163 27.163 0 0 1-20.87 26.424" strokeWidth="2.2303"/>
             </g>
-            <path className={`${styles.haloHidden} ${styles.halo}`} d="m197.21 213.69-23.577-68.246c16.635-13.801 76.351-21.474 89.403-3.1093l-22.524 71.355c0.41656 15.852-42.441 17.474-43.301 0z" fill="url(#linearGradient7777)" filter="url(#filter8045)" opacity=".58636"/>
-            <g className={styles.logo} fillRule="evenodd">
+            <path className={`${styles.haloHidden} ${styles.halo}`} data-pausable-animation={true} d="m197.21 213.69-23.577-68.246c16.635-13.801 76.351-21.474 89.403-3.1093l-22.524 71.355c0.41656 15.852-42.441 17.474-43.301 0z" fill="url(#linearGradient7777)" filter="url(#filter8045)" opacity=".58636"/>
+            <g className={styles.logo} fillRule="evenodd" data-pausable-animation={true}>
               <path id="Path" d="m234.06 34.456c19.664 1.1611 37.516 11.869 47.799 28.671 10.283 16.801 11.695 37.571 3.7813 55.609-0.52 1.17-1.07 2.33-1.66 3.47 18.807 11.129 30.109 31.572 29.532 53.417-0.57728 21.845-12.943 41.663-32.312 51.783-0.24708 27.692-19.348 51.645-46.29 58.05-1.0731 20.173-13.26 38.081-31.632 46.481s-39.889 5.9035-55.848-6.481l-3.57-2.77v-309.3l2.29-2.61c12.742-14.556 32.657-20.593 51.336-15.562 18.679 5.0316 32.868 20.255 36.574 39.242" fill="#a31b57" strokeWidth="1.0021"/>
               <path d="m169.67 59.35v265.41c14.298 11.086 33.84 12.545 49.625 3.7062 15.786-8.8392 24.754-26.263 22.775-44.246 26.307-2.3356 46.48-24.369 46.49-50.78 0-1.46-0.09-3-0.24-4.72l-0.06-0.58c19.854-7.6746 32.853-26.873 32.608-48.157s-13.683-40.178-33.708-47.393c12.041-15.348 14.272-36.219 5.7482-53.766-8.5243-17.546-26.311-28.693-45.818-28.714-1.55 0-3.13 0.08-4.75 0.23-0.14553-17.211-10.909-32.542-27.047-38.524-16.138-5.9826-34.294-1.3726-45.623 11.584v36z" fill="#ec297a"/>
               <path d="m311.36 180.57c6e-3 -18.495-12.24-34.758-30.016-39.863-17.777-5.105-36.785 2.1824-46.594 17.863l-8-5c10.616-16.96 30.168-26.146 50-23.49 7.5898-7.7399 11.822-18.16 11.78-29 0-22.892-18.558-41.45-41.45-41.45-1.493-0.0028-2.9852 0.07394-4.47 0.23l-1.34 0.16c-4.2007 18.101-19.919 31.205-38.48 32.08l-0.41-9.49c14.161-0.60801 26.235-10.46 29.672-24.211 3.437-13.751-2.582-28.125-14.792-35.325s-27.701-5.5083-38.07 4.1557v32.12h-9.52v-35.95c11.329-12.957 29.485-17.567 45.623-11.584 16.138 5.9826 26.901 21.314 27.047 38.524 1.62-0.15 3.2-0.23 4.75-0.23 19.507 0.021 37.294 11.168 45.818 28.714 8.5243 17.546 6.2928 38.418-5.7482 53.766 20.025 7.2155 33.463 26.109 33.708 47.393s-12.754 40.482-32.608 48.157l0.06 0.58c0.15 1.68 0.24 3.26 0.24 4.72-0.0105 26.411-20.183 48.444-46.49 50.78 1.9894 17.987-6.9772 35.418-22.767 44.26s-35.337 7.3764-49.633-3.7198v-32.3h9.52v27.31c10.997 6.474 24.62 6.5625 35.7 0.23191s17.922-18.11 17.93-30.872c4e-3 -1.4171-0.0794-2.8332-0.25-4.24l-0.09-0.73c-12.978-1.3144-24.96-7.552-33.48-17.43l7.18-6.21c11.322 13.093 29.587 17.774 45.811 11.74 16.224-6.0333 26.992-21.511 27.009-38.82 0-1 0-1.87-0.07-2.7-27.543 4.9353-53.919-13.244-59.11-40.74l9.34-1.75c3.9698 21.023 23.285 35.573 44.587 33.588 21.302-1.9851 37.596-19.853 37.613-41.248" fill="#fff"/>
@@ -532,14 +524,16 @@ const Hero: React.FC<IHeroProps> = () => {
               <path d="m228.88 64.418 121.24 60 0.0484 91.25-121.29-61.25z" fill="#11111f"/>
               <path d="m220.22 69.418 121.24 60 0.0484 91.25-121.29-61.25z" fill="#00000f"/>
               <use
-                id="screen-stroke-logo"
+                className={styles.screenStrokeLogo}
+                data-pausable-animation={true}
                 href="#leon-stroke"
                 x="0"
                 y="60"
               />
               <g>
                 <use
-                  id="screen-mail-icon"
+                  className={styles.screenMailIcon}
+                  data-pausable-animation={true}
                   href="#mail-icon"
                   x="0"
                   y="0"
@@ -547,7 +541,8 @@ const Hero: React.FC<IHeroProps> = () => {
               </g>
               <g>
                 <use
-                  id="screen-music-icon"
+                  className={styles.screenMusicIcon}
+                  data-pausable-animation={true}
                   href="#music-icon"
                   x="0"
                   y="0"
@@ -555,7 +550,8 @@ const Hero: React.FC<IHeroProps> = () => {
               </g>
               <g>
                 <use
-                  id="screen-chat-icon"
+                  className={styles.screenChatIcon}
+                  data-pausable-animation={true}
                   href="#chat-icon"
                   x="0"
                   y="0"
@@ -563,7 +559,8 @@ const Hero: React.FC<IHeroProps> = () => {
               </g>
               <g>
                 <use
-                  id="screen-video-icon"
+                  className={styles.screenVideoIcon}
+                  data-pausable-animation={true}
                   href="#video-icon"
                   x="0"
                   y="0"
@@ -571,7 +568,8 @@ const Hero: React.FC<IHeroProps> = () => {
               </g>
               <g>
                 <use
-                  id="screen-forecast-icon"
+                  className={styles.screenForecastIcon}
+                  data-pausable-animation={true}
                   href="#forecast-icon"
                   x="0"
                   y="0"
@@ -579,7 +577,8 @@ const Hero: React.FC<IHeroProps> = () => {
               </g>
               <g>
                 <use
-                  id="screen-check-icon"
+                  className={styles.screenCheckIcon}
+                  data-pausable-animation={true}
                   href="#check-icon"
                   x="0"
                   y="0"
@@ -604,7 +603,7 @@ const Hero: React.FC<IHeroProps> = () => {
               </g>
             </g>
             <ellipse transform="matrix(.94032 -.34029 0 1 836.32 103.95)" cx="-555.02" cy="10.645" rx="9.345" ry="4.2997" fill="#00000f" filter="url(#filter5495-9)" opacity=".99962"/>
-            <g className={styles.pythonLogo}>
+            <g className={styles.pythonLogo} data-pausable-animation={true}>
               <path d="m33.124 30.533-11.321-10.392 1.6784-7.3827 11.759 1.0077 0.05687 6.0995z" fill="#203a50"/>
               <path d="m46.719 116.14c4.9806-0.0231 10.535 2.9016 14.72 2.1611 12.329-2.1781-6.0066-24.822-0.33552-28.81l11.549-8.1216h-29.134v-3.7012l29.134-1e-5h10.934c8.4672 0 29.432-0.0634 31.751-9.7449 2.6366-10.938-4.072-19.321-7.0536-30.716-15.408-10.313-12.781-7.726-25.174-9.0828-5.2751-0.76242 9.1833 4.8443 3.6792-0.2318l-11.471-10.579 0.96785 14.514c0.66216 9.9302-8.3201 18.098-18.2 18.098l-29.1 3e-6c-8.1005 0-14.567 6.6697-14.567 14.805v27.742c0 7.8955 22.276 21.022 30.182 22.34 5.0048 0.83311-2.8618 1.3498 2.1186 1.3266z" fill="url(#linearGradient4927)" strokeWidth="1.0866"/>
               <path d="m91.229 35.054v11.906c0 9.2308-7.8259 17-16.75 17h-26.781c-7.3358 0-13.406 6.2785-13.406 13.625v25.531c0 7.2663 6.3186 11.54 13.406 13.625 8.4873 2.4956 16.626 2.9466 26.781 0 6.7502-1.9544 13.406-5.8876 13.406-13.625v-10.219h-26.781v-3.4062h40.188c7.7925 0 10.696-5.4354 13.406-13.594 2.7993-8.3989 2.6802-16.476 0-27.25-1.9258-7.7574-5.6039-13.594-13.406-13.594zm-15.062 64.656c2.7795 3e-6 5.0312 2.2774 5.0312 5.0937-2e-6 2.8264-2.2518 5.125-5.0312 5.125-2.7696 0-5.0312-2.2986-5.0312-5.125 2e-6 -2.8163 2.2617-5.0937 5.0312-5.0937z" fill="url(#linearGradient4893)"/>
@@ -615,7 +614,7 @@ const Hero: React.FC<IHeroProps> = () => {
               <path d="m87.885 92.898-26.781-9.4e-5v-3.4062h20.854l5.9271 3.4063" fill="#5f4f16"/>
             </g>
             <ellipse transform="matrix(.94032 -.34029 0 1 802.45 81.4)" cx="-555.02" cy="10.645" rx="9.345" ry="4.2997" fill="#00000f" filter="url(#filter5495)" opacity=".99962"/>
-            <g className={styles.nodeJsLogo}>
+            <g className={styles.nodeJsLogo} data-pausable-animation={true}>
               <path d="m174.4 246.99-9.5116 11.831c-0.97702 2.0002-2.0876 9.2614-1.1604 12.925l8.4395 0.51545 1.9323-0.79666 8.88-11.311 0.14533-12.585-8.4317-0.74886c-0.39941-0.35683-0.25906 0.0259-0.29338 0.16933z" display="none" fill="#204720"/>
               <g fill="#204620">
                 <g transform="matrix(.23825 -.13755 0 -.27511 101.82 339.29)">
@@ -664,42 +663,42 @@ const Hero: React.FC<IHeroProps> = () => {
               <path d="m97.879 253.25-3.5608 6.9679-0.04903 5.3521-5.5935 2.5217 3.6147-10.484z" fill="#44444f" />
             </g>
             {/* Packages */}
-            <g id="static-pkg1">
+            <g className={styles.staticPkg1} data-pausable-animation={true}>
               <path d="m281.46 217.5v10l8.6603 5v-10z" fill="#8d134d"/>
               <path d="m281.46 217.5 8.6603-5 8.6603 5-8.6603 5z" fill="#ec297a"/>
               <path d="m298.78 217.5v10l-8.6603 5v-10z" fill="#6a1237"/>
             </g>
-            <g id="static-pkg2">
+            <g className={styles.staticPkg2} data-pausable-animation={true}>
               <path d="m281.46 217.5v10l8.6603 5v-10z" fill="#165dab"/>
               <path d="m281.46 217.5 8.6603-5 8.6603 5-8.6603 5z" fill="#1c75db"/>
               <path d="m298.78 217.5v10l-8.6603 5v-10z" fill="#092c54"/>
             </g>
-            <g id="pkg1">
+            <g className={styles.pkg1} data-pausable-animation={true}>
               <path d="m281.46 217.5v10l8.6603 5v-10z" fill="#165dab"/>
               <path d="m281.46 217.5 8.6603-5 8.6603 5-8.6603 5z" fill="#1c75db"/>
               <path d="m298.78 217.5v10l-8.6603 5v-10z" fill="#092c54"/>
             </g>
-            <g id="pkg2">
+            <g className={styles.pkg2} data-pausable-animation={true}>
               <path d="m281.46 217.5v10l8.6603 5v-10z" fill="#8d134d"/>
               <path d="m281.46 217.5 8.6603-5 8.6603 5-8.6603 5z" fill="#ec297a"/>
               <path d="m298.78 217.5v10l-8.6603 5v-10z" fill="#6a1237"/>
             </g>
-            <g id="pkg3">
+            <g className={styles.pkg3} data-pausable-animation={true}>
               <path d="m281.46 217.5v10l8.6603 5v-10z" fill="#165dab"/>
               <path d="m281.46 217.5 8.6603-5 8.6603 5-8.6603 5z" fill="#1c75db"/>
               <path d="m298.78 217.5v10l-8.6603 5v-10z" fill="#092c54"/>
             </g>
-            <g id="pkg4">
+            <g className={styles.pkg4} data-pausable-animation={true}>
               <path d="m281.46 217.5v10l8.6603 5v-10z" fill="#8d134d"/>
               <path d="m281.46 217.5 8.6603-5 8.6603 5-8.6603 5z" fill="#ec297a"/>
               <path d="m298.78 217.5v10l-8.6603 5v-10z" fill="#6a1237"/>
             </g>
-            <g id="pkg5">
+            <g className={styles.pkg5} data-pausable-animation={true}>
               <path d="m281.46 217.5v10l8.6603 5v-10z" fill="#165dab"/>
               <path d="m281.46 217.5 8.6603-5 8.6603 5-8.6603 5z" fill="#1c75db"/>
               <path d="m298.78 217.5v10l-8.6603 5v-10z" fill="#092c54"/>
             </g>
-            <g id="pkg6">
+            <g className={styles.pkg6} data-pausable-animation={true}>
               <path d="m281.46 217.5v10l8.6603 5v-10z" fill="#8d134d"/>
               <path d="m281.46 217.5 8.6603-5 8.6603 5-8.6603 5z" fill="#ec297a"/>
               <path d="m298.78 217.5v10l-8.6603 5v-10z" fill="#6a1237"/>
