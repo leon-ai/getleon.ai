@@ -92,6 +92,17 @@ p
   font-size: var(--fontSize-bigger)
   line-height: 1.5rem
 
+.arrow-link
+  display: inline-block
+  font-weight: var(--fontWeight-semibold)
+  color: var(--color-white)
+  &:hover
+    .feather-arrow-right
+      transform: translateX(4px)
+  .feather-arrow-right
+    transition: transform var(--transitionTiming-main) var(--transitionDuration-main)
+    width: 14px
+
 #get-started
   // Header height
   scroll-margin-top: 78px

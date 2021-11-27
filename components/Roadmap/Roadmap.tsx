@@ -89,7 +89,7 @@ const Roadmap: React.FC<IRoadmapProps> = ({ cards }) => {
         </svg>
       </div>
       <div className={styles.footer}>
-        <a className={styles.browse} href="https://roadmap.getleon.ai" target="_blank" rel="noreferrer">
+        <a className="arrow-link" href="https://roadmap.getleon.ai" target="_blank" rel="noreferrer">
           Browse the roadmap <Icon name="arrow-right" />
         </a>
       </div>
