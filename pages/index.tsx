@@ -171,12 +171,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
     starsNb = abbreviateNumber(ghData.stargazers_count, 1, { padding: false })
   }
 
+  const SECONDS_IN_ONE_DAY = (60 * 60) * 24
   return {
     props: {
       starsNb,
       cards
     },
-    revalidate: (60 * 60) * 24
+    revalidate: SECONDS_IN_ONE_DAY
   }
 }
 

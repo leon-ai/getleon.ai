@@ -17,10 +17,11 @@
     "url": "https://github.com/leon-ai/getleon.ai/issues"
   },
   "scripts": {
-    "dev": "node_modules/.bin/next dev",
-    "build": "node_modules/.bin/next build",
-    "start": "node_modules/.bin/next start",
-    "lint": "node_modules/.bin/next lint"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "vercel"
   },
   "dependencies": {
     "js-abbreviation-number": "^1.3.0",
@@ -29,12 +30,11 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^4.0.0-beta.9",
     "@types/react": "^17.0.33",
     "eslint": "^7.24.0",
     "eslint-config-next": "^12.0.1",
-    "netlify-plugin-cache-nextjs": "^1.6.1",
     "sass": "^1.43.4",
-    "typescript": "4.4.4"
+    "typescript": "4.4.4",
+    "vercel": "^23.1.2"
   }
 }
