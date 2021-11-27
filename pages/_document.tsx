@@ -17,7 +17,7 @@ class MyDocument extends Document {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:description" content={headDescription} />
           {/* TODO */}
-          <meta name="twitter:image" content="https://agitated-mirzakhani-8e6be9.netlify.app/img/social-preview.png" />
+          <meta name="twitter:image" content="https://agitated-mirzakhani-8e6be9.netlify.app/img/social-preview-2.png" />
           <meta name="twitter:dnt" content="on" />
           <meta name="twitter:creator" content="@louistiti_fr" />
           <link rel="icon" href="/img/favicon.png" type="image/png" />
