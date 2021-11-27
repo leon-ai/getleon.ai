@@ -12,12 +12,10 @@ class MyDocument extends Document {
           <meta name="description" content={headDescription} />
           <meta name="og:type" content="website" />
           <meta name="og:description" content={headDescription} />
-          {/* TODO */}
-          <meta name="og:image" content="" />
+          <meta name="og:image" content="https://getleon.ai/img/facebook-preview.png" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:description" content={headDescription} />
-          {/* TODO */}
-          <meta name="twitter:image" content="https://agitated-mirzakhani-8e6be9.netlify.app/img/social-preview-7.png" />
+          <meta name="twitter:image" content="https://getleon.ai/img/social-preview.png" />
           <meta name="twitter:dnt" content="on" />
           <meta name="twitter:creator" content="@louistiti_fr" />
           <link rel="icon" href="/img/favicon.png" type="image/png" />
