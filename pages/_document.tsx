@@ -18,6 +18,10 @@ class MyDocument extends Document {
           <meta name="twitter:image" content="https://getleon.ai/img/social-preview.png" />
           <meta name="twitter:dnt" content="on" />
           <meta name="twitter:creator" content="@louistiti_fr" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,400&display=swap"
+            rel="stylesheet"
+          />
           <link rel="icon" href="/img/favicon.png" type="image/png" />
           <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
           <link rel="preconnect" href="https://unpkg.com" />
