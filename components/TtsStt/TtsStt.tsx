@@ -1,8 +1,35 @@
 import React from 'react'
+import Image from 'next/image'
 
 import styles from '@/components/TtsStt/TtsStt.module.sass'
 
 interface ITtsSttProps { }
+interface INodeProps {
+  name: string
+  src: string
+  width: number
+  height: number
+  soon?: boolean
+}
+
+const Node: React.FC<INodeProps> = ({ name, src, width, height, soon }) => {
+  const containerClassNames = !soon ? `${styles.solution}` : `${styles.solution} ${styles.soon}`
+  const title = !soon ? <span>{name}</span> : <span>{name}<br />(coming soon)</span>
+
+  return (
+    <div className={containerClassNames}>
+      <div>
+        <Image
+          src={src}
+          alt={name}
+          width={width}
+          height={height}
+        />
+      </div>
+      {title}
+    </div>
+  )
+}
 
 const TtsStt: React.FC<ITtsSttProps> = () => {
   return (
@@ -23,30 +50,44 @@ const TtsStt: React.FC<ITtsSttProps> = () => {
             Text-to-Speech
           </h2>
           <div className={styles.ttsSolutions}>
-            <div className={`${styles.solution} ${styles.googleCloud}`}>
-              <div />
-              <span>Google Cloud</span>
-            </div>
-            <div className={`${styles.solution} ${styles.aws}`}>
-              <div />
-              <span>AWS</span>
-            </div>
-            <div className={`${styles.solution} ${styles.ibmWatson}`}>
-              <div />
-              <span>IBM Watson</span>
-            </div>
-            <div className={`${styles.solution} ${styles.flite}`}>
-              <div />
-              <span>CMU Flite</span>
-            </div>
-            <div className={`${styles.solution} ${styles.aliyun} ${styles.soon}`}>
-              <div />
-              <span>Alibaba Cloud<br />(coming soon)</span>
-            </div>
-            <div className={`${styles.solution} ${styles.microsoftAzure} ${styles.soon}`}>
-              <div />
-              <span>Microsoft Azure<br />(coming soon)</span>
-            </div>
+            <Node
+              src="/img/tts-stt-solutions-logo/google-cloud.svg"
+              name="Google Cloud"
+              width={51}
+              height={51}
+            />
+            <Node
+              src="/img/tts-stt-solutions-logo/aws.svg"
+              name="AWS"
+              width={51}
+              height={51}
+            />
+            <Node
+              src="/img/tts-stt-solutions-logo/ibm-watson.png"
+              name="IBM Watson"
+              width={51}
+              height={48}
+            />
+            <Node
+              src="/img/tts-stt-solutions-logo/festvox.png"
+              name="CMU Flite"
+              width={51}
+              height={27}
+            />
+            <Node
+              src="/img/tts-stt-solutions-logo/aliyun.svg"
+              name="Alibaba Cloud"
+              width={51}
+              height={51}
+              soon={true}
+            />
+            <Node
+              src="/img/tts-stt-solutions-logo/microsoft-azure.svg"
+              name="Microsoft Azure"
+              width={51}
+              height={51}
+              soon={true}
+            />
           </div>
         </div>
         <div className={styles.stt}>
@@ -54,26 +95,38 @@ const TtsStt: React.FC<ITtsSttProps> = () => {
             Speech-to-Text
           </h2>
           <div className={styles.sttSolutions}>
-            <div className={`${styles.solution} ${styles.googleCloud}`}>
-              <div />
-              <span>Google Cloud</span>
-            </div>
-            <div className={`${styles.solution} ${styles.ibmWatson}`}>
-              <div />
-              <span>IBM Watson</span>
-            </div>
-            <div className={`${styles.solution} ${styles.deepSpeech}`}>
-              <div />
-              <span>DeepSpeech</span>
-            </div>
-            <div className={`${styles.solution} ${styles.aliyun} ${styles.soon}`}>
-              <div />
-              <span>Alibaba Cloud<br />(coming soon)</span>
-            </div>
-            <div className={`${styles.solution} ${styles.microsoftAzure} ${styles.soon}`}>
-              <div />
-              <span>Microsoft Azure<br />(coming soon)</span>
-            </div>
+            <Node
+              src="/img/tts-stt-solutions-logo/google-cloud.svg"
+              name="Google Cloud"
+              width={51}
+              height={51}
+            />
+            <Node
+              src="/img/tts-stt-solutions-logo/ibm-watson.png"
+              name="IBM Watson"
+              width={51}
+              height={48}
+            />
+            <Node
+              src="/img/tts-stt-solutions-logo/mozilla.svg"
+              name="DeepSpeech"
+              width={53}
+              height={53}
+            />
+            <Node
+              src="/img/tts-stt-solutions-logo/aliyun.svg"
+              name="Alibaba Cloud"
+              width={51}
+              height={51}
+              soon={true}
+            />
+            <Node
+              src="/img/tts-stt-solutions-logo/microsoft-azure.svg"
+              name="Microsoft Azure"
+              width={51}
+              height={51}
+              soon={true}
+            />
           </div>
         </div>
       </div>
