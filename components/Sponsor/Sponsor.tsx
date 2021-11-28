@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 import styles from '@/components/Sponsor/Sponsor.module.sass'
 import Icon from '@/components/Icon'
@@ -8,7 +9,14 @@ interface ISponsorProps { }
 const Sponsor: React.FC<ISponsorProps> = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.astronaut} />
+      <div className={styles.astronaut}>
+        <Image
+          src="/img/astronaut-2.svg"
+          width={285}
+          height={132}
+          alt="Astronaut"
+        />
+      </div>
       <h3>Become a sponsor</h3>
       <div className={styles.sponsor}>
         <p>
@@ -20,15 +28,35 @@ const Sponsor: React.FC<ISponsorProps> = () => {
           <em>Louis</em>
         </p>
         <div className={styles.right}>
-          <div className={styles.photo} />
+          <Image
+            src="/img/louis.png"
+            width={196}
+            height={196}
+            alt="Louis"
+            quality={100}
+          />
           <a href="https://sponsor.getleon.ai" aria-label="Sponsor Leon" target="_blank" rel="noreferrer" className={`heartbeat-button ${styles.button}`}>
             <div className={styles.buttonInnerContainer}>
               <Icon name="heart" stroke="none" fill="#FF0000" width={18} style={{ marginRight: '4px' }} />
               Sponsor @louistiti on GitHub
             </div>
           </a>
-          <div className={styles.rightArrow} />
-          <div className={styles.leftArrow} />
+          <div className={styles.rightArrow}>
+            <Image
+              src="/img/arrow.svg"
+              width={53}
+              height={22}
+              alt="Arrow"
+            />
+          </div>
+          <div className={styles.leftArrow}>
+            <Image
+              src="/img/arrow.svg"
+              width={53}
+              height={22}
+              alt="Arrow"
+            />
+          </div>
         </div>
       </div>
       <svg className={`backbone ${styles.backbone}`} viewBox="0 0 645 260" fill="none" xmlns="http://www.w3.org/2000/svg">

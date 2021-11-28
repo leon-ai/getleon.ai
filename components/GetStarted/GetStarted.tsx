@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 import styles from '@/components/GetStarted/GetStarted.module.sass'
 
@@ -36,7 +37,14 @@ const GetStarted: React.FC<IGetStartedProps> = () => {
                 npm install -g leon-ai/leon-cli#master
               </span>
             </div>
-            <div className={styles.placeholder} />
+            <div className={styles.placeholder}>
+              <Image
+                src="/img/terminal-placeholder.svg"
+                width={416}
+                height={62}
+                alt="Terminal placeholder"
+              />
+            </div>
             <div className={styles.chunk}>
               <span className={styles.comment}>
                 Install Leon
@@ -45,7 +53,14 @@ const GetStarted: React.FC<IGetStartedProps> = () => {
                 leon create birth
               </span>
             </div>
-            <div className={styles.placeholder} />
+            <div className={styles.placeholder}>
+              <Image
+                src="/img/terminal-placeholder.svg"
+                width={416}
+                height={62}
+                alt="Terminal placeholder"
+              />
+            </div>
           </div>
         </div>
         <svg className={`backbone ${styles.backbone}`} viewBox="0 0 256 557" fill="none" xmlns="http://www.w3.org/2000/svg">

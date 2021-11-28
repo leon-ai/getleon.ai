@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { default as NextImage } from 'next/image'
 
 import styles from '@/components/Demo/Demo.module.sass'
 
@@ -45,8 +46,15 @@ const Demo: React.FC<IDemoProps> = () => {
           href="https://www.youtube.com/watch?v=p7GRGiicO1c"
           target="_blank"
           rel="noreferrer"
-          className={styles.ytPreview}
-        />
+        >
+          <NextImage
+            src="/img/youtube-preview.png"
+            width={472}
+            height={400}
+            alt="Demo preview"
+            className={styles.ytPreview}
+          />
+        </a>
       )}
       <svg className={`backbone ${styles.backbone}`} viewBox="0 0 429 544" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_552_2)">

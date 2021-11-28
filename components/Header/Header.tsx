@@ -44,7 +44,7 @@ const Header: React.FC<IHeaderProps> = ({ starsNb }) => {
             <a aria-label="Leon homepage">
               <Image
                 src="/img/logo-t.svg"
-                alt="Leon: open-source personal assistant"
+                alt="Leon: open-source personal and virtual assistant"
                 width={86}
                 height={44}
               />

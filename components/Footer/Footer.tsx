@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+
 import styles from '@/components/Footer/Footer.module.sass'
 
 interface IFooterProps { }
@@ -33,7 +35,12 @@ const Footer: React.FC<IFooterProps> = () => {
         <div className={styles.wrapper}>
           <div className={styles.licenseContainer}>
             <div className={styles.license}>
-              <div className={styles.logo} />
+              <Image
+                src="/img/logo-stroke.svg"
+                width={58}
+                height={60}
+                alt="Leon logo"
+              />
               <p>
                 Released under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noreferrer">MIT License</a><br />
                 Copyright © 2019 - present<br />
