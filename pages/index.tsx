@@ -176,7 +176,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
       starsNb,
       cards
     },
-    revalidate: (60 * 60) * 24
+    revalidate: 60
+    // revalidate: (60 * 60) * 24
   }
 }
 
