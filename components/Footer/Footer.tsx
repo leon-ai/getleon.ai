@@ -85,6 +85,16 @@ const Footer: React.FC<IFooterProps> = () => {
             </div>
           </div>
         </div>
+        <div className={styles.poweredByContainer}>
+          <a href="https://vercel.com?utm_source=leon-ai&utm_campaign=oss" target="_blank" rel="noreferrer">
+            <Image
+              src="/img/powered-by-vercel.svg"
+              width={172}
+              height={36}
+              alt="Powered by Vercel"
+            />
+          </a>
+        </div>
       </div>
     </footer>
   )
