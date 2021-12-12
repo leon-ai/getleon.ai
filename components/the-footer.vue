@@ -50,7 +50,7 @@
             <h4>Stay Tuned</h4>
             <ul>
               <li><a href="https://blog.getleon.ai" target="_blank" rel="noopener">Blog</a></li>
-              <li><a href="https://roadmap.getleon.ai" target="_blank" rel="noopener">Roadmap</a></li>
+              <li><a href="http://roadmap.getleon.ai" target="_blank" rel="noopener">Roadmap</a></li>
               <li><a href="https://twitter.com/hashtag/LeonAI" target="_blank" rel="noopener">#LeonAI</a></li>
             </ul>
           </div>

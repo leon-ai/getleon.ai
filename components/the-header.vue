@@ -8,8 +8,8 @@
         <ul>
           <li><a href="https://docs.getleon.ai" target="_blank" rel="noopener">Getting Started</a></li>
           <li><a href="https://github.com/leon-ai/leon" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://roadmap.getleon.ai" target="_blank" rel="noopener">Roadmap</a></li>
-          <li><a href="https://sponsor.getleon.ai" target="_blank" rel="noopener">Sponsor</a></li>
+          <li><a href="http://roadmap.getleon.ai" target="_blank" rel="noopener">Roadmap</a></li>
+          <li><a href="http://sponsor.getleon.ai" target="_blank" rel="noopener">Sponsor</a></li>
         </ul>
       </nav>
     </header>
