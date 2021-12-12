@@ -35,7 +35,7 @@ const Sponsor: React.FC<ISponsorProps> = () => {
             alt="Louis"
             quality={100}
           />
-          <a href="https://sponsor.getleon.ai" aria-label="Sponsor Leon" target="_blank" rel="noreferrer" className={`heartbeat-button ${styles.button}`}>
+          <a href="http://sponsor.getleon.ai" aria-label="Sponsor Leon" target="_blank" rel="noreferrer" className={`heartbeat-button ${styles.button}`}>
             <div className={styles.buttonInnerContainer}>
               <Icon name="heart" stroke="none" fill="#FF0000" width={18} style={{ marginRight: '4px' }} />
               Sponsor @louistiti on GitHub

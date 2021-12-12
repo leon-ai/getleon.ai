@@ -60,8 +60,8 @@ const Footer: React.FC<IFooterProps> = () => {
               <ul>
                 <li><a href="https://twitter.com/louistiti_fr" target="_blank" rel="noreferrer">Twitter</a></li>
                 <li><a href="https://blog.getleon.ai" target="_blank" rel="noreferrer">Blog</a></li>
-                <li><a href="https://roadmap.getleon.ai" target="_blank" rel="noreferrer">Roadmap</a></li>
-                <li><a href="https://changelog.getleon.ai" target="_blank" rel="noreferrer">Changelog</a></li>
+                <li><a href="http://roadmap.getleon.ai" target="_blank" rel="noreferrer">Roadmap</a></li>
+                <li><a href="http://changelog.getleon.ai" target="_blank" rel="noreferrer">Changelog</a></li>
                 <li><a href="https://twitter.com/hashtag/LeonAI" target="_blank" rel="noreferrer">#LeonAI</a></li>
               </ul>
             </div>
@@ -82,7 +82,7 @@ const Footer: React.FC<IFooterProps> = () => {
                 <li><a href="https://www.youtube.com/channel/UCW6mk6j6nQUzFYY97r47emQ" target="_blank" rel="noreferrer">YouTube</a></li>
                 <li><a href="https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md" target="_blank" rel="noreferrer">Contribute</a></li>
                 <li><a href="https://github.com/leon-ai/leon/issues" target="_blank" rel="noreferrer">Help</a></li>
-                <li><a href="https://sponsor.getleon.ai" target="_blank" rel="noreferrer">Become a sponsor</a></li>
+                <li><a href="http://sponsor.getleon.ai" target="_blank" rel="noreferrer">Become a sponsor</a></li>
               </ul>
             </div>
           </div>

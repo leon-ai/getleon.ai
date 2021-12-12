@@ -60,7 +60,7 @@ const Header: React.FC<IHeaderProps> = ({ starsNb }) => {
             <nav>
               <ul>
                 <li><a href="#get-started">Get started</a></li>
-                <li><a href="https://roadmap.getleon.ai" target="_blank" rel="noreferrer">Roadmap</a></li>
+                <li><a href="http://roadmap.getleon.ai" target="_blank" rel="noreferrer">Roadmap</a></li>
                 <li><a href="https://blog.getleon.ai" target="_blank" rel="noreferrer">Blog</a></li>
               </ul>
             </nav>
@@ -77,7 +77,7 @@ const Header: React.FC<IHeaderProps> = ({ starsNb }) => {
                 </svg>
                 <span>{starsNb}</span>
               </a>
-              <a href="https://sponsor.getleon.ai" aria-label="Sponsor Leon" target="_blank" rel="noreferrer" className="button heartbeat-button">
+              <a href="http://sponsor.getleon.ai" aria-label="Sponsor Leon" target="_blank" rel="noreferrer" className="button heartbeat-button">
                 <Icon name="heart" stroke="none" fill="#FF0000" width={18} style={{ marginRight: '4px' }} />
                 Sponsor
               </a>
