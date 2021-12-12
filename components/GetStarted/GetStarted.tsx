@@ -34,7 +34,7 @@ const GetStarted: React.FC<IGetStartedProps> = () => {
                 Install Leon CLI
               </span>
               <span className={styles.line}>
-                npm install -g leon-ai/leon-cli#master
+                npm install -g https://latest.getleon.ai
               </span>
             </div>
             <div className={styles.placeholder}>
