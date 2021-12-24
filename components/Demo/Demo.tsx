@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState, useCallback } from 'react'
 import { default as NextImage } from 'next/image'
 
 import styles from '@/components/Demo/Demo.module.sass'
@@ -7,28 +7,57 @@ interface IDemoProps { }
 
 const Demo: React.FC<IDemoProps> = () => {
   const [isYtAccessible, setIsYtAccessible] = useState(false)
+  const containerRef = useRef(null)
+  const [image, setImage] = useState<HTMLImageElement | null>(null)
+  const [hasAlreadyTried, setHasAlreadyTried] = useState(false)
+  const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (!hasAlreadyTried && entry.isIntersecting) {
+        setHasAlreadyTried(true)
+
+        const image = new Image()
+
+        image.onload = () => {
+          setIsYtAccessible(true)
+        }
+        image.onerror = () => {
+          setIsYtAccessible(false)
+        }
+        image.src = 'https://www.youtube.com/favicon.ico'
+
+        setImage(image)
+
+        setTimeout(() => {
+          if (!image.complete) {
+            image.src = ''
+            setIsYtAccessible(false)
+          }
+        }, 3000)
+      }
+    })
+  }, [hasAlreadyTried])
 
   useEffect(() => {
-    const image = new Image()
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      rootMargin: '0px',
+      threshold: [0, 1]
+    })
+    const elem = containerRef?.current
 
-    image.onload = () => {
-      setIsYtAccessible(true)
+    if (elem) {
+      observer.observe(elem)
     }
-    image.onerror = () => {
-      setIsYtAccessible(false)
-    }
-    image.src = 'https://youtube.com/favicon.ico'
 
-    setTimeout(() => {
-      if (!image.complete) {
-        image.src = ''
-        setIsYtAccessible(false)
+    return () => {
+      if (elem) {
+        observer.unobserve(elem)
       }
-    }, 3000)
-  }, [])
+    }
+  }, [handleIntersection])
 
   return (
-    <div className={styles.container}>
+    <div ref={containerRef} className={styles.container}>
       <h3>
         Aaaand action!
       </h3>
