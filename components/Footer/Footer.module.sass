@@ -4,6 +4,30 @@
   padding: var(--header-footer-y-padding) 0
   padding-bottom: calc(var(--header-footer-y-padding) * 4)
 
+.thanksContainer
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: var(--color-white)
+  margin-bottom: 96px
+.thanks
+  display: flex
+  flex-direction: column
+  align-items: center
+  row-gap: 16px
+  div
+    display: flex
+    align-items: center
+    &:first-child
+      column-gap: 48px
+    &:last-child
+      column-gap: 16px
+      a, img
+        width: 36px
+        height: 36px
+        border-radius: 50%
+        border: 2px solid var(--color-white)
+
 .newsletterContainer
   display: flex
   justify-content: center

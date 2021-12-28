@@ -9,6 +9,49 @@ const Footer: React.FC<IFooterProps> = () => {
   return (
     <footer className={styles.footer}>
       <div className="container">
+        <div id="thanks" className={styles.thanksContainer}>
+          <h4>
+            Thanks
+          </h4>
+          <div className={styles.thanks}>
+            <div>
+              <a href="https://www.aoz.studio/" target="_blank" rel="noreferrer">
+                <Image
+                  src="/img/thanks/aoz-studio.png"
+                  width={172}
+                  height={46}
+                  alt="AOZ Studio"
+                />
+              </a>
+              <a href="https://vercel.com/?utm_source=leon-ai&utm_campaign=oss" target="_blank" rel="noreferrer">
+                <Image
+                  src="/img/thanks/vercel.svg"
+                  width={132}
+                  height={30}
+                  alt="Vercel"
+                />
+              </a>
+            </div>
+            <div>
+              <a href="https://github.com/GregoireAMATO" target="_blank" rel="noreferrer">
+                <Image
+                  src="https://github.com/GregoireAMATO.png?size=128"
+                  width={36}
+                  height={36}
+                  alt="GregoireAMATO"
+                />
+              </a>
+              <a href="https://github.com/phareal" target="_blank" rel="noreferrer">
+                <Image
+                  src="https://github.com/phareal.png?size=128"
+                  width={36}
+                  height={36}
+                  alt="phareal"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
         <div className={styles.newsletterContainer}>
           <div className={styles.newsletter}>
             <span className={styles.title}>
