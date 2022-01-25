@@ -1,6 +1,6 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_201_2)">
-<rect x="1" y="1" width="62" height="62" rx="3" fill="black" stroke="url(#paint0_linear_201_2)" stroke-width="2"/>
+<rect x="1" y="1" width="62" height="62" rx="9" fill="black" stroke="url(#paint0_linear_201_2)" stroke-width="2"/>
 <path d="M9.748 16.426V14.292L13.994 12.796L16.964 11.74V11.652L13.994 10.596L9.748 9.1V6.966L19.538 10.772V12.62L9.748 16.426ZM20.5433 21.926V20.408H31.0153V21.926H20.5433Z" fill="white"/>
 </g>
 <defs>
