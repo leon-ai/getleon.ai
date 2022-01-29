@@ -1,0 +1,143 @@
+@import '@/styles/_includes/mixins'
+
+.footer
+  padding: var(--header-footer-y-padding) 0
+  padding-bottom: calc(var(--header-footer-y-padding) * 4)
+
+.thanksContainer
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: var(--color-white)
+  margin-bottom: 96px
+.thanks
+  display: flex
+  flex-direction: column
+  align-items: center
+  row-gap: 16px
+  div
+    display: flex
+    align-items: center
+    &:first-child
+      column-gap: 48px
+    &:last-child
+      column-gap: 16px
+      a, img
+        width: 36px
+        height: 36px
+        border-radius: 50%
+        border: 2px solid var(--color-white)
+
+.newsletterContainer
+  display: flex
+  justify-content: center
+  color: var(--color-white)
+  margin-bottom: 96px
+
+.newsletter
+  display: flex
+  flex-direction: column
+  gap: 6px
+  i
+    font-style: italic
+    color: var(--color-primary-grey)
+    font-size: .8rem
+
+.inputContainer
+  display: flex
+  align-items: center
+  flex-direction: row-reverse
+  position: relative
+  width: 300px
+  input
+    border: 1.5px solid var(--color-white)
+    position: relative
+    padding: 10px 4px
+    padding-right: calc(106px + 10px)
+    width: 100%
+    box-shadow: 0 0 10px 10px transparent
+    transition: box-shadow var(--transitionDuration-main) var(--transitionTiming-main)
+    &:focus
+      box-shadow: 0 0 10px 6px rgba(255, 255, 255, .2)
+  button
+    position: absolute
+    padding: 4px 10px
+    margin-right: 5px
+    height: 26px
+
+.wrapper
+  color: var(--color-white)
+  display: flex
+  justify-content: space-between
+  a
+    transition: color var(--transitionDuration-main) var(--transitionTiming-main)
+    &:hover
+      color: var(--color-white)
+
+.licenseContainer
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  gap: 32px
+
+.poweredByContainer
+  display: flex
+  margin-top: 64px
+  justify-content: center
+
+.license
+  display: flex
+  align-items: center
+  gap: 7px
+  p
+    color: var(--color-primary-grey)
+    font-size: var(--fontSize-main)
+    line-height: 1.3rem
+  a
+    font-weight: var(--fontWeight-semibold)
+
+.credits
+  line-height: 1rem
+  font-size: .7rem
+  color: var(--color-primary-grey)
+  a
+    font-weight: var(--fontWeight-semibold)
+
+.links
+  display: flex
+  gap: 64px
+  span
+    text-transform: uppercase
+    font-weight: var(--fontWeight-semibold)
+  ul
+    margin-top: 16px
+  li
+    color: var(--color-primary-grey)
+    margin-bottom: 16px
+    &:last-child
+      margin-bottom: 0
+
+@include tablet
+  .newsletter
+    i
+      font-size: .7rem
+  .wrapper
+    align-items: center
+    flex-direction: column-reverse
+    gap: 32px
+  .licenseContainer
+    flex-direction: column
+    gap: 16px
+    text-align: center
+  .license
+    flex-direction: column
+    p
+      line-height: 1rem
+  .credits
+    font-size: .5rem
+    line-height: .6rem
+
+@include mobile
+  .links
+    padding: 0 20px
+    gap: 20px

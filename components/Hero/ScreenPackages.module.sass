@@ -1,0 +1,197 @@
+.container
+  --start-after: 5s
+  --after-generic-logo: 2s
+
+.screenStrokeLogo
+  opacity: 0
+  transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 255, 90)
+  animation: displayScreenStrokeLogo 5s var(--start-after) linear forwards
+
+.staticPkg1
+  transform: translateZ(0) matrix(.70592, -.48229, .48229, .70592, 45, 230)
+  animation: floatStaticPkg1 3s ease-in-out alternate infinite
+.staticPkg2
+  transform: translateZ(0) matrix(.33908, .1166, -.1166, .33908, 338, 89)
+  animation: floatStaticPkg2 5s ease-in-out alternate infinite
+.pkg1
+  opacity: 0
+  transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 267, -20)
+  animation: movePkg1 12s calc(var(--start-after) + var(--after-generic-logo)) linear forwards infinite
+.pkg2
+  opacity: 0
+  transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 291, -32)
+  animation: movePkg2 15s calc(var(--start-after) + var(--after-generic-logo) + 3s) linear forwards infinite
+.pkg3
+  opacity: 0
+  transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 250, -15)
+  animation: movePkg3 10s calc(var(--start-after) + var(--after-generic-logo) + 7s) linear forwards infinite
+.pkg4
+  opacity: 0
+  transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 265, -23)
+  animation: movePkg4 18s calc(var(--start-after) + var(--after-generic-logo) + 9s) linear forwards infinite
+.pkg5
+  opacity: 0
+  transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 290, -35)
+  animation: movePkg5 12s calc(var(--start-after) + var(--after-generic-logo) + 10s) linear forwards infinite
+.pkg6
+  opacity: 0
+  transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 255, -13)
+  animation: movePkg6 16s calc(var(--start-after) + var(--after-generic-logo) + 12s) linear forwards infinite
+
+.screenMailIcon
+  stroke: var(--color-blue)
+  opacity: 0
+  transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 230, 100)
+  animation: moveEmailSkill 12s calc(var(--start-after) + var(--after-generic-logo) + 8s) ease-in infinite
+.screenMusicIcon
+  stroke: var(--color-pink)
+  opacity: 0
+  transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 298, 163)
+  animation: moveMusicSkill 15s calc(var(--start-after) + var(--after-generic-logo) + 13s) ease-in infinite
+.screenChatIcon
+  stroke: var(--color-blue)
+  opacity: 0
+  transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 252, 132)
+  animation: moveChatSkill 10s calc(var(--start-after) + var(--after-generic-logo) + 14s) ease-in infinite
+.screenVideoIcon
+  stroke: var(--color-pink)
+  opacity: 0
+  transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 255, 105)
+  animation: moveVideoSkill 18s calc(var(--start-after) + var(--after-generic-logo) + 21s) ease-in infinite
+.screenForecastIcon
+  stroke: var(--color-blue)
+  opacity: 0
+  transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 280, 127)
+  animation: moveForecastSkill 12s calc(var(--start-after) + var(--after-generic-logo) + 18s) ease-in infinite
+.screenCheckIcon
+  stroke: var(--color-pink)
+  opacity: 0
+  transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 315, 127)
+  animation: moveCheckSkill 16s calc(var(--start-after) + var(--after-generic-logo) + 23s) ease-in infinite
+
+@keyframes moveEmailSkill
+  10%, 25%
+    opacity: 1
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 210, 100) scale(1.5)
+  40%
+    opacity: 0
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 230, 100) scale(1)
+@keyframes moveMusicSkill
+  10%, 25%
+    opacity: 1
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 278, 163) scale(1.5)
+  40%
+    opacity: 0
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 298, 163) scale(1)
+@keyframes moveChatSkill
+  10%, 25%
+    opacity: 1
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 232, 132) scale(1.5)
+  40%
+    opacity: 0
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 252, 132) scale(1)
+@keyframes moveVideoSkill
+  10%, 25%
+    opacity: 1
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 235, 105) scale(1.5)
+  40%
+    opacity: 0
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 255, 105) scale(1)
+@keyframes moveForecastSkill
+  10%, 25%
+    opacity: 1
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 260, 127) scale(1.5)
+  40%
+    opacity: 0
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 280, 127) scale(1)
+@keyframes moveCheckSkill
+  10%, 25%
+    opacity: 1
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 295, 127) scale(1.5)
+  40%
+    opacity: 0
+    transform: translateZ(0) matrix(.38468, .13604, 0, .38468, 315, 127) scale(1)
+
+@keyframes floatStaticPkg1
+  50%
+    opacity: .7
+  100%
+    transform: translateZ(0) matrix(.70592, -.48229, .48229, .70592, 45, 225)
+@keyframes floatStaticPkg2
+  50%
+    opacity: .7
+  100%
+    transform: translateZ(0) matrix(.33908, .1166, -.1166, .33908, 338, 79)
+
+@keyframes movePkg1
+  10%
+    opacity: 1
+  20%
+    transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 267, -94)
+  50%
+    opacity: 1
+    transform: translateZ(0) matrix(.35582, .36308, -.36308, .35582, 287, -105)
+  75%
+    opacity: 0
+    transform: translateZ(0) matrix(.35582, .36308, -.36308, .35582, 305, -105)
+@keyframes movePkg2
+  10%
+    opacity: 1
+  20%
+    transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 291, -72)
+  50%
+    opacity: 1
+    transform: translateZ(0) matrix(.56582, .36308, -.36308, .56582, 299, -78)
+  75%
+    opacity: 0
+    transform: translateZ(0) matrix(.56582, .36308, -.36308, .56582, 320, -89)
+@keyframes movePkg3
+  10%
+    opacity: 1
+  20%
+    transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 250, -50)
+  50%
+    opacity: 1
+    transform: translateZ(0) matrix(.48582, .33308, -.33308, .48582, 240, -75)
+  75%
+    opacity: 0
+    transform: translateZ(0) matrix(.48582, .33308, -.33308, .48582, 300, -95)
+@keyframes movePkg4
+  10%
+    opacity: 1
+  20%
+    transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 265, -140)
+  50%
+    opacity: 1
+    transform: translateZ(0) matrix(.50582, .36308, -.36308, .50582, 265, -130)
+  75%
+    opacity: 0
+    transform: translateZ(0) matrix(.50582, .36308, -.36308, .50582, 300, -130)
+@keyframes movePkg5
+  10%
+    opacity: 1
+  20%
+    transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 290, -105)
+  50%
+    opacity: 1
+    transform: translateZ(0) matrix(.55582, .36308, -.36308, .55582, 290, -120)
+  75%
+    opacity: 0
+    transform: translateZ(0) matrix(.55582, .36308, -.36308, .55582, 300, -120)
+@keyframes movePkg6
+  10%
+    opacity: 1
+  20%
+    transform: translateZ(0) matrix(.75582, .36308, -.36308, .75582, 255, -150)
+  50%
+    opacity: 1
+    transform: translateZ(0) matrix(.60582, .36308, -.36308, .60582, 255, -130)
+  75%
+    opacity: 0
+    transform: translateZ(0) matrix(.60582, .36308, -.36308, .60582, 320, -130)
+
+@keyframes displayScreenStrokeLogo
+  0%, 100%
+    opacity: 0
+  50%, 75%
+    opacity: .2

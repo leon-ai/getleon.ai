@@ -1,0 +1,169 @@
+@import '@/styles/_includes/mixins'
+
+.container
+  margin-bottom: 156px
+  h3
+    margin: 0 auto
+    margin-bottom: 59px
+    text-align: center
+    width: 626px
+    box-shadow: var(--backbone-shadow)
+    background-color: var(--color-black)
+
+.getStarted
+  display: flex
+  align-items: center
+  justify-content: space-evenly
+  &:hover
+    .terminal::before
+      transform: translateZ(0) rotate(5deg)
+    .terminal::after
+      transform: translateZ(0) rotate(-5deg)
+  a
+    line-height: 26px
+    &::before
+      position: absolute
+      left: 0
+      opacity: .5
+      margin-top: -84px
+      z-index: -10
+      content: ''
+      width: 400px
+      height: 200px
+      border-radius: 50%
+      background-image: linear-gradient(to bottom right, var(--color-blue), var(--color-pink))
+      filter: blur(100px)
+
+.terminal, .terminal::before, .terminal::after
+  width: 464px
+  height: 300px
+  border-radius: 6px
+  border: solid 1.75px transparent
+  background-origin: border-box
+  background-clip: content-box, border-box
+.terminal
+  font-family: 'JetBrains Mono', monospace
+  font-size: 14px
+  font-weight: 700
+  color: var(--color-white)
+  background-color: #11101D
+  background-image: linear-gradient(#11101D, #11101D), linear-gradient(to bottom right, var(--color-blue), var(--color-pink))
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, .5)
+  &::before, &::after
+    position: absolute
+    opacity: .5
+    z-index: -10
+    content: ''
+    background-image: linear-gradient(#11101D, #11101D), linear-gradient(to bottom right, var(--color-blue), var(--color-pink))
+    transition: transform var(--transitionDuration-main) var(--transitionTiming-main)
+  &::before
+    margin-left: -20px
+    margin-top: -20px
+  &::after
+    margin-left: 20px
+    margin-top: -290px
+
+.header
+  cursor: default
+  border-radius: 6px 6px 0 0
+  border-bottom: solid 1.75px transparent
+  background-origin: border-box
+  background-clip: content-box, border-box
+  background-image: linear-gradient(#11101D, #11101D), linear-gradient(to right, var(--color-blue), var(--color-pink))
+
+.innerHeader
+  display: flex
+  align-items: center
+  padding: 16px
+
+.actions
+  display: flex
+  gap: 6px
+  margin-right: 16px
+  div
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    &:nth-child(1)
+      background-color: #EC6A5E
+    &:nth-child(2)
+      background-color: #F4BF4F
+    &:nth-child(3)
+      background-color: #61C554
+
+.titleContainer
+  flex: 1
+  text-align: center
+
+.body
+  padding: 32px 16px
+
+.chunk
+  display: flex
+  flex-direction: column
+  gap: 8px
+
+.comment
+  color: var(--color-secondary-grey)
+  &::before
+    content: '# '
+
+.line::before
+  content: '$ '
+  color: var(--color-blue)
+
+.placeholder
+  opacity: .4
+
+.generator
+  width: 256px
+  height: 355px
+  margin: 0 auto
+  margin-top: 156px
+
+.logo
+  transform-origin: 236px 236px
+  transform: translateZ(0) perspective(1000px) rotateY(0deg)
+  animation: rotateLogo 45s linear infinite
+
+@keyframes rotateLogo
+  100%
+    transform: translateZ(0) perspective(1000px) rotateY(360deg)
+
+.backbone
+  --width: 324px
+  position: absolute
+  z-index: -20
+  left: 501px
+  transform: translateY(210px)
+  width: var(--width)
+
+@include tablet
+  .container
+    margin-bottom: 32px
+    h3
+      box-shadow: none
+  .getStarted
+    flex-direction: column-reverse
+    gap: 64px
+    :global(.button)
+      font-size: .85rem
+  .generator
+    transform: scale(.8)
+    margin-top: 32px
+
+@include mobile
+  .container
+    h3
+      width: 100%
+  .terminal, .terminal::before, .terminal::after
+    width: 100%
+  .terminal
+    &::before
+      margin-left: -20px
+      margin-top: -20px
+    &::after
+      margin-left: 20px
+      margin-top: -302px
+  .placeholder
+    width: 100%

@@ -1,0 +1,133 @@
+@import '_includes/reset'
+@import '_includes/variables'
+@import '_includes/mixins'
+
+*, :after, :before
+  box-sizing: border-box
+
+::selection
+  background-color: var(--color-blue)
+  color: var(--color-white)
+
+::placeholder
+  color: var(--color-primary-grey)
+
+html, body
+  padding: 0
+  margin: 0
+
+html
+  font-size: var(--fontSize-main)
+  scroll-behavior: smooth
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-text-size-adjust: 100%
+
+body
+  font-family: var(--font-sans)
+  font-weight: var(--fontWeight-regular)
+  background-color: var(--color-black)
+  color: var(--color-primary-grey)
+  text-rendering: optimizeLegibility
+
+a
+  color: inherit
+  text-decoration: none
+
+.container
+  width: var(--width-container)
+  margin: 0 auto
+  padding: 0 var(--padding-x-container)
+
+.icon
+  vertical-align: middle
+
+button, .button
+  cursor: pointer
+  background-color: var(--color-white)
+  color: var(--color-black)
+  border-radius: var(--borderRadius-main)
+  font-weight: var(--fontWeight-semibold)
+  padding: 4px 18px
+  display: inline-block
+  height: 34px
+  line-height: var(--fontSize-main)
+  text-align: center
+  border: 1px solid transparent
+  transition: background-color var(--transitionDuration-main) var(--transitionTiming-main), color var(--transitionDuration-main) var(--transitionTiming-main), border-color var(--transitionDuration-main) var(--transitionTiming-main)
+  &:hover
+    background-color: transparent
+    color: var(--color-white)
+    border-color: var(--color-white)
+.heartbeat-button:hover svg
+  animation: heartBeats .7s linear infinite
+
+@keyframes heartBeats
+  0%
+    transform: scale3d(1, 1, 1)
+  20%
+    transform: scale3d(1.15, 1.15, 1.15)
+  55%
+    transform: scale3d(1, 1, 1)
+  70%
+    transform: scale3d(1.15, 1.15, 1.15)
+
+input
+  background: none
+  border: none
+  border-radius: var(--borderRadius-main)
+  color: var(--color-white)
+  &:focus
+    outline: none
+
+h1, h2, h3, h4
+  color: var(--color-white)
+  font-weight: var(--fontWeight-bold)
+h2, h3
+  margin-bottom: 16px
+  font-size: 3.5rem
+h4
+  margin-bottom: 16px
+  font-size: 2.5rem
+
+p
+  font-size: var(--fontSize-bigger)
+  line-height: 1.5rem
+
+.arrow-link
+  display: inline-block
+  font-weight: var(--fontWeight-semibold)
+  color: var(--color-white)
+  &:hover
+    .feather-arrow-right
+      transform: translateX(4px)
+  .feather-arrow-right
+    transition: transform var(--transitionTiming-main) var(--transitionDuration-main)
+    width: 14px
+
+#get-started
+  // Header height
+  scroll-margin-top: 78px
+
+[data-pausable-animation], .page-hidden .animation-running [data-pausable-animation]
+  animation-play-state: paused !important
+
+.animation-running [data-pausable-animation], .animation-running[data-pausable-animation]
+  animation-play-state: running !important
+
+@include tablet
+  html
+    font-size: 18px
+  .container
+    width: calc(var(--tablet-width) - var(--padding-x-container))
+    overflow-x: hidden
+  h2, h3
+    font-size: 3rem
+  .backbone
+    display: none
+
+@include mobile
+  .container
+    width: 100%
+  h2, h3
+    font-size: 2.2rem

@@ -1,0 +1,151 @@
+@import '@/styles/_includes/mixins'
+
+.header
+  position: sticky
+  z-index: 20
+  top: 0
+  padding-top: var(--header-footer-y-padding)
+  margin-bottom: 84px
+  backdrop-filter: saturate(140%) blur(5px)
+  background-color: rgba(0, 0, 0, .5)
+
+  &::after
+    content: ''
+    display: block
+    height: var(--header-footer-y-padding)
+    opacity: 1
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .1)
+    transition: opacity var(--transitionDuration-main) var(--transitionTiming-main)
+
+.noBorder
+  &::after
+    opacity: 0
+
+.wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.mobileMenuBtn
+  display: none
+
+.menu
+  display: flex
+
+  nav
+    display: flex
+    margin-right: 72px
+    ul
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 228px
+    a
+      padding: 10px
+      background-color: transparent
+      border-radius: 4px
+      transition: color var(--transitionDuration-main) var(--transitionTiming-main), background-color var(--transitionDuration-main) var(--transitionTiming-main)
+      &:hover
+        background-color: rgba(255, 255, 255, .1)
+        color: var(--color-white)
+
+.social
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 240px
+
+  a:not(:last-child)
+    transition: color var(--transitionDuration-main) var(--transitionTiming-main)
+
+    path
+      fill: var(--color-primary-grey)
+      transition: fill var(--transitionDuration-main) var(--transitionTiming-main)
+    &:hover
+      color: var(--color-white)
+      path
+        fill: var(--color-white)
+
+.discord
+  width: 23px
+  height: 26px
+
+.github
+  font-size: var(--fontSize-small)
+  display: flex
+  align-items: center
+  gap: 4px
+  svg
+    width: 26px
+    height: 26px
+
+.menu.mobileMenuBtnClicked
+  position: fixed
+  padding: 0 var(--padding-x-container)
+  display: flex
+  flex-direction: column
+  left: 0
+  top: 78px
+  width: 100%
+  height: calc(100vh - 78px)
+  background-color: var(--color-black)
+  nav
+    margin-right: 0
+    ul
+      display: block
+      flex: 1
+      align-items: center
+      flex-direction: column
+      li
+        a
+          padding: 10px 0
+          display: block
+          width: 100%
+          border-radius: 0
+          border-bottom: 1px solid rgba(255, 255, 255, .1)
+  .social
+    padding: var(--header-footer-y-padding) 0
+    flex-direction: column
+    align-items: center
+    width: auto
+    gap: 10px
+    a:not(:last-child) path
+      fill: var(--color-white)
+    a:last-child
+      width: 100%
+      font-size: .85rem
+
+@include tablet
+  .header
+    color: var(--color-white)
+    background-color: var(--color-black)
+    margin-bottom: 32px
+  .menu:not(.mobileMenuBtnClicked)
+    display: none
+  .mobileMenuBtn
+    display: flex
+    flex-direction: column
+    background-color: transparent
+    border: none
+    height: auto
+    width: auto
+    padding: 10px 0
+    transition: transform .3s var(--transitionTiming-main)
+    &.mobileMenuBtnClicked
+      transform: rotate(180deg)
+    &::before, &::after
+      content: ''
+      display: block
+      height: 1px
+      width: 22px
+      background-color: var(--color-white)
+      transition: transform var(--transitionDuration-main) var(--transitionTiming-main)
+    &::before
+      transform: translateY(4px) rotate(0)
+    &::after
+      transform: translateY(-4px) rotate(0)
+    &.mobileMenuBtnClicked
+      &::before
+        transform: rotate(45deg)
+      &::after
+        transform: rotate(-45deg)

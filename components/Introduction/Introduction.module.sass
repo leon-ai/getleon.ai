@@ -1,0 +1,34 @@
+@import '@/styles/_includes/mixins'
+
+.container
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-bottom: 32px
+
+  h1, p
+    text-align: center
+
+  h1
+    display: flex
+    justify-content: center
+    font-size: 6.5rem
+    width: 600px
+    margin-bottom: 16px
+
+  p
+    font-size: 1.3rem
+    line-height: 1.6rem
+
+    strong
+      font-weight: var(--fontWeight-bold)
+
+@include tablet
+  .container
+    h1
+      font-size: 5rem
+@include mobile
+  .container
+    h1
+      width: 296px
+      font-size: 3rem

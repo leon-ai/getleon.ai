@@ -1,0 +1,31 @@
+.loader
+  .leftProgress, .rightProgress
+    transform: translate(0%, 5%)
+    animation-duration: 2s
+    animation-name: progress
+    animation-timing-function: linear
+    animation-direction: alternate
+    animation-iteration-count: infinite
+  .leftProgress
+    fill: var(--color-blue)
+  .rightProgress
+    fill: var(--color-pink)
+
+@keyframes progress
+  100%
+    transform: translate(0, -90%)
+
+/* .loader
+  width: 48px
+
+  path
+    stroke-dasharray: 800
+    stroke-dashoffset: 800
+    animation: dash 2.5s linear alternate infinite
+    stroke-width: 3
+    stroke-linecap: round
+    stroke: var(--color-white) */
+
+/* @keyframes dash
+  to
+    stroke-dashoffset: 0 */

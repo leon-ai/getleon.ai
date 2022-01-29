@@ -1,0 +1,90 @@
+@import '@/styles/_includes/mixins'
+@import './ScreenPackages.module'
+@import './Energy.module'
+
+.container
+  position: relative
+  perspective: 500px
+  margin-bottom: 156px
+
+.backbone
+  --width: 672px
+  position: absolute
+  z-index: -10
+  bottom: -156px
+  left: calc(50% - (var(--width) / 2))
+  width: var(--width)
+
+.hero
+  --energy-turned-off-color: rgba(0, 0, 0, .5)
+
+  perspective: 1000px
+  opacity: 0
+  animation: displayHero 2s ease-in forwards
+  box-shadow: 0 40px 20px 0 rgba(0, 0, 0, .9)
+
+.halo
+  animation: blinkHalo 6s 5s ease-in alternate infinite
+
+@keyframes blinkHalo
+  10%
+    opacity: .45
+  50%
+    opacity: .58
+  100%
+    opacity: .3
+
+.logo
+  transform-origin: 150px 150px
+  transform: translateZ(0) perspective(3000px) matrix(.15468, -.03604, 0, .15468, 66, 30) rotateY(0deg)
+  animation: rotateLogo 60s 5s linear infinite
+
+@keyframes rotateLogo
+  100%
+    transform: translateZ(0) perspective(3000px) matrix(.15468, -.03604, 0, .15468, 66, 30) rotateY(360deg)
+
+.nodeJsLogo
+  transform: translate3d(105px, -5px, 0)
+  animation: floatNodeJsLogo 4s linear alternate infinite
+
+.pythonLogo
+  transform: translateZ(0) matrix(.22914, -.13229, 0, .26458, 302, 263)
+  animation: floatPythonLogo 5s 1s linear alternate infinite
+
+@keyframes floatNodeJsLogo
+  100%
+    transform: translate3d(105px, -12px, 0)
+@keyframes floatPythonLogo
+  100%
+    transform: translateZ(0) matrix(.22914, -.13229, 0, .26458, 302, 256)
+
+.voiceWaves path
+  opacity: 0
+  &:nth-child(1)
+    transform: translate3d(98px, 5px, 0)
+    animation: voiceWaveMove 2s 1s linear forwards
+  &:nth-child(2)
+    transform: translate3d(99px, 5px, 0)
+    animation: voiceWaveMove 2s 1.5s linear forwards
+  &:nth-child(3)
+    transform: translate3d(100px, 5px, 0)
+    animation: voiceWaveMove 2s 2s linear forwards
+
+@keyframes voiceWaveMove
+  70%
+    opacity: 0
+  100%
+    opacity: 1
+    transform: translate3d(110px, 20px, 0)
+
+@keyframes displayHero
+  100%
+    opacity: 1
+
+@include tablet
+  .container
+    margin-bottom: 64px
+
+@include mobile
+  .hero
+    transform: scale(1.6)
