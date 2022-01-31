@@ -108,10 +108,10 @@ const TtsStt: React.FC<ITtsSttProps> = () => {
               height={48}
             />
             <Node
-              src="/img/tts-stt-solutions-logo/mozilla.svg"
-              name="DeepSpeech"
-              width={53}
-              height={53}
+              src="/img/tts-stt-solutions-logo/coqui.svg"
+              name="Coqui STT"
+              width={51}
+              height={51}
             />
             <Node
               src="/img/tts-stt-solutions-logo/aliyun.svg"
