@@ -105,7 +105,7 @@ const Footer: React.FC<IFooterProps> = () => {
                 <li><a href="https://blog.getleon.ai" target="_blank" rel="noreferrer">Blog</a></li>
                 <li><a href="http://roadmap.getleon.ai" target="_blank" rel="noreferrer">Roadmap</a></li>
                 <li><a href="http://changelog.getleon.ai" target="_blank" rel="noreferrer">Changelog</a></li>
-                <li><a href="https://twitter.com/hashtag/LeonAI" target="_blank" rel="noreferrer">#LeonAI</a></li>
+                <li><a href="https://twitter.com/search?f=live&q=%23LeonAI%20(from%3Alouistiti_fr)&src=typed_query" target="_blank" rel="noreferrer">#LeonAI</a></li>
               </ul>
             </div>
             <div className={styles.col}>
