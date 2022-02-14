@@ -23,6 +23,15 @@ const Footer: React.FC<IFooterProps> = () => {
                   alt="AOZ Studio"
                 />
               </a>
+              <a href="https://github.com/FluxIndustries" target="_blank" rel="noreferrer">
+                <Image
+                  src="https://github.com/FluxIndustries.png?size=128"
+                  width={46}
+                  height={46}
+                  alt="Flux Industries"
+                  className={styles.radius}
+                />
+              </a>
               <a href="https://vercel.com/?utm_source=leon-ai&utm_campaign=oss" target="_blank" rel="noreferrer">
                 <Image
                   src="/img/thanks/vercel.svg"
