@@ -15,14 +15,6 @@ const Footer: React.FC<IFooterProps> = () => {
           </h4>
           <div className={styles.thanks}>
             <div>
-              <a href="https://www.aoz.studio/" target="_blank" rel="noreferrer">
-                <Image
-                  src="/img/thanks/aoz-studio.png"
-                  width={172}
-                  height={46}
-                  alt="AOZ Studio"
-                />
-              </a>
               <a href="https://github.com/FluxIndustries" target="_blank" rel="noreferrer">
                 <Image
                   src="https://github.com/FluxIndustries.png?size=128"
@@ -30,6 +22,14 @@ const Footer: React.FC<IFooterProps> = () => {
                   height={46}
                   alt="Flux Industries"
                   className={styles.radius}
+                />
+              </a>
+              <a href="https://www.aoz.studio/" target="_blank" rel="noreferrer">
+                <Image
+                  src="/img/thanks/aoz-studio.png"
+                  width={172}
+                  height={46}
+                  alt="AOZ Studio"
                 />
               </a>
               <a href="https://vercel.com/?utm_source=leon-ai&utm_campaign=oss" target="_blank" rel="noreferrer">
