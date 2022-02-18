@@ -15,13 +15,6 @@ const Footer: React.FC<IFooterProps> = () => {
           </h4>
           <div className={styles.thanks}>
             <div>
-              <Image
-                src="/img/flux-industries.png"
-                width={46}
-                height={46}
-                alt="Flux Industries"
-                className={styles.radius}
-              />
               <a href="https://www.aoz.studio/" target="_blank" rel="noreferrer">
                 <Image
                   src="/img/thanks/aoz-studio.png"
