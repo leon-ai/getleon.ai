@@ -87,7 +87,7 @@ const Footer: React.FC<IFooterProps> = () => {
               <p>
                 Released under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noreferrer">MIT License</a><br />
                 Copyright © 2019 - present<br />
-                <strong><a href="https://twitter.com/louistiti_fr" target="_blank" rel="noreferrer">Louis Grenard</a></strong>
+                <strong><a href="https://twitter.com/grenlouis" target="_blank" rel="noreferrer">Louis Grenard</a></strong>
               </p>
             </div>
             <p className={styles.credits}>
@@ -101,11 +101,11 @@ const Footer: React.FC<IFooterProps> = () => {
                 Stay Tuned
               </span>
               <ul>
-                <li><a href="https://twitter.com/louistiti_fr" target="_blank" rel="noreferrer">Twitter</a></li>
+                <li><a href="https://twitter.com/grenlouis" target="_blank" rel="noreferrer">Twitter</a></li>
                 <li><a href="https://blog.getleon.ai" target="_blank" rel="noreferrer">Blog</a></li>
                 <li><a href="http://roadmap.getleon.ai" target="_blank" rel="noreferrer">Roadmap</a></li>
                 <li><a href="http://changelog.getleon.ai" target="_blank" rel="noreferrer">Changelog</a></li>
-                <li><a href="https://twitter.com/search?f=live&q=%23LeonAI%20(from%3Alouistiti_fr)&src=typed_query" target="_blank" rel="noreferrer">#LeonAI</a></li>
+                <li><a href="https://twitter.com/search?f=live&q=%23LeonAI%20(from%3Agrenlouis%20OR%20from%3Alouistiti_fr)&src=typed_query" target="_blank" rel="noreferrer">#LeonAI</a></li>
               </ul>
             </div>
             <div className={styles.col}>
