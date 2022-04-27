@@ -15,6 +15,14 @@ const Footer: React.FC<IFooterProps> = () => {
           </h4>
           <div className={styles.thanks}>
             <div>
+              <a href="https://antmedia.io?utm_source=github&utm_medium=banner&utm_campaign=opensource&utm_id=1" target="_blank" rel="noreferrer">
+                <Image
+                  src="/img/thanks/ant-media.svg"
+                  width={172}
+                  height={46}
+                  alt="Ant Media"
+                />
+              </a>
               <a href="https://www.aoz.studio/" target="_blank" rel="noreferrer">
                 <Image
                   src="/img/thanks/aoz-studio.png"
