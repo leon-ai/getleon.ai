@@ -1,4 +1,4 @@
-# Leon Website [![Powered by Vercel](https://raw.githubusercontent.com/leon-ai/getleon.ai/next.js/public/img/powered-by-vercel.svg)](https://vercel.com?utm_source=leon-ai&utm_campaign=oss)
+# Leon Website <a href="https://vercel.com?utm_source=leon-ai&utm_campaign=oss"><img width="156" src="https://getleon.ai/img/powered-by-vercel.svg" alt="Vercel"></a>
 
 ## Overview
 

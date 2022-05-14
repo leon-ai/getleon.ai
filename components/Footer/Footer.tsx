@@ -41,14 +41,6 @@ const Footer: React.FC<IFooterProps> = () => {
               </a>
             </div>
             <div>
-              <a href="https://github.com/GregoireAMATO" target="_blank" rel="noreferrer">
-                <Image
-                  src="https://github.com/GregoireAMATO.png?size=128"
-                  width={36}
-                  height={36}
-                  alt="GregoireAMATO"
-                />
-              </a>
               <a href="https://github.com/phareal" target="_blank" rel="noreferrer">
                 <Image
                   src="https://github.com/phareal.png?size=128"
