@@ -11,7 +11,7 @@ const Newsletter: React.FC<INewsletterProps> = () => {
         Get the latest news from Leon
       </span>
       <form
-        action="https://www.getrevue.co/profile/leon/add_subscriber"
+        action="https://newsletter.getleon.ai/subscription/form"
         method="post"
         target="_blank"
       >
@@ -19,7 +19,13 @@ const Newsletter: React.FC<INewsletterProps> = () => {
           <input
             type="email"
             placeholder="Enter your email address..."
-            name="member[email]"
+            name="email"
+            required
+          />
+          <input
+            type="hidden"
+            value="1908b2a9-155b-40b8-ab99-569a9463e7bd"
+            name="l"
             required
           />
           <button type="submit">Stay updated</button>
