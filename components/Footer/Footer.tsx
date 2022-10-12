@@ -15,20 +15,28 @@ const Footer: React.FC<IFooterProps> = () => {
           </h4>
           <div className={styles.thanks}>
             <div>
-              <a href="https://www.aoz.studio/" target="_blank" rel="noreferrer">
-                <Image
-                  src="/img/thanks/aoz-studio.png"
-                  width={172}
-                  height={46}
-                  alt="AOZ Studio"
-                />
-              </a>
               <a href="https://vercel.com/?utm_source=leon-ai&utm_campaign=oss" target="_blank" rel="noreferrer">
                 <Image
                   src="/img/thanks/vercel.svg"
                   width={132}
                   height={30}
                   alt="Vercel"
+                />
+              </a>
+              <a href="https://www.macstadium.com/" target="_blank" rel="noreferrer">
+                <Image
+                  src="/img/thanks/mac-stadium.svg"
+                  width={143}
+                  height={56}
+                  alt="MacStadium"
+                />
+              </a>
+              <a href="https://www.aoz.studio/" target="_blank" rel="noreferrer">
+                <Image
+                  src="/img/thanks/aoz-studio.png"
+                  width={172}
+                  height={46}
+                  alt="AOZ Studio"
                 />
               </a>
             </div>
