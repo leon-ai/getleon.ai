@@ -20,7 +20,9 @@
     "dev": "node_modules/.bin/next dev",
     "build": "node_modules/.bin/next build",
     "start": "node_modules/.bin/next start",
-    "lint": "node_modules/.bin/next lint"
+    "lint": "node_modules/.bin/next lint",
+    "link": "node_modules/.bin/vercel link",
+    "env": "node_modules/.bin/vercel login && node_modules/.bin/vercel env pull"
   },
   "dependencies": {
     "js-abbreviation-number": "^1.3.0",
@@ -34,6 +36,7 @@
     "eslint": "^7.24.0",
     "eslint-config-next": "^12.0.1",
     "sass": "^1.43.4",
-    "typescript": "4.4.4"
+    "typescript": "4.4.4",
+    "vercel": "^28.4.10"
   }
 }
