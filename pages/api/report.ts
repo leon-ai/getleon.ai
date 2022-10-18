@@ -16,7 +16,10 @@ export default async function handler (
   res: NextApiResponse<APIResponse>
 ) {
   try {
-    const { report } = req.body
+    let { report } = req.body
+
+    report = JSON.stringify(report)
+
     const pasteName = '[Leon] Report - ' + new Date().toISOString()
     const response = await fetch('https://pastebin.com/api/api_post.php', {
       method: 'POST',
