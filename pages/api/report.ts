@@ -16,9 +16,9 @@ export default async function handler (
   res: NextApiResponse<APIResponse>
 ) {
   try {
-    let { report } = req.body
+    let { report: reportObject } = req.body
 
-    if (!report) {
+    if (!reportObject) {
       return res.status(400).json({
         success: false,
         message: 'No report provided',
@@ -26,13 +26,13 @@ export default async function handler (
       })
     }
 
-    report = JSON.stringify({ report }, null, 2)
+    const report = JSON.stringify({ reportObject }, null, 2)
 
     /**
      * Pastebin docs
      * @see https://pastebin.com/doc_api
      */
-    const { environment: { osDetails: { type, arch } } } = report
+    const { environment: { osDetails: { type, arch } } } = reportObject
     const envTitle = `${type}-${arch}`
     const pasteName = `[Leon] Report - ${envTitle} - ${new Date().toISOString()}`
     const params = [
