@@ -18,13 +18,23 @@ export default async function handler (
   try {
     let { report } = req.body
 
+    if (!report) {
+      return res.status(400).json({
+        success: false,
+        message: 'No report provided',
+        data: null
+      })
+    }
+
     report = JSON.stringify({ report }, null, 2)
 
     /**
      * Pastebin docs
      * @see https://pastebin.com/doc_api
      */
-    const pasteName = '[Leon] Report - ' + new Date().toISOString()
+    const { environment: { osDetails: { type, arch } } } = report
+    const envTitle = `${type}-${arch}`
+    const pasteName = `[Leon] Report - ${envTitle} - ${new Date().toISOString()}`
     const params = [
       `api_dev_key=${PASTEBIN_API_DEV_KEY}`,
       `api_paste_name=${pasteName}`,
@@ -44,7 +54,7 @@ export default async function handler (
 
     const data = await response.text()
 
-    res.status(200).json({
+    return res.status(200).json({
       success: true,
       message: 'Report created successfully',
       data: {
@@ -52,7 +62,7 @@ export default async function handler (
       }
     })
   } catch (e) {
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       message: `Failed to create paste on Pastebin: ${JSON.stringify(e)}`,
       data: null
