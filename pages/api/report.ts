@@ -16,9 +16,9 @@ export default async function handler (
   res: NextApiResponse<APIResponse>
 ) {
   try {
-    let { report: reportObject } = req.body
+    let { report: inputObject } = req.body
 
-    if (!reportObject) {
+    if (!inputObject) {
       return res.status(400).json({
         success: false,
         message: 'No report provided',
@@ -26,39 +26,28 @@ export default async function handler (
       })
     }
 
-    const report = JSON.stringify({ reportObject }, null, 2)
-
-    /**
-     * Pastebin docs
-     * @see https://pastebin.com/doc_api
-     */
-    const { environment: { osDetails: { type, arch } } } = reportObject
+    const { environment: { osDetails: { type, arch } } } = inputObject
     const envTitle = `${type}-${arch}`
-    const pasteName = `[Leon] Report - ${envTitle} - ${new Date().toISOString()}`
-    const params = [
-      `api_dev_key=${PASTEBIN_API_DEV_KEY}`,
-      `api_paste_name=${pasteName}`,
-      `api_paste_code=${report}`,
-      `api_user_key=${PASTEBIN_API_USER_KEY}`,
-      'api_paste_format=json',
-      'api_option=paste',
-      'api_paste_private=0' // Public
-    ]
-    const response = await fetch('https://pastebin.com/api/api_post.php', {
+    const reportObject = {
+      title: `[Leon] Report - ${envTitle} - ${new Date().toISOString()}`,
+      ...inputObject
+    }
+    const report = JSON.stringify({ reportObject }, null, 2)
+    const response = await fetch('https://report.getleon.ai/documents', {
       method: 'POST',
-      body: params.join('&'),
+      body: report,
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'Content-Type': 'text/plain'
       }
     })
 
-    const data = await response.text()
+    const { key } = await response.json()
 
     return res.status(200).json({
       success: true,
       message: 'Report created successfully',
       data: {
-        reportUrl: data
+        reportUrl: `https://report.getleon.ai/raw/${key}`
       }
     })
   } catch (e) {
