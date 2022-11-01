@@ -15,6 +15,14 @@ const Footer: React.FC<IFooterProps> = () => {
           </h4>
           <div className={styles.thanks}>
             <div>
+              <a href="https://appwrite.io/" target="_blank" rel="noreferrer">
+                <Image
+                  src="/img/thanks/appwrite.svg"
+                  width={164}
+                  height={46}
+                  alt="Appwrite"
+                />
+              </a>
               <a href="https://vercel.com/?utm_source=leon-ai&utm_campaign=oss" target="_blank" rel="noreferrer">
                 <Image
                   src="/img/thanks/vercel.svg"
