@@ -14,50 +14,38 @@ const Footer: React.FC<IFooterProps> = () => {
             Thanks
           </h4>
           <div className={styles.thanks}>
-            <div>
-              <a href="https://appwrite.io/" target="_blank" rel="noreferrer">
-                <Image
-                  src="/img/thanks/appwrite.svg"
-                  width={164}
-                  height={46}
-                  alt="Appwrite"
-                />
-              </a>
-              <a href="https://vercel.com/?utm_source=leon-ai&utm_campaign=oss" target="_blank" rel="noreferrer">
-                <Image
-                  src="/img/thanks/vercel.svg"
-                  width={132}
-                  height={30}
-                  alt="Vercel"
-                />
-              </a>
-              <a href="https://www.macstadium.com/" target="_blank" rel="noreferrer">
-                <Image
-                  src="/img/thanks/mac-stadium.svg"
-                  width={143}
-                  height={56}
-                  alt="MacStadium"
-                />
-              </a>
-              <a href="https://www.aoz.studio/" target="_blank" rel="noreferrer">
-                <Image
-                  src="/img/thanks/aoz-studio.png"
-                  width={172}
-                  height={46}
-                  alt="AOZ Studio"
-                />
-              </a>
-            </div>
-            <div>
-              <a href="https://github.com/phareal" target="_blank" rel="noreferrer">
-                <Image
-                  src="https://github.com/phareal.png?size=128"
-                  width={36}
-                  height={36}
-                  alt="phareal"
-                />
-              </a>
-            </div>
+            <a href="https://appwrite.io/" target="_blank" rel="noreferrer">
+              <Image
+                src="/img/thanks/appwrite.svg"
+                width={164}
+                height={46}
+                alt="Appwrite"
+              />
+            </a>
+            <a href="https://vercel.com/?utm_source=leon-ai&utm_campaign=oss" target="_blank" rel="noreferrer">
+              <Image
+                src="/img/thanks/vercel.svg"
+                width={132}
+                height={30}
+                alt="Vercel"
+              />
+            </a>
+            <a href="https://www.macstadium.com/" target="_blank" rel="noreferrer">
+              <Image
+                src="/img/thanks/mac-stadium.svg"
+                width={143}
+                height={56}
+                alt="MacStadium"
+              />
+            </a>
+            <a href="https://www.aoz.studio/" target="_blank" rel="noreferrer">
+              <Image
+                src="/img/thanks/aoz-studio.png"
+                width={172}
+                height={46}
+                alt="AOZ Studio"
+              />
+            </a>
           </div>
         </div>
         <div className={styles.newsletterContainer}>
