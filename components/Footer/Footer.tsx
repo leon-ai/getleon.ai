@@ -1,11 +1,26 @@
 import React from 'react'
 import Image from 'next/image'
 
+import useCaptcha from '@/lib/use-captcha'
+
 import styles from '@/components/Footer/Footer.module.sass'
 
 interface IFooterProps { }
 
 const Footer: React.FC<IFooterProps> = () => {
+  const { handleFormSubmit } = useCaptcha()
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    const email = formData.get('email') as string
+    const listId = formData.get('l') as string
+
+    handleFormSubmit(email, listId)
+  }
+
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -53,11 +68,7 @@ const Footer: React.FC<IFooterProps> = () => {
             <span className={styles.title}>
               Get the latest news from Leon
             </span>
-            <form
-              action="https://newsletter.getleon.ai/subscription/form"
-              method="post"
-              target="_blank"
-            >
+            <form onSubmit={handleSubmit}>
               <div className={styles.inputContainer}>
                 <input
                   type="email"
