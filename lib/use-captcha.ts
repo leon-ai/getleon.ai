@@ -4,13 +4,8 @@ interface IProblem {
   n1: number
   n2: number
   result: number
+  type: 'addition' | 'multiplication'
 }
-
-const PROBLEMS: IProblem[] = [
-  { n1: 1, n2: 1, result: 2 },
-  { n1: 2, n2: 2, result: 4 },
-  { n1: 3, n2: 3, result: 6 }
-]
 
 interface UseCaptchaReturn {
   isHuman: boolean
@@ -20,18 +15,48 @@ interface UseCaptchaReturn {
 const useCaptcha = (): UseCaptchaReturn => {
   const [isHuman, setIsHuman] = useState<boolean>(false)
 
-  const verifyCaptcha = (): boolean => {
-    const pickedProblem = PROBLEMS[Math.floor(Math.random() * PROBLEMS.length)]
-    const answer = prompt(`Please verify you are human: ${pickedProblem.n1} + ${pickedProblem.n2} = ?`)
+  const generateProblem = (): IProblem => {
+    // Random number between 0 and 9
+    const n1 = Math.floor(Math.random() * 10)
+    const n2 = Math.floor(Math.random() * 10)
+    // Randomly choose type
+    const type = Math.random() < 0.5 ? 'addition' : 'multiplication'
 
-    if (answer === pickedProblem.result.toString()) {
-      setIsHuman(true)
-      return true
+    let result: number
+
+    if (type === 'addition') {
+      result = n1 + n2
     } else {
-      alert('You are not human!')
-      setIsHuman(false)
-      return false
+      result = n1 * n2
     }
+
+    return { n1, n2, result, type }
+  }
+
+  const verifyCaptcha = (): boolean => {
+    const problem = generateProblem()
+    let question = ''
+
+    if (problem.type === 'addition') {
+      question = `${problem.n1} + ${problem.n2} = ?`
+    } else if (problem.type === 'multiplication') {
+      question = `${problem.n1} * ${problem.n2} = ?`
+    } else {
+      question = `${problem.n1} + ${problem.n2} = ?`
+    }
+
+    const answer = prompt(`Please verify you are human: ${question}`)
+
+    if (answer === problem.result.toString()) {
+      setIsHuman(true)
+
+      return true
+    }
+
+    alert('You are not human!')
+    setIsHuman(false)
+
+    return false
   }
 
   const handleFormSubmit = (email: string, listId: string): void => {
