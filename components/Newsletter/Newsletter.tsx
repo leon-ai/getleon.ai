@@ -1,23 +1,19 @@
 import React from 'react'
 
-import useCaptcha from '@/lib/use-captcha'
-
 import styles from '@/components/Newsletter/Newsletter.module.sass'
 
 interface INewsletterProps { }
 
 const Newsletter: React.FC<INewsletterProps> = () => {
-  const { handleFormSubmit } = useCaptcha()
-
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     const form = event.currentTarget
     const formData = new FormData(form)
-    const email = formData.get('email') as string
-    const listId = formData.get('l') as string
+    let email = formData.get('email') as string
+    email = encodeURIComponent(email)
 
-    handleFormSubmit(email, listId)
+    window.open(`https://leonai.substack.com/subscribe?freeSignupEmail=${email}`, '_blank')
   }
 
   return (
@@ -33,16 +29,12 @@ const Newsletter: React.FC<INewsletterProps> = () => {
             name="email"
             required
           />
-          <input
-            type="hidden"
-            value="1908b2a9-155b-40b8-ab99-569a9463e7bd"
-            name="l"
-            required
-          />
           <button type="submit">Stay updated</button>
         </div>
       </form>
-      <i>No spam. Unsubscribe at any time.</i>
+      <div className={styles.subscribeHintContainer}>
+        <i>No spam. Unsubscribe at any time.</i>
+      </div>
     </div>
   )
 }

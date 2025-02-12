@@ -36,3 +36,6 @@ yarn-error.log*
 
 # IDE
 .idea
+
+package-lock.json
+pnpm-lock.yaml
